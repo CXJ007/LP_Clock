@@ -1,0 +1,637 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "a7780dfa-db6b-4ae9-ae2e-39993c135403")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 101.6 87.63) (xy 114.3 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "159aea5e-b6c1-4479-bd34-a080a6e90332")
+	)
+	(wire
+		(pts
+			(xy 142.24 102.87) (xy 165.1 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "245141a8-e846-42b9-ad2a-04ab13b91a6b")
+	)
+	(wire
+		(pts
+			(xy 142.24 107.95) (xy 165.1 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f5b453b-1307-438f-a6cd-ddd16916ec2a")
+	)
+	(wire
+		(pts
+			(xy 101.6 90.17) (xy 114.3 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33a49e07-bd42-4263-91d9-18996685e8db")
+	)
+	(wire
+		(pts
+			(xy 142.24 95.25) (xy 165.1 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44cb832e-1226-4823-a54c-c8213dd8c4e0")
+	)
+	(wire
+		(pts
+			(xy 142.24 87.63) (xy 165.1 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a9c7dc9-1203-4944-893e-8acd3a86a8b5")
+	)
+	(wire
+		(pts
+			(xy 142.24 100.33) (xy 165.1 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bce5a8f-2df9-4357-8a23-05b3aba87e1c")
+	)
+	(wire
+		(pts
+			(xy 142.24 82.55) (xy 165.1 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c73eb68-afd8-44e2-9bb7-5316e4b33475")
+	)
+	(wire
+		(pts
+			(xy 101.6 82.55) (xy 114.3 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85f44d20-c46a-4928-889e-38152311244a")
+	)
+	(wire
+		(pts
+			(xy 142.24 92.71) (xy 165.1 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ed11d0c-3c70-48e9-9e42-5d4bc4565b57")
+	)
+	(wire
+		(pts
+			(xy 142.24 85.09) (xy 165.1 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99ed8063-0e8b-4270-a919-2fdcf917def3")
+	)
+	(wire
+		(pts
+			(xy 142.24 97.79) (xy 165.1 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3322f49-a65b-4fa5-96d4-1e0931b0429f")
+	)
+	(wire
+		(pts
+			(xy 101.6 92.71) (xy 114.3 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a964dfee-c551-48a3-9bba-274085719e73")
+	)
+	(wire
+		(pts
+			(xy 142.24 90.17) (xy 165.1 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b201ee61-c4cd-4fe7-b890-3b8029fe258f")
+	)
+	(wire
+		(pts
+			(xy 142.24 105.41) (xy 165.1 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3dbe6bb-be2d-4726-b720-4ad9d1191cb5")
+	)
+	(wire
+		(pts
+			(xy 142.24 110.49) (xy 165.1 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b50a62b1-3a05-40a8-8d13-ea05612b63ed")
+	)
+	(wire
+		(pts
+			(xy 101.6 85.09) (xy 114.3 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0f684b1-fefb-4049-b91f-2ff2f56f1bb2")
+	)
+	(sheet
+		(at 165.1 76.2)
+		(size 38.608 43.942)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5a8a6173-9ed9-40ba-9327-5543efb4e273")
+		(property "Sheetname" "peripherals"
+			(at 165.1 75.4884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "peripherals.kicad_sch"
+			(at 165.1 120.7266 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ST7567_DC" input
+			(at 165.1 92.71 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "92509950-c0dc-4cbd-8e3a-74305dfb7ff5")
+		)
+		(pin "ST7567_SCL" input
+			(at 165.1 90.17 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "4ed32b16-3b98-4307-8735-06bb560582fb")
+		)
+		(pin "ST7567_SDA" input
+			(at 165.1 87.63 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "57e0df99-d811-43bc-bff0-1c70079cc181")
+		)
+		(pin "ST7567_RST" input
+			(at 165.1 85.09 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "06e7b8c6-6c5e-45e4-ab66-5e3fdc4686e6")
+		)
+		(pin "ST7567_BLK" input
+			(at 165.1 82.55 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "dc682577-5850-4ff8-a024-eaeb1dd8fe58")
+		)
+		(pin "SW18010P_CHECK" output
+			(at 165.1 102.87 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "d0cdb720-0ee3-4e86-990d-c91c31c4da2b")
+		)
+		(pin "RX8900CE_INT" output
+			(at 165.1 105.41 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "91c20270-534f-4c54-a128-a5187bddd577")
+		)
+		(pin "SDA" bidirectional
+			(at 165.1 97.79 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "aa37f045-a97d-458e-9d8a-3d3f8a0e721a")
+		)
+		(pin "SCL" input
+			(at 165.1 100.33 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "096835e9-cb63-4309-9fb3-f30e5ae50baf")
+		)
+		(pin "DVI" input
+			(at 165.1 110.49 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "072a93be-3125-4113-82f9-878a29b5d303")
+		)
+		(pin "BUZZER" input
+			(at 165.1 107.95 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "650e0ede-ab00-45c2-80ba-ce592289d384")
+		)
+		(pin "ST7567_CS" input
+			(at 165.1 95.25 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "39f99ce5-d127-4281-9e9a-2bdc80adb7c6")
+		)
+		(instances
+			(project "PerpetualClock"
+				(path "/a7780dfa-db6b-4ae9-ae2e-39993c135403"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 53.594 75.946)
+		(size 48.006 44.577)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c89642bb-f9e8-4a60-a0bf-239935888b91")
+		(property "Sheetname" "Power"
+			(at 53.594 75.2344 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 53.594 121.1076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VBAT_CHECK_SW" input
+			(at 101.6 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "34f3eacd-78fc-4a7d-a550-5c61449c4d3e")
+		)
+		(pin "VBAT_ADC" output
+			(at 101.6 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "90460afc-da6c-4af4-a0d1-3744446ce934")
+		)
+		(pin "VBAT_OK" output
+			(at 101.6 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "27fd5f74-951c-4f4e-8138-69ba6c7933b7")
+		)
+		(pin "USB_P" bidirectional
+			(at 101.6 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "86b2db23-fd67-4ea6-aea9-f64358e11a0e")
+		)
+		(pin "USB_N" bidirectional
+			(at 101.6 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "06b3f14a-e5d3-4419-9fd9-d9554f5d7480")
+		)
+		(instances
+			(project "PerpetualClock"
+				(path "/a7780dfa-db6b-4ae9-ae2e-39993c135403"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 114.3 76.2)
+		(size 27.94 43.942)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d31d882d-d203-4a1e-be00-3a29a6694b95")
+		(property "Sheetname" "MCU"
+			(at 114.3 75.4884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 114.3 120.7266 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ST7567_RST" output
+			(at 142.24 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f04ea4e2-4782-401f-8cfb-84e1e5b66229")
+		)
+		(pin "ST7567_SDA" output
+			(at 142.24 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "039f8187-cf6a-4fc6-8ad6-a9cc90ed3043")
+		)
+		(pin "ST7567_SCL" output
+			(at 142.24 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "98b97812-6c42-479c-96a9-b5bb71d1cbaa")
+		)
+		(pin "ST7567_BLK" output
+			(at 142.24 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "d498b435-5444-4858-b9de-80c22b169ab4")
+		)
+		(pin "ST7567_DC" output
+			(at 142.24 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "daa5c6ff-b2f1-4619-8303-490222fa2ea0")
+		)
+		(pin "SDA" bidirectional
+			(at 142.24 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7331c654-3693-4881-9048-7f29c50887d5")
+		)
+		(pin "SCL" output
+			(at 142.24 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1629779b-c105-4b19-8d8e-00e0e958ab1e")
+		)
+		(pin "BUZZER" output
+			(at 142.24 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "904ee43d-ba5d-424f-bb6e-51d1494453a3")
+		)
+		(pin "SW18010P_CHECK" input
+			(at 142.24 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "79069319-36e1-42f7-9d9f-24391f510921")
+		)
+		(pin "RX8900CE_INT" input
+			(at 142.24 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a239c398-796c-4ebd-ada9-cd4094322f15")
+		)
+		(pin "DVI" output
+			(at 142.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "87361f97-6fd6-4406-a6e8-8e540d3f9bd0")
+		)
+		(pin "ST7567_CS" output
+			(at 142.24 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "789e7b4c-5b79-4e3f-b86f-d70103888ab7")
+		)
+		(pin "USB_N" bidirectional
+			(at 114.3 82.55 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "51d964f8-6bff-41a6-84bb-0fb603c99b1f")
+		)
+		(pin "VBAT_CHECK_SW" output
+			(at 114.3 87.63 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "978568dd-cf26-432a-a2a5-66c33ec103ba")
+		)
+		(pin "USB_P" bidirectional
+			(at 114.3 85.09 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "434bafc4-9966-47e6-9932-33e41e675201")
+		)
+		(pin "VBAT_OK" input
+			(at 114.3 90.17 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f29fb6d5-f7f5-4280-851c-2ff8662e09b0")
+		)
+		(pin "VBAT_ADC" input
+			(at 114.3 92.71 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "87ac49ce-8a95-4fd5-9a3c-78323850a646")
+		)
+		(instances
+			(project "PerpetualClock"
+				(path "/a7780dfa-db6b-4ae9-ae2e-39993c135403"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
