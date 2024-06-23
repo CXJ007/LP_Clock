@@ -23,7 +23,40 @@
 #ifndef RX8900_CFG_H
 #define RX8900_CFG_H
 
-#include "Std_Types.h"
+#include "RX8900_Types.h"
 
+#define RX8900_DEBUG                  (STD_ON)
+
+
+#if (RX8900_DEBUG == STD_ON)
+
+#define RX8900_REG_OFFSET              (16U)
+#define RX8900_DEBUG_UPDATA_CMD        (0x0U)
+#define RX8900_DEBUG_WRITE_CMD         (0x1U)
+#define RX8900_DEBUG_NONE_CMD          (0xFU)
+
+typedef struct 
+{
+  RX8900SecRegType            SecReg;
+  RX8900MinRegType            MinReg;
+  RX8900HourRegType           HourReg;
+  RX8900WeekRegType           WeekReg;
+  RX8900DayRegType            DayReg;
+  RX8900MonthRegType          MonthReg;
+  RX8900YearRegType           YearReg;
+  RX8900RamRegType            RamReg;
+  RX8900MinAlarmRegType       MinAlarmReg;
+  RX8900HourAlarmRegType      HourAlarmReg;
+  RX8900WeekDayAlarmRegType   WeekDayAlarmReg;
+  RX8900TimeCount0RegType     TimeCount0Reg;
+  RX8900TimeCount1RegType     TimeCount1Reg;
+  RX8900ExtRegType            ExtReg;
+  RX8900FlagRegType           FlagReg;
+  RX8900ControlRegType        ControlReg;
+  RX8900TEMPRegType           TempReg;
+  RX8900BackupRegType         BackupReg;
+}RX8900AllRegType;
+
+#endif
 
 #endif

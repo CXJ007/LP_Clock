@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
-            <RunUserProg2>1</RunUserProg2>
+            <RunUserProg2>0</RunUserProg2>
             <UserProg1Name>.\..\keil5_disp_size_bar.exe</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>1</UserProg1Dos16Mode>
@@ -10170,6 +10170,11 @@
               <FileName>RX8900_Cfg.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\App\BSP\RX8900\RX8900_Cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>RX8900_Types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\RX8900\RX8900_Types.h</FilePath>
             </File>
           </Files>
         </Group>

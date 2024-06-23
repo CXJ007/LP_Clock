@@ -1,6 +1,6 @@
 software/rx8900_callout.o: ..\App\BSP\RX8900\RX8900_Callout.c \
   ..\App\BSP\RX8900\RX8900_Cbk.h ..\App\BSP\RX8900\RX8900_Cfg.h \
-  ..\App\Std_Types.h ..\Core\Inc\main.h \
+  ..\App\BSP\RX8900\RX8900_Types.h ..\App\Std_Types.h ..\Core\Inc\main.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h \
   ..\Core\Inc\stm32l4xx_hal_conf.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h \

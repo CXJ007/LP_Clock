@@ -30,8 +30,6 @@
 #define RX8900_WRITE_CMD                                  (0x0U)
 #define RX8900_READ_CMD                                   (0x1U)
 
-#define RX8900_CONTROL_REG             (0x0FU)
-
 
 #define RX8900_READ_REGISTER(Register, pData, Len)        RX8900_IIC_Transmit               \
                                                           (                                 \
@@ -55,5 +53,11 @@
 
 
 extern Std_ReturnType RX8900_Init(void);
+
+#if (RX8900_DEBUG == STD_ON)
+
+extern void RX8900_Debug(void);
+
+#endif
 
 #endif

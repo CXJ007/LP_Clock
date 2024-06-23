@@ -26,7 +26,7 @@ Std_ReturnType AppMain(void)
 																						TX_NO_TIME_SLICE,              
 																						TX_AUTO_START);
 
-	RetVal = RX8900_Init();
+	//RetVal = RX8900_Init();
 	return RetVal;
 }
 
@@ -37,8 +37,9 @@ static void AppTaskStart(ULONG thread_input)
 	
 
 	while (1)
-	{  
-		tx_thread_sleep(MS_TO_TICKS(10));
+	{ 
+		RX8900_Debug(); 
+		tx_thread_sleep(MS_TO_TICKS(100));
 	}
 }
 
