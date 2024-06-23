@@ -32,6 +32,9 @@ software/appmain.o: ..\App\AppMain.c ..\App\AppMain.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h \
+  ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h \
+  ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h \
-  ..\App\Std_Types.h
+  ..\App\Std_Types.h ..\App\BSP\RX8900\RX8900.h \
+  ..\App\BSP\RX8900\RX8900_Cbk.h ..\App\BSP\RX8900\RX8900_Cfg.h

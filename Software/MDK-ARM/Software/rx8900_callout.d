@@ -1,5 +1,6 @@
-software/stm32l4xx_hal_dma.o: \
-  ..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_dma.c \
+software/rx8900_callout.o: ..\App\BSP\RX8900\RX8900_Callout.c \
+  ..\App\BSP\RX8900\RX8900_Cbk.h ..\App\BSP\RX8900\RX8900_Cfg.h \
+  ..\App\Std_Types.h ..\Core\Inc\main.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h \
   ..\Core\Inc\stm32l4xx_hal_conf.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h \
@@ -29,4 +30,5 @@ software/stm32l4xx_hal_dma.o: \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h \
-  ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h
+  ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h \
+  ..\Core\Inc\i2c.h

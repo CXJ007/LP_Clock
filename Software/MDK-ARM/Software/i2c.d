@@ -1,5 +1,4 @@
-software/stm32l4xx_hal_dma.o: \
-  ..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_dma.c \
+software/i2c.o: ..\Core\Src\i2c.c ..\Core\Inc\i2c.h ..\Core\Inc\main.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h \
   ..\Core\Inc\stm32l4xx_hal_conf.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h \

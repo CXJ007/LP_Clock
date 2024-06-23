@@ -1,5 +1,5 @@
 #include "AppMain.h"
-
+#include "RX8900.h"
 
 
 
@@ -26,7 +26,7 @@ Std_ReturnType AppMain(void)
 																						TX_NO_TIME_SLICE,              
 																						TX_AUTO_START);
 
-	
+	RetVal = RX8900_Init();
 	return RetVal;
 }
 
