@@ -280,4 +280,17 @@ typedef union
   }B;
 }RX8900BackupRegType;
 
+
+typedef struct
+{
+  uint8 sec;
+  uint8 min; 
+  uint8 hour; 
+  uint8 week;
+  uint8 day; 
+  uint8 mon;
+  uint8 year;
+}RX8900TimeType;
+
+
 #endif

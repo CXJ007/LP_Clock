@@ -30,8 +30,25 @@
 #define RX8900_WRITE_CMD                                  (0x0U)
 #define RX8900_READ_CMD                                   (0x1U)
 
+#define RX8900_WEEK_SUN                                   (0x00U)
+#define RX8900_WEEK_MON                                   (0x01U)
+#define RX8900_WEEK_TUE                                   (0x02U)
+#define RX8900_WEEK_WED                                   (0x04U)
+#define RX8900_WEEK_THU                                   (0x08U)
+#define RX8900_WEEK_FRI                                   (0x10U)
+#define RX8900_WEEK_SAT                                   (0x20U)
 
-#define RX8900_READ_REGISTER(Register, pData, Len)        RX8900_IIC_Transmit               \
+#define RX8900_SEC_MAX                                    (59U)
+#define RX8900_MIN_MAX                                    (59U)
+#define RX8900_HOUR_MAX                                   (23U)
+#define RX8900_WEEK_MAX                                   (RX8900_WEEK_SAT)
+#define RX8900_DAY_MAX                                    (31U)
+#define RX8900_MON_MAX                                    (12U)
+#define RX8900_YEAR_MAX                                   (99U)
+
+
+
+#define RX8900_READ_REGISTER_LIST(Register, pData, Len)   RX8900_IIC_Transmit               \
                                                           (                                 \
                                                             RX8900_ADDRESS,                 \
                                                             (Register),                     \
@@ -39,25 +56,38 @@
                                                             (pData),                        \
                                                             (Len),                          \
                                                             RX8900_READ_CMD                 \
-                                                          );     
+                                                          ); 
 
-#define RX8900_WRITE_REGISTER(Register, Data, Len)        RX8900_IIC_Transmit               \
+#define RX8900_READ_REGISTER(Register, pData)             RX8900_IIC_Transmit               \
+                                                          (                                 \
+                                                            RX8900_ADDRESS,                 \
+                                                            (Register),                     \
+                                                            0U,                             \
+                                                            (pData),                        \
+                                                            1U,                             \
+                                                            RX8900_READ_CMD                 \
+                                                          );       
+
+#define RX8900_WRITE_REGISTER(Register, Data)             RX8900_IIC_Transmit               \
                                                           (                                 \
                                                             RX8900_ADDRESS,                 \
                                                             (Register),                     \
                                                             (Data),                         \
                                                             NULL_PTR,                       \
-                                                            (Len),                          \
+                                                            1U,                             \
                                                             RX8900_WRITE_CMD                \
                                                           );     
 
+#define RX8900_BCD_TO_DEC(bcd) (((bcd) & 0xFU) + (((bcd) >> 4U) & 0xFU) * 10U)
+#define RX8900_DEC_TO_BCD(dec) ((((dec) / 10U) << 4U) + ((dec) % 10U))
 
-extern Std_ReturnType RX8900_Init(void);
+
 
 #if (RX8900_DEBUG == STD_ON)
-
 extern void RX8900_Debug(void);
-
 #endif
+extern Std_ReturnType RX8900_Init(void);
+extern Std_ReturnType RX8900_Set_Time(RX8900TimeType Time);
+extern Std_ReturnType RX8900_Updata_Time(RX8900TimeType *pTime);
 
 #endif

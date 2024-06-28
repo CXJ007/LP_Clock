@@ -153,22 +153,32 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>gRX8900AllReg</ItemText>
+          <ItemText>gRX8900DebugCtrCmd</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>gRX8900DebugCtrCmd</ItemText>
+          <ItemText>gRX8900DebugRegAddr</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>gRX8900DebugRegAddr</ItemText>
+          <ItemText>gRX8900DebugData,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>gRX8900DebugData</ItemText>
+          <ItemText>gRX8900AllReg,0x10</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Time,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>TimeData,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

@@ -29,16 +29,26 @@ Std_ReturnType AppMain(void)
 	//RetVal = RX8900_Init();
 	return RetVal;
 }
-
+RX8900TimeType Time;
 static void AppTaskStart(ULONG thread_input)
 {
 	(void)thread_input;
 	Std_ReturnType RetVal;
 	
+	Time.sec = 0;
+	Time.min = 21;
+	Time.hour = 22;
+	Time.week = RX8900_WEEK_WED;
+	Time.day = 25;
+	Time.mon = 6;
+	Time.year = 24;
+
+	RX8900_Set_Time(Time);
 
 	while (1)
 	{ 
-		RX8900_Debug(); 
+		RX8900_Debug();
+		RX8900_Updata_Time(&Time); 
 		tx_thread_sleep(MS_TO_TICKS(100));
 	}
 }
