@@ -25,6 +25,27 @@
 
 #include "Std_Types.h"
 
+/* Temperature compensation selection */
+#define RX8900_CSEL_0X5S            (0x0U)
+#define RX8900_CSEL_2S              (0x1U)
+#define RX8900_CSEL_10S             (0x2U)
+#define RX8900_CSEL_30S             (0x3U)
+/* Timer source clock selection */
+#define RX8900_TSEL_4096HZ          (0x0U)
+#define RX8900_TSEL_64HZ            (0x1U)
+#define RX8900_TSEL_SEC             (0x2U)
+#define RX8900_TSEL_MIN             (0x3U)
+/* Output Frequency selection */
+#define RX8900_FSEL_32768HZ         (0x0U)
+#define RX8900_FSEL_1024HZ          (0x1U)
+#define RX8900_FSEL_1HZ             (0x2U)
+/* Update Interrupt Select */
+#define RX8900_USEL_SEC             (0x0U)
+#define RX8900_USEL_MIN             (0x1U)
+/* Week Alarm/Day Alarm */
+#define RX8900_WADA_WEEK            (0x0U)
+#define RX8900_WADA_DAY             (0x1U)
+
 typedef enum
 {
   RX8900_SEC_REG                   = 0x0U,
@@ -217,10 +238,8 @@ typedef union
   uint8 U;
   struct 
   {
-    uint8 TSEL0:1;
-    uint8 TSEL1:1;
-    uint8 FSEL0:1;
-    uint8 FSEL1:1;
+    uint8 TSEL:2;
+    uint8 FSEL:2;
     uint8 TE:1;
     uint8 USEL:1;
     uint8 WADA:1;
@@ -253,8 +272,7 @@ typedef union
 		uint8 AIE:1;
 		uint8 TIE:1;
 		uint8 UIE:1;
-		uint8 CSEL0:1;
-		uint8 CSEL1:1; 
+		uint8 CSEL:2; 
   }B;
 }RX8900ControlRegType;
 
@@ -291,6 +309,14 @@ typedef struct
   uint8 mon;
   uint8 year;
 }RX8900TimeType;
+
+typedef struct 
+{
+  RX8900ControlRegType ControlRegCfg;
+  RX8900ExtRegType ExtRegCfg;
+  RX8900TimeCount0RegType TimeCount0RegCfg;
+  RX8900TimeCount1RegType TimeCount1RegCfg;
+}RX8900CfgType;
 
 
 #endif

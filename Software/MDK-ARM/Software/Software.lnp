@@ -27,6 +27,10 @@
 "software\system_stm32l4xx.o"
 "software\app_azure_rtos.o"
 "software\appmain.o"
+"software\appirqcallout.o"
+"software\rx8900.o"
+"software\rx8900_callout.o"
+"software\rx8900_lcfg.o"
 "software\tx_thread_context_restore.o"
 "software\tx_thread_context_save.o"
 "software\tx_thread_interrupt_control.o"
@@ -193,8 +197,6 @@
 "software\txe_timer_delete.o"
 "software\txe_timer_info_get.o"
 "software\tx_low_power.o"
-"software\rx8900.o"
-"software\rx8900_callout.o"
 --strict --scatter "Software\Software.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

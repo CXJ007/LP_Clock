@@ -33,7 +33,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:STM32L432KCUx$CMSIS\SVD\STM32L4x2.svd</SFDFile>
+          <SFDFile>D:\app\keil\pack\Keil\STM32L4xx_DFP\2.7.0_2\CMSIS\SVD\STM32L4x2.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
-            <RunUserProg2>0</RunUserProg2>
+            <RunUserProg2>1</RunUserProg2>
             <UserProg1Name>.\..\keil5_disp_size_bar.exe</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>1</UserProg1Dos16Mode>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L432xx,TX_INCLUDE_USER_DEFINE_FILE,TX_LOW_POWER</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../AZURE_RTOS/App;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/;../Middlewares/ST/threadx/utility/low_power/;../App;..\App\BSP\RX8900</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../AZURE_RTOS/App;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/;../Middlewares/ST/threadx/utility/low_power/;../App;../App/BSP/RX8900</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -813,6 +813,51 @@
               <FileName>AppMain.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\App\AppMain.h</FilePath>
+            </File>
+            <File>
+              <FileName>AppIRQCallout.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\AppIRQCallout.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>RX8900.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\RX8900\RX8900.c</FilePath>
+            </File>
+            <File>
+              <FileName>RX8900.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\RX8900\RX8900.h</FilePath>
+            </File>
+            <File>
+              <FileName>RX8900_Callout.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\RX8900\RX8900_Callout.c</FilePath>
+            </File>
+            <File>
+              <FileName>RX8900_Cbk.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\RX8900\RX8900_Cbk.h</FilePath>
+            </File>
+            <File>
+              <FileName>RX8900_Cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\RX8900\RX8900_Cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>RX8900_Types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\RX8900\RX8900_Types.h</FilePath>
+            </File>
+            <File>
+              <FileName>RX8900_Lcfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\RX8900\RX8900_Lcfg.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -10140,41 +10185,6 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>BSP</GroupName>
-          <Files>
-            <File>
-              <FileName>RX8900.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\App\BSP\RX8900\RX8900.c</FilePath>
-            </File>
-            <File>
-              <FileName>RX8900.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\App\BSP\RX8900\RX8900.h</FilePath>
-            </File>
-            <File>
-              <FileName>RX8900_Callout.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\App\BSP\RX8900\RX8900_Callout.c</FilePath>
-            </File>
-            <File>
-              <FileName>RX8900_Cbk.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\App\BSP\RX8900\RX8900_Cbk.h</FilePath>
-            </File>
-            <File>
-              <FileName>RX8900_Cfg.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\App\BSP\RX8900\RX8900_Cfg.h</FilePath>
-            </File>
-            <File>
-              <FileName>RX8900_Types.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\App\BSP\RX8900\RX8900_Types.h</FilePath>
             </File>
           </Files>
         </Group>

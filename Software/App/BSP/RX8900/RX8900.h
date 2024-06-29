@@ -45,8 +45,13 @@
 #define RX8900_DAY_MAX                                    (31U)
 #define RX8900_MON_MAX                                    (12U)
 #define RX8900_YEAR_MAX                                   (99U)
-
-
+/* Run_time error flag */
+#define RX8900_VDET_ERR                                   (0x01U)
+#define RX8900_VLF_ERR                                    (0x02U)
+/* Run_time Event flag */
+#define RX8900_WAKEUP_EVENT                               (0x04U)
+#define RX8900_UPTATA_EVENT                               (0x08U)
+#define RX8900_ALARM_EVENT                                (0x10U)
 
 #define RX8900_READ_REGISTER_LIST(Register, pData, Len)   RX8900_IIC_Transmit               \
                                                           (                                 \
@@ -82,12 +87,13 @@
 #define RX8900_DEC_TO_BCD(dec) ((((dec) / 10U) << 4U) + ((dec) % 10U))
 
 
+extern uint8 gRX8900RuntimeNotify;
+extern RX8900TimeType gRX8900TimeInfo;
 
-#if (RX8900_DEBUG == STD_ON)
-extern void RX8900_Debug(void);
-#endif
 extern Std_ReturnType RX8900_Init(void);
+extern Std_ReturnType RX8900_Main_Fun(void);
 extern Std_ReturnType RX8900_Set_Time(RX8900TimeType Time);
 extern Std_ReturnType RX8900_Updata_Time(RX8900TimeType *pTime);
+extern void RX8900_Process_ISR(void);
 
 #endif

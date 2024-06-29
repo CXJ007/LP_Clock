@@ -22,17 +22,23 @@
  */
 #include "RX8900.h"
 
-
+uint8 gRX8900RuntimeNotify = 0U;
+RX8900TimeType gRX8900TimeInfo = {0U};
 #if (RX8900_DEBUG == STD_ON)
-RX8900AllRegType gRX8900AllReg = { 0U };
+RX8900AllRegType gRX8900AllReg = {0U};
 uint8 gRX8900DebugCtrCmd = RX8900_DEBUG_UPDATA_CMD;
 RX8900_RegisterType gRX8900DebugRegAddr = RX8900_RAM_REG;
 uint8 gRX8900DebugData = 0U;
 #endif
 
-#if (RX8900_DEBUG == STD_ON)
+#if(RX8900_DEBUG == STD_ON)
+static void RX8900_Debug(void);
+#endif
+static Std_ReturnType RX8900_UpErrFlag_Polling(void);
 
-void RX8900_Debug(void)
+#if(RX8900_DEBUG == STD_ON)
+
+static void RX8900_Debug(void)
 {
   if(RX8900_DEBUG_UPDATA_CMD == gRX8900DebugCtrCmd)
   {
@@ -55,8 +61,45 @@ void RX8900_Debug(void)
 		/* nothing */
 	}
 }
-
 #endif
+
+static Std_ReturnType RX8900_UpErrFlag_Polling(void)
+{
+	Std_ReturnType RetVal;
+	RX8900FlagRegType FlagReg;
+
+	RetVal = RX8900_READ_REGISTER((uint8)RX8900_FLAG_REG, &FlagReg.U);
+	if((E_OK == RetVal) && (FlagReg.U != 0x0U))
+	{
+		/* Voltage Detection Flag */
+		if(FlagReg.B.VDET == 0x1U)
+		{
+			gRX8900RuntimeNotify |= RX8900_VDET_ERR;
+			FlagReg.B.VDET = 0x0U;
+		}
+		else
+		{
+			/* nothing */
+		}
+		/* Voltage Low Flag */
+		if(FlagReg.B.VLF == 0x1U)
+		{
+			gRX8900RuntimeNotify |= RX8900_VLF_ERR;
+			FlagReg.B.VLF = 0x0U;
+		}
+		else
+		{
+			/* nothing */
+		}
+		RetVal = RX8900_WRITE_REGISTER((uint8)RX8900_FLAG_REG, FlagReg.U);
+	}
+	else
+	{
+		/* nothing */
+	}
+
+	return RetVal;
+}
 
 Std_ReturnType RX8900_Set_Time(RX8900TimeType Time)
 {
@@ -136,43 +179,107 @@ Std_ReturnType RX8900_Updata_Time(RX8900TimeType *pTime)
 	return RetVal;
 }
 
-
-
-
-
-
-
-
-
-RX8900ControlRegType ControlReg0;
-RX8900ControlRegType ControlReg1;
-
 Std_ReturnType RX8900_Init(void)
 {
-  Std_ReturnType RetVal;
+  Std_ReturnType RetVal = E_OK;
 
-
-
-
-
-  uint8 data = 0xff;
-	uint8 data1 = 0xFF;
-	
-	ControlReg0.U = 0x0;
-	ControlReg1.U = 0;
-	
-	ControlReg0.B.CSEL1 = 1;
-	ControlReg0.B.CSEL0 = 1;
-
-//  
-
-//	RetVal = RX8900_READ_REGISTER(0x0D, &data, 1);
-  RX8900_WRITE_REGISTER(RX8900_CONTROL_REG, ControlReg0.U);
-//	ControlReg1.U = 0;
-	RetVal = RX8900_READ_REGISTER(0x0F, (uint8*)&ControlReg1.U);
-  RetVal = RX8900_READ_REGISTER(0x0F, &data);
-
-	
-
+	/* Clear all flag */
+	RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_FLAG_REG, 0U);
+	RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_CONTROL_REG,                  \
+																				gRX8900Cfg.ControlRegCfg.U);
+	RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_EXTENSION_REG,                \
+																				gRX8900Cfg.ExtRegCfg.U);
+	RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_TIMER_COUNTER0_REG,           \
+																				gRX8900Cfg.TimeCount0RegCfg.U);	
+	RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_TIMER_COUNTER1_REG,           \
+																				gRX8900Cfg.TimeCount1RegCfg.U);	
   return RetVal;
+}
+
+Std_ReturnType RX8900_Main_Fun(void)
+{
+	Std_ReturnType RetVal = E_OK;
+
+	RetVal |= RX8900_UpErrFlag_Polling();
+	if(RX8900_UPTATA_EVENT == (gRX8900RuntimeNotify & RX8900_UPTATA_EVENT))
+	{
+		RetVal |= RX8900_Updata_Time(&gRX8900TimeInfo);
+		/* Clear Updata time event*/
+		gRX8900RuntimeNotify &= (~RX8900_UPTATA_EVENT);
+	}
+	else
+	{
+		/* nothing */
+	}
+	
+#if(RX8900_DEBUG == STD_ON)
+	RX8900_Debug();
+#endif
+
+	return RetVal;
+}
+
+void RX8900_Process_ISR(void)
+{
+	uint8 index;
+	Std_ReturnType RetVal;
+	RX8900FlagRegType FlagReg;
+
+	RetVal = RX8900_READ_REGISTER((uint8)RX8900_FLAG_REG, &FlagReg.U);
+	if((E_OK == RetVal) && (FlagReg.U != 0U))
+	{
+		/* Voltage Detection Flag */
+		/* Not an interrupt source */
+		if(FlagReg.B.VDET == 0x1U)
+		{
+			gRX8900RuntimeNotify |= RX8900_VDET_ERR;
+		}
+		else
+		{
+			/* nothing */
+		}
+		/* Voltage Low Flag */
+		/* Not an interrupt source */
+		if(FlagReg.B.VLF == 0x1U)
+		{
+			gRX8900RuntimeNotify |= RX8900_VLF_ERR;
+		}
+		else
+		{
+			/* nothing */
+		}
+		/* Alarm Flag */
+		if(FlagReg.B.AF == 0x1U)
+		{
+			gRX8900RuntimeNotify |= RX8900_ALARM_EVENT;
+		}
+		else
+		{
+			/* nothing */
+		}
+		/* Wakeup Timer Flag */
+		if(FlagReg.B.TF == 0x1U)
+		{
+			gRX8900RuntimeNotify |= RX8900_WAKEUP_EVENT;
+		}
+		else
+		{
+			/* nothing */
+		}
+		/* Timer Updata Flag */
+		if(FlagReg.B.UF == 0x1U)
+		{
+			gRX8900RuntimeNotify |= RX8900_UPTATA_EVENT;
+		}
+		else
+		{
+			/* nothing */
+		}
+		/* clear interrupt flag */
+		(void)RX8900_WRITE_REGISTER((uint8)RX8900_FLAG_REG, 0U);
+	}
+	else
+	{
+		/* nothing */
+	}
 }

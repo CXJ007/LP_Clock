@@ -20,37 +20,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#include "RX8900_Cbk.h"
-#include "main.h"
-#include "i2c.h" 
+#include "gpio.h"
+#include "RX8900.h"
 
-Std_ReturnType RX8900_IIC_Transmit
-(
-  const uint8 Address, 
-  const uint8 Register, 
-  const uint8 WriteData, 
-  uint8 * const pReadData, 
-  const uint8 Len, 
-  const uint8 Cmd
-)
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-  Std_ReturnType RetVal;
-
-  if(Cmd == 0U)
+  if(GPIO_PIN_1 == GPIO_Pin)
   {
-    RetVal = (Std_ReturnType)HAL_I2C_Mem_Write(&hi2c1, (uint16_t)Address, (uint16_t)Register,           \
-                                                                  1U, (uint8_t*)&WriteData, Len, 0XFFU);
+    RX8900_Process_ISR();
   }
-  else if(Cmd == 1U)
-  {
-    RetVal = (Std_ReturnType)HAL_I2C_Mem_Read(&hi2c1, (uint16_t)Address, (uint16_t)Register,             \
-                                  1U, (uint8_t*)pReadData, Len, 0XFFU);
-  }
-  else
-  {
-    /* Nothing */
-  }
-
-  return RetVal;
 }
- 

@@ -29,12 +29,12 @@ Std_ReturnType AppMain(void)
 	//RetVal = RX8900_Init();
 	return RetVal;
 }
-RX8900TimeType Time;
+
 static void AppTaskStart(ULONG thread_input)
 {
 	(void)thread_input;
 	Std_ReturnType RetVal;
-	
+	RX8900TimeType Time;
 	Time.sec = 0;
 	Time.min = 21;
 	Time.hour = 22;
@@ -42,14 +42,19 @@ static void AppTaskStart(ULONG thread_input)
 	Time.day = 25;
 	Time.mon = 6;
 	Time.year = 24;
-
+	
+	HAL_DBGMCU_EnableDBGSleepMode();
+	HAL_DBGMCU_EnableDBGStopMode();
+	
+	RX8900_Init();
 	RX8900_Set_Time(Time);
 
 	while (1)
 	{ 
-		RX8900_Debug();
-		RX8900_Updata_Time(&Time); 
-		tx_thread_sleep(MS_TO_TICKS(100));
+		RX8900_Main_Fun();
+		//RX8900_Updata_Time(&Time); 
+		//tx_thread_sleep(MS_TO_TICKS(10));
+		HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI);
 	}
 }
 

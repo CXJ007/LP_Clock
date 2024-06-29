@@ -25,7 +25,7 @@
 
 #include "RX8900_Types.h"
 
-#define RX8900_DEBUG                  (STD_ON)
+#define RX8900_DEBUG                  (STD_OFF)
 
 
 #if (RX8900_DEBUG == STD_ON)
@@ -58,5 +58,8 @@ typedef struct
 }RX8900AllRegType;
 
 #endif
+
+
+extern const RX8900CfgType gRX8900Cfg;
 
 #endif

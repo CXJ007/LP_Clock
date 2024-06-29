@@ -20,37 +20,34 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#include "RX8900_Cbk.h"
-#include "main.h"
-#include "i2c.h" 
+#include "RX8900_Cfg.h"
 
-Std_ReturnType RX8900_IIC_Transmit
-(
-  const uint8 Address, 
-  const uint8 Register, 
-  const uint8 WriteData, 
-  uint8 * const pReadData, 
-  const uint8 Len, 
-  const uint8 Cmd
-)
+const RX8900CfgType gRX8900Cfg =
 {
-  Std_ReturnType RetVal;
-
-  if(Cmd == 0U)
+  /* Control register configer */
   {
-    RetVal = (Std_ReturnType)HAL_I2C_Mem_Write(&hi2c1, (uint16_t)Address, (uint16_t)Register,           \
-                                                                  1U, (uint8_t*)&WriteData, Len, 0XFFU);
-  }
-  else if(Cmd == 1U)
+    .B.RESET = 0x1U,//Software reset
+    .B.RW0_0 = 0x0U,
+    .B.AIE = STD_OFF,
+    .B.TIE = STD_OFF,
+    .B.UIE = STD_ON,
+    .B.CSEL = RX8900_CSEL_0X5S
+  },
+  /* Extension register configer */
   {
-    RetVal = (Std_ReturnType)HAL_I2C_Mem_Read(&hi2c1, (uint16_t)Address, (uint16_t)Register,             \
-                                  1U, (uint8_t*)pReadData, Len, 0XFFU);
-  }
-  else
+    .B.TSEL = RX8900_TSEL_4096HZ,
+    .B.FSEL = RX8900_FSEL_32768HZ,
+    .B.TE = STD_OFF,
+    .B.USEL = RX8900_USEL_SEC,
+    .B.WADA = RX8900_WADA_DAY,
+    .B.TEST = 0x0U
+  },
+  /* Timer Counter 0 */
   {
-    /* Nothing */
+    .U = 0x0U
+  },
+  /* Timer Counter 1 */
+  {
+    .U = 0x0U
   }
-
-  return RetVal;
-}
- 
+};
