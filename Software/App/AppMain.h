@@ -8,9 +8,9 @@
 #include "Std_Types.h"
                 
 
-#define  APP_CFG_TASK_START_PRIO                          (2U)
+#define  APP_CFG_TASK_10MS_PRIO                          (2U)
 
-#define  APP_CFG_TASK_START_STK_SIZE                      (1024U)
+#define  APP_CFG_TASK_10MS_STK_SIZE                      (1024U)
 
 Std_ReturnType AppMain(void);
 

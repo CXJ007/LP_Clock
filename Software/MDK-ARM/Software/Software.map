@@ -619,30 +619,37 @@ Section Cross References
     app_azure_rtos.o(.text.tx_application_define) refers to txe_byte_pool_create.o(.text._txe_byte_pool_create) for _txe_byte_pool_create
     app_azure_rtos.o(.text.tx_application_define) refers to app_threadx.o(.text.App_ThreadX_Init) for App_ThreadX_Init
     app_azure_rtos.o(.ARM.exidx.text.tx_application_define) refers to app_azure_rtos.o(.text.tx_application_define) for [Anonymous Symbol]
-    appmain.o(.text.AppMain) refers to appmain.o(.bss.AppTaskStartStk) for AppTaskStartStk
-    appmain.o(.text.AppMain) refers to appmain.o(.bss.AppTaskStartTCB) for AppTaskStartTCB
-    appmain.o(.text.AppMain) refers to appmain.o(.text.AppTaskStart) for AppTaskStart
+    appmain.o(.text.AppMain) refers to rx8900.o(.text.RX8900_Init) for RX8900_Init
+    appmain.o(.text.AppMain) refers to appmain.o(.bss.AppTask10msStk) for AppTask10msStk
+    appmain.o(.text.AppMain) refers to appmain.o(.bss.AppTask10msTCB) for AppTask10msTCB
+    appmain.o(.text.AppMain) refers to appmain.o(.text.AppTask10ms) for AppTask10ms
     appmain.o(.text.AppMain) refers to txe_thread_create.o(.text._txe_thread_create) for _txe_thread_create
     appmain.o(.ARM.exidx.text.AppMain) refers to appmain.o(.text.AppMain) for [Anonymous Symbol]
-    appmain.o(.text.AppTaskStart) refers to stm32l4xx_hal.o(.text.HAL_DBGMCU_EnableDBGSleepMode) for HAL_DBGMCU_EnableDBGSleepMode
-    appmain.o(.text.AppTaskStart) refers to stm32l4xx_hal.o(.text.HAL_DBGMCU_EnableDBGStopMode) for HAL_DBGMCU_EnableDBGStopMode
-    appmain.o(.text.AppTaskStart) refers to rx8900.o(.text.RX8900_Init) for RX8900_Init
-    appmain.o(.text.AppTaskStart) refers to rx8900.o(.text.RX8900_Set_Time) for RX8900_Set_Time
-    appmain.o(.text.AppTaskStart) refers to rx8900.o(.text.RX8900_Main_Fun) for RX8900_Main_Fun
-    appmain.o(.text.AppTaskStart) refers to stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSTOPMode) for HAL_PWR_EnterSTOPMode
-    appmain.o(.ARM.exidx.text.AppTaskStart) refers to appmain.o(.text.AppTaskStart) for [Anonymous Symbol]
+    appmain.o(.text.AppTask10ms) refers to rx8900.o(.text.RX8900_Set_Time) for RX8900_Set_Time
+    appmain.o(.text.AppTask10ms) refers to rx8900.o(.text.RX8900_Set_Alarm) for RX8900_Set_Alarm
+    appmain.o(.text.AppTask10ms) refers to appmain.o(.bss..L_MergedGlobals) for .L_MergedGlobals
+    appmain.o(.text.AppTask10ms) refers to rx8900.o(.text.RX8900_Get_Alarm) for RX8900_Get_Alarm
+    appmain.o(.text.AppTask10ms) refers to rx8900.o(.text.RX8900_Main_Fun) for RX8900_Main_Fun
+    appmain.o(.text.AppTask10ms) refers to tx_thread_sleep.o(.text._tx_thread_sleep) for _tx_thread_sleep
+    appmain.o(.ARM.exidx.text.AppTask10ms) refers to appmain.o(.text.AppTask10ms) for [Anonymous Symbol]
     appirqcallout.o(.text.HAL_GPIO_EXTI_Callback) refers to rx8900.o(.text.RX8900_Process_ISR) for RX8900_Process_ISR
     appirqcallout.o(.ARM.exidx.text.HAL_GPIO_EXTI_Callback) refers to appirqcallout.o(.text.HAL_GPIO_EXTI_Callback) for [Anonymous Symbol]
     rx8900.o(.text.RX8900_Set_Time) refers to rx8900_callout.o(.text.RX8900_IIC_Transmit) for RX8900_IIC_Transmit
     rx8900.o(.ARM.exidx.text.RX8900_Set_Time) refers to rx8900.o(.text.RX8900_Set_Time) for [Anonymous Symbol]
     rx8900.o(.text.RX8900_Updata_Time) refers to rx8900_callout.o(.text.RX8900_IIC_Transmit) for RX8900_IIC_Transmit
     rx8900.o(.ARM.exidx.text.RX8900_Updata_Time) refers to rx8900.o(.text.RX8900_Updata_Time) for [Anonymous Symbol]
+    rx8900.o(.text.RX8900_Set_Alarm) refers to rx8900_callout.o(.text.RX8900_IIC_Transmit) for RX8900_IIC_Transmit
+    rx8900.o(.text.RX8900_Set_Alarm) refers to rx8900_lcfg.o(.rodata.gRX8900Cfg) for gRX8900Cfg
+    rx8900.o(.ARM.exidx.text.RX8900_Set_Alarm) refers to rx8900.o(.text.RX8900_Set_Alarm) for [Anonymous Symbol]
+    rx8900.o(.text.RX8900_Get_Alarm) refers to rx8900_callout.o(.text.RX8900_IIC_Transmit) for RX8900_IIC_Transmit
+    rx8900.o(.ARM.exidx.text.RX8900_Get_Alarm) refers to rx8900.o(.text.RX8900_Get_Alarm) for [Anonymous Symbol]
     rx8900.o(.text.RX8900_Init) refers to rx8900_callout.o(.text.RX8900_IIC_Transmit) for RX8900_IIC_Transmit
     rx8900.o(.text.RX8900_Init) refers to rx8900_lcfg.o(.rodata.gRX8900Cfg) for gRX8900Cfg
     rx8900.o(.ARM.exidx.text.RX8900_Init) refers to rx8900.o(.text.RX8900_Init) for [Anonymous Symbol]
     rx8900.o(.text.RX8900_Main_Fun) refers to rx8900_callout.o(.text.RX8900_IIC_Transmit) for RX8900_IIC_Transmit
     rx8900.o(.text.RX8900_Main_Fun) refers to rx8900.o(.bss..L_MergedGlobals) for .L_MergedGlobals
     rx8900.o(.text.RX8900_Main_Fun) refers to rx8900.o(.text.RX8900_Updata_Time) for RX8900_Updata_Time
+    rx8900.o(.text.RX8900_Main_Fun) refers to rx8900.o(.data.gRX8900DebugRegAddr) for gRX8900DebugRegAddr
     rx8900.o(.ARM.exidx.text.RX8900_Main_Fun) refers to rx8900.o(.text.RX8900_Main_Fun) for [Anonymous Symbol]
     rx8900.o(.text.RX8900_Process_ISR) refers to rx8900_callout.o(.text.RX8900_IIC_Transmit) for RX8900_IIC_Transmit
     rx8900.o(.text.RX8900_Process_ISR) refers to rx8900.o(.bss..L_MergedGlobals) for .L_MergedGlobals
@@ -1532,9 +1539,11 @@ Removing Unused input sections from the image.
     Removing stm32l4xx_hal.o(.ARM.exidx.text.HAL_GetUIDw1), (8 bytes).
     Removing stm32l4xx_hal.o(.text.HAL_GetUIDw2), (12 bytes).
     Removing stm32l4xx_hal.o(.ARM.exidx.text.HAL_GetUIDw2), (8 bytes).
+    Removing stm32l4xx_hal.o(.text.HAL_DBGMCU_EnableDBGSleepMode), (18 bytes).
     Removing stm32l4xx_hal.o(.ARM.exidx.text.HAL_DBGMCU_EnableDBGSleepMode), (8 bytes).
     Removing stm32l4xx_hal.o(.text.HAL_DBGMCU_DisableDBGSleepMode), (18 bytes).
     Removing stm32l4xx_hal.o(.ARM.exidx.text.HAL_DBGMCU_DisableDBGSleepMode), (8 bytes).
+    Removing stm32l4xx_hal.o(.text.HAL_DBGMCU_EnableDBGStopMode), (18 bytes).
     Removing stm32l4xx_hal.o(.ARM.exidx.text.HAL_DBGMCU_EnableDBGStopMode), (8 bytes).
     Removing stm32l4xx_hal.o(.text.HAL_DBGMCU_DisableDBGStopMode), (18 bytes).
     Removing stm32l4xx_hal.o(.ARM.exidx.text.HAL_DBGMCU_DisableDBGStopMode), (8 bytes).
@@ -1733,6 +1742,7 @@ Removing Unused input sections from the image.
     Removing stm32l4xx_hal_pwr.o(.text.HAL_PWR_DisableWakeUpPin), (24 bytes).
     Removing stm32l4xx_hal_pwr.o(.ARM.exidx.text.HAL_PWR_DisableWakeUpPin), (8 bytes).
     Removing stm32l4xx_hal_pwr.o(.ARM.exidx.text.HAL_PWR_EnterSLEEPMode), (8 bytes).
+    Removing stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSTOPMode), (16 bytes).
     Removing stm32l4xx_hal_pwr.o(.ARM.exidx.text.HAL_PWR_EnterSTOPMode), (8 bytes).
     Removing stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSTANDBYMode), (38 bytes).
     Removing stm32l4xx_hal_pwr.o(.ARM.exidx.text.HAL_PWR_EnterSTANDBYMode), (8 bytes).
@@ -1795,7 +1805,9 @@ Removing Unused input sections from the image.
     Removing stm32l4xx_hal_pwr_ex.o(.ARM.exidx.text.HAL_PWREx_ConfigPVM), (8 bytes).
     Removing stm32l4xx_hal_pwr_ex.o(.ARM.exidx.text.HAL_PWREx_EnableLowPowerRunMode), (8 bytes).
     Removing stm32l4xx_hal_pwr_ex.o(.ARM.exidx.text.HAL_PWREx_DisableLowPowerRunMode), (8 bytes).
+    Removing stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnterSTOP0Mode), (54 bytes).
     Removing stm32l4xx_hal_pwr_ex.o(.ARM.exidx.text.HAL_PWREx_EnterSTOP0Mode), (8 bytes).
+    Removing stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnterSTOP1Mode), (60 bytes).
     Removing stm32l4xx_hal_pwr_ex.o(.ARM.exidx.text.HAL_PWREx_EnterSTOP1Mode), (8 bytes).
     Removing stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnterSTOP2Mode), (60 bytes).
     Removing stm32l4xx_hal_pwr_ex.o(.ARM.exidx.text.HAL_PWREx_EnterSTOP2Mode), (8 bytes).
@@ -1874,12 +1886,14 @@ Removing Unused input sections from the image.
     Removing app_azure_rtos.o(.ARM.exidx.text.tx_application_define), (8 bytes).
     Removing appmain.o(.text), (0 bytes).
     Removing appmain.o(.ARM.exidx.text.AppMain), (8 bytes).
-    Removing appmain.o(.ARM.exidx.text.AppTaskStart), (8 bytes).
+    Removing appmain.o(.ARM.exidx.text.AppTask10ms), (8 bytes).
     Removing appirqcallout.o(.text), (0 bytes).
     Removing appirqcallout.o(.ARM.exidx.text.HAL_GPIO_EXTI_Callback), (8 bytes).
     Removing rx8900.o(.text), (0 bytes).
     Removing rx8900.o(.ARM.exidx.text.RX8900_Set_Time), (8 bytes).
     Removing rx8900.o(.ARM.exidx.text.RX8900_Updata_Time), (8 bytes).
+    Removing rx8900.o(.ARM.exidx.text.RX8900_Set_Alarm), (8 bytes).
+    Removing rx8900.o(.ARM.exidx.text.RX8900_Get_Alarm), (8 bytes).
     Removing rx8900.o(.ARM.exidx.text.RX8900_Init), (8 bytes).
     Removing rx8900.o(.ARM.exidx.text.RX8900_Main_Fun), (8 bytes).
     Removing rx8900.o(.ARM.exidx.text.RX8900_Process_ISR), (8 bytes).
@@ -2089,7 +2103,6 @@ Removing Unused input sections from the image.
     Removing tx_thread_shell_entry.o(.text), (0 bytes).
     Removing tx_thread_shell_entry.o(.ARM.exidx.text._tx_thread_shell_entry), (8 bytes).
     Removing tx_thread_sleep.o(.text), (0 bytes).
-    Removing tx_thread_sleep.o(.text._tx_thread_sleep), (146 bytes).
     Removing tx_thread_sleep.o(.ARM.exidx.text._tx_thread_sleep), (8 bytes).
     Removing tx_thread_stack_analyze.o(.text), (0 bytes).
     Removing tx_thread_stack_analyze.o(.text._tx_thread_stack_analyze), (266 bytes).
@@ -2339,7 +2352,7 @@ Removing Unused input sections from the image.
     Removing tx_low_power.o(.ARM.exidx.text.tx_low_power_exit), (8 bytes).
     Removing tx_low_power.o(.ARM.exidx.text.tx_time_increment), (8 bytes).
 
-1021 unused section(s) (total 47538 bytes) removed from the image.
+1027 unused section(s) (total 47574 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2676,118 +2689,118 @@ Image Symbol Table
     .text                                    0x08000630   Section        2  use_no_semi.o(.text)
     .text                                    0x08000632   Section        0  indicate_semi.o(.text)
     [Anonymous Symbol]                       0x08000634   Section        0  appmain.o(.text.AppMain)
-    AppTaskStart                             0x08000691   Thumb Code    46  appmain.o(.text.AppTaskStart)
-    [Anonymous Symbol]                       0x08000690   Section        0  appmain.o(.text.AppTaskStart)
-    [Anonymous Symbol]                       0x080006c0   Section        0  app_threadx.o(.text.App_ThreadX_Init)
-    [Anonymous Symbol]                       0x080006c8   Section        0  app_threadx.o(.text.App_ThreadX_LowPower_Enter)
-    [Anonymous Symbol]                       0x080006d0   Section        0  app_threadx.o(.text.App_ThreadX_LowPower_Exit)
-    [Anonymous Symbol]                       0x080006d4   Section        0  app_threadx.o(.text.App_ThreadX_LowPower_Timer_Adjust)
-    [Anonymous Symbol]                       0x080006d8   Section        0  app_threadx.o(.text.App_ThreadX_LowPower_Timer_Setup)
-    [Anonymous Symbol]                       0x080006dc   Section        0  stm32l4xx_it.o(.text.BusFault_Handler)
-    [Anonymous Symbol]                       0x080006e0   Section        0  stm32l4xx_it.o(.text.DebugMon_Handler)
-    [Anonymous Symbol]                       0x080006e4   Section        0  stm32l4xx_it.o(.text.EXTI1_IRQHandler)
-    [Anonymous Symbol]                       0x080006ec   Section        0  main.o(.text.Error_Handler)
-    [Anonymous Symbol]                       0x080006f8   Section        0  stm32l4xx_hal.o(.text.HAL_DBGMCU_EnableDBGSleepMode)
-    [Anonymous Symbol]                       0x0800070c   Section        0  stm32l4xx_hal.o(.text.HAL_DBGMCU_EnableDBGStopMode)
-    [Anonymous Symbol]                       0x08000720   Section        0  appirqcallout.o(.text.HAL_GPIO_EXTI_Callback)
-    [Anonymous Symbol]                       0x0800072c   Section        0  stm32l4xx_hal_gpio.o(.text.HAL_GPIO_EXTI_IRQHandler)
-    [Anonymous Symbol]                       0x08000744   Section        0  stm32l4xx_hal_gpio.o(.text.HAL_GPIO_Init)
-    [Anonymous Symbol]                       0x080008fc   Section        0  stm32l4xx_hal.o(.text.HAL_GetTick)
-    [Anonymous Symbol]                       0x08000908   Section        0  stm32l4xx_hal_i2c_ex.o(.text.HAL_I2CEx_ConfigAnalogFilter)
-    [Anonymous Symbol]                       0x08000954   Section        0  stm32l4xx_hal_i2c_ex.o(.text.HAL_I2CEx_ConfigDigitalFilter)
-    [Anonymous Symbol]                       0x0800099c   Section        0  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Init)
-    [Anonymous Symbol]                       0x08000a4c   Section        0  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Mem_Read)
-    [Anonymous Symbol]                       0x08000c7c   Section        0  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Mem_Write)
-    [Anonymous Symbol]                       0x08000eac   Section        0  i2c.o(.text.HAL_I2C_MspInit)
-    [Anonymous Symbol]                       0x08000f34   Section        0  stm32l4xx_hal.o(.text.HAL_Init)
-    [Anonymous Symbol]                       0x08000f54   Section        0  stm32l4xx_hal.o(.text.HAL_InitTick)
-    [Anonymous Symbol]                       0x08000fa0   Section        0  stm32l4xx_hal_msp.o(.text.HAL_MspInit)
-    [Anonymous Symbol]                       0x08000fd4   Section        0  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_EnableIRQ)
-    [Anonymous Symbol]                       0x08000ff8   Section        0  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08001050   Section        0  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping)
-    [Anonymous Symbol]                       0x08001070   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_ControlVoltageScaling)
-    [Anonymous Symbol]                       0x080010fc   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_DisableLowPowerRunMode)
-    [Anonymous Symbol]                       0x08001164   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnableLowPowerRunMode)
-    [Anonymous Symbol]                       0x08001178   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnterSTOP0Mode)
-    [Anonymous Symbol]                       0x080011b0   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnterSTOP1Mode)
-    [Anonymous Symbol]                       0x080011ec   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_GetVoltageRange)
-    [Anonymous Symbol]                       0x080011fc   Section        0  stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSLEEPMode)
-    [Anonymous Symbol]                       0x08001248   Section        0  stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSTOPMode)
-    [Anonymous Symbol]                       0x08001258   Section        0  stm32l4xx_hal_rcc_ex.o(.text.HAL_RCCEx_PeriphCLKConfig)
-    [Anonymous Symbol]                       0x080014dc   Section        0  stm32l4xx_hal_rcc.o(.text.HAL_RCC_ClockConfig)
-    [Anonymous Symbol]                       0x08001758   Section        0  stm32l4xx_hal_rcc.o(.text.HAL_RCC_OscConfig)
-    [Anonymous Symbol]                       0x08001f44   Section        0  stm32l4xx_hal_cortex.o(.text.HAL_SYSTICK_Config)
-    [Anonymous Symbol]                       0x08001f70   Section        0  stm32l4xx_it.o(.text.HardFault_Handler)
-    I2C_IsErrorOccurred                      0x08001f75   Thumb Code   348  stm32l4xx_hal_i2c.o(.text.I2C_IsErrorOccurred)
-    [Anonymous Symbol]                       0x08001f74   Section        0  stm32l4xx_hal_i2c.o(.text.I2C_IsErrorOccurred)
-    I2C_WaitOnFlagUntilTimeout               0x080020d1   Thumb Code   232  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnFlagUntilTimeout)
-    [Anonymous Symbol]                       0x080020d0   Section        0  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnFlagUntilTimeout)
-    I2C_WaitOnSTOPFlagUntilTimeout           0x080021b9   Thumb Code   124  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnSTOPFlagUntilTimeout)
-    [Anonymous Symbol]                       0x080021b8   Section        0  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnSTOPFlagUntilTimeout)
-    I2C_WaitOnTXISFlagUntilTimeout           0x08002235   Thumb Code   152  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnTXISFlagUntilTimeout)
-    [Anonymous Symbol]                       0x08002234   Section        0  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnTXISFlagUntilTimeout)
-    [Anonymous Symbol]                       0x080022cc   Section        0  gpio.o(.text.MX_GPIO_Init)
-    [Anonymous Symbol]                       0x08002334   Section        0  i2c.o(.text.MX_I2C1_Init)
-    [Anonymous Symbol]                       0x080023a0   Section        0  app_threadx.o(.text.MX_ThreadX_Init)
-    [Anonymous Symbol]                       0x080023a4   Section        0  stm32l4xx_it.o(.text.MemManage_Handler)
-    [Anonymous Symbol]                       0x080023a8   Section        0  stm32l4xx_it.o(.text.NMI_Handler)
-    RCCEx_PLLSAI1_Config                     0x080023ad   Thumb Code   330  stm32l4xx_hal_rcc_ex.o(.text.RCCEx_PLLSAI1_Config)
-    [Anonymous Symbol]                       0x080023ac   Section        0  stm32l4xx_hal_rcc_ex.o(.text.RCCEx_PLLSAI1_Config)
-    [Anonymous Symbol]                       0x080024f8   Section        0  rx8900_callout.o(.text.RX8900_IIC_Transmit)
-    [Anonymous Symbol]                       0x08002554   Section        0  rx8900.o(.text.RX8900_Init)
-    [Anonymous Symbol]                       0x080025d4   Section        0  rx8900.o(.text.RX8900_Main_Fun)
-    [Anonymous Symbol]                       0x08002658   Section        0  rx8900.o(.text.RX8900_Process_ISR)
-    [Anonymous Symbol]                       0x080026f4   Section        0  rx8900.o(.text.RX8900_Set_Time)
-    [Anonymous Symbol]                       0x08002880   Section        0  rx8900.o(.text.RX8900_Updata_Time)
-    [Anonymous Symbol]                       0x08002958   Section        0  system_stm32l4xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x0800296c   Section        0  stm32l4xx_it.o(.text.UsageFault_Handler)
-    [Anonymous Symbol]                       0x08002970   Section        0  tx_byte_pool_create.o(.text._tx_byte_pool_create)
-    [Anonymous Symbol]                       0x080029fc   Section        0  tx_initialize_high_level.o(.text._tx_initialize_high_level)
-    [Anonymous Symbol]                       0x08002a2c   Section        0  tx_initialize_kernel_enter.o(.text._tx_initialize_kernel_enter)
-    [Anonymous Symbol]                       0x08002a7c   Section        0  tx_thread_create.o(.text._tx_thread_create)
-    [Anonymous Symbol]                       0x08002bbc   Section        0  tx_thread_initialize.o(.text._tx_thread_initialize)
-    [Anonymous Symbol]                       0x08002bf4   Section        0  tx_thread_shell_entry.o(.text._tx_thread_shell_entry)
-    [Anonymous Symbol]                       0x08002c50   Section        0  tx_thread_system_preempt_check.o(.text._tx_thread_system_preempt_check)
-    [Anonymous Symbol]                       0x08002c9c   Section        0  tx_thread_system_resume.o(.text._tx_thread_system_resume)
-    [Anonymous Symbol]                       0x08002dd0   Section        0  tx_thread_system_suspend.o(.text._tx_thread_system_suspend)
-    [Anonymous Symbol]                       0x08002f4c   Section        0  tx_thread_time_slice.o(.text._tx_thread_time_slice)
-    [Anonymous Symbol]                       0x08002fbc   Section        0  tx_thread_timeout.o(.text._tx_thread_timeout)
-    [Anonymous Symbol]                       0x08002ff4   Section        0  tx_timer_expiration_process.o(.text._tx_timer_expiration_process)
-    [Anonymous Symbol]                       0x08003018   Section        0  tx_timer_initialize.o(.text._tx_timer_initialize)
-    [Anonymous Symbol]                       0x080030b8   Section        0  tx_timer_system_activate.o(.text._tx_timer_system_activate)
-    [Anonymous Symbol]                       0x08003114   Section        0  tx_timer_system_deactivate.o(.text._tx_timer_system_deactivate)
-    [Anonymous Symbol]                       0x08003150   Section        0  tx_timer_thread_entry.o(.text._tx_timer_thread_entry)
-    [Anonymous Symbol]                       0x08003298   Section        0  txe_byte_pool_create.o(.text._txe_byte_pool_create)
-    [Anonymous Symbol]                       0x080033fc   Section        0  txe_thread_create.o(.text._txe_thread_create)
-    [Anonymous Symbol]                       0x0800358c   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x08003618   Section        0  app_azure_rtos.o(.text.tx_application_define)
-    [Anonymous Symbol]                       0x0800366c   Section        0  tx_low_power.o(.text.tx_low_power_enter)
-    [Anonymous Symbol]                       0x080037c4   Section        0  tx_low_power.o(.text.tx_low_power_exit)
-    [Anonymous Symbol]                       0x080037f0   Section        0  tx_low_power.o(.text.tx_time_increment)
-    $v0                                      0x080039b8   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x080039b8   Section       26  fpinit.o(x$fpl$fpinit)
+    AppTask10ms                              0x08000699   Thumb Code    60  appmain.o(.text.AppTask10ms)
+    [Anonymous Symbol]                       0x08000698   Section        0  appmain.o(.text.AppTask10ms)
+    [Anonymous Symbol]                       0x080006d4   Section        0  app_threadx.o(.text.App_ThreadX_Init)
+    [Anonymous Symbol]                       0x080006dc   Section        0  app_threadx.o(.text.App_ThreadX_LowPower_Enter)
+    [Anonymous Symbol]                       0x080006e4   Section        0  app_threadx.o(.text.App_ThreadX_LowPower_Exit)
+    [Anonymous Symbol]                       0x080006e8   Section        0  app_threadx.o(.text.App_ThreadX_LowPower_Timer_Adjust)
+    [Anonymous Symbol]                       0x080006ec   Section        0  app_threadx.o(.text.App_ThreadX_LowPower_Timer_Setup)
+    [Anonymous Symbol]                       0x080006f0   Section        0  stm32l4xx_it.o(.text.BusFault_Handler)
+    [Anonymous Symbol]                       0x080006f4   Section        0  stm32l4xx_it.o(.text.DebugMon_Handler)
+    [Anonymous Symbol]                       0x080006f8   Section        0  stm32l4xx_it.o(.text.EXTI1_IRQHandler)
+    [Anonymous Symbol]                       0x08000700   Section        0  main.o(.text.Error_Handler)
+    [Anonymous Symbol]                       0x0800070c   Section        0  appirqcallout.o(.text.HAL_GPIO_EXTI_Callback)
+    [Anonymous Symbol]                       0x08000718   Section        0  stm32l4xx_hal_gpio.o(.text.HAL_GPIO_EXTI_IRQHandler)
+    [Anonymous Symbol]                       0x08000730   Section        0  stm32l4xx_hal_gpio.o(.text.HAL_GPIO_Init)
+    [Anonymous Symbol]                       0x080008e8   Section        0  stm32l4xx_hal.o(.text.HAL_GetTick)
+    [Anonymous Symbol]                       0x080008f4   Section        0  stm32l4xx_hal_i2c_ex.o(.text.HAL_I2CEx_ConfigAnalogFilter)
+    [Anonymous Symbol]                       0x08000940   Section        0  stm32l4xx_hal_i2c_ex.o(.text.HAL_I2CEx_ConfigDigitalFilter)
+    [Anonymous Symbol]                       0x08000988   Section        0  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Init)
+    [Anonymous Symbol]                       0x08000a38   Section        0  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Mem_Read)
+    [Anonymous Symbol]                       0x08000c68   Section        0  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Mem_Write)
+    [Anonymous Symbol]                       0x08000e98   Section        0  i2c.o(.text.HAL_I2C_MspInit)
+    [Anonymous Symbol]                       0x08000f20   Section        0  stm32l4xx_hal.o(.text.HAL_Init)
+    [Anonymous Symbol]                       0x08000f40   Section        0  stm32l4xx_hal.o(.text.HAL_InitTick)
+    [Anonymous Symbol]                       0x08000f8c   Section        0  stm32l4xx_hal_msp.o(.text.HAL_MspInit)
+    [Anonymous Symbol]                       0x08000fc0   Section        0  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08000fe4   Section        0  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_SetPriority)
+    [Anonymous Symbol]                       0x0800103c   Section        0  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping)
+    [Anonymous Symbol]                       0x0800105c   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_ControlVoltageScaling)
+    [Anonymous Symbol]                       0x080010e8   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_DisableLowPowerRunMode)
+    [Anonymous Symbol]                       0x08001150   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnableLowPowerRunMode)
+    [Anonymous Symbol]                       0x08001164   Section        0  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_GetVoltageRange)
+    [Anonymous Symbol]                       0x08001174   Section        0  stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSLEEPMode)
+    [Anonymous Symbol]                       0x080011c0   Section        0  stm32l4xx_hal_rcc_ex.o(.text.HAL_RCCEx_PeriphCLKConfig)
+    [Anonymous Symbol]                       0x08001444   Section        0  stm32l4xx_hal_rcc.o(.text.HAL_RCC_ClockConfig)
+    [Anonymous Symbol]                       0x080016c0   Section        0  stm32l4xx_hal_rcc.o(.text.HAL_RCC_OscConfig)
+    [Anonymous Symbol]                       0x08001eac   Section        0  stm32l4xx_hal_cortex.o(.text.HAL_SYSTICK_Config)
+    [Anonymous Symbol]                       0x08001ed8   Section        0  stm32l4xx_it.o(.text.HardFault_Handler)
+    I2C_IsErrorOccurred                      0x08001edd   Thumb Code   348  stm32l4xx_hal_i2c.o(.text.I2C_IsErrorOccurred)
+    [Anonymous Symbol]                       0x08001edc   Section        0  stm32l4xx_hal_i2c.o(.text.I2C_IsErrorOccurred)
+    I2C_WaitOnFlagUntilTimeout               0x08002039   Thumb Code   232  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnFlagUntilTimeout)
+    [Anonymous Symbol]                       0x08002038   Section        0  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnFlagUntilTimeout)
+    I2C_WaitOnSTOPFlagUntilTimeout           0x08002121   Thumb Code   124  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnSTOPFlagUntilTimeout)
+    [Anonymous Symbol]                       0x08002120   Section        0  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnSTOPFlagUntilTimeout)
+    I2C_WaitOnTXISFlagUntilTimeout           0x0800219d   Thumb Code   152  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnTXISFlagUntilTimeout)
+    [Anonymous Symbol]                       0x0800219c   Section        0  stm32l4xx_hal_i2c.o(.text.I2C_WaitOnTXISFlagUntilTimeout)
+    [Anonymous Symbol]                       0x08002234   Section        0  gpio.o(.text.MX_GPIO_Init)
+    [Anonymous Symbol]                       0x0800229c   Section        0  i2c.o(.text.MX_I2C1_Init)
+    [Anonymous Symbol]                       0x08002308   Section        0  app_threadx.o(.text.MX_ThreadX_Init)
+    [Anonymous Symbol]                       0x0800230c   Section        0  stm32l4xx_it.o(.text.MemManage_Handler)
+    [Anonymous Symbol]                       0x08002310   Section        0  stm32l4xx_it.o(.text.NMI_Handler)
+    RCCEx_PLLSAI1_Config                     0x08002315   Thumb Code   330  stm32l4xx_hal_rcc_ex.o(.text.RCCEx_PLLSAI1_Config)
+    [Anonymous Symbol]                       0x08002314   Section        0  stm32l4xx_hal_rcc_ex.o(.text.RCCEx_PLLSAI1_Config)
+    [Anonymous Symbol]                       0x08002460   Section        0  rx8900.o(.text.RX8900_Get_Alarm)
+    [Anonymous Symbol]                       0x080024f4   Section        0  rx8900_callout.o(.text.RX8900_IIC_Transmit)
+    [Anonymous Symbol]                       0x08002550   Section        0  rx8900.o(.text.RX8900_Init)
+    [Anonymous Symbol]                       0x080025d0   Section        0  rx8900.o(.text.RX8900_Main_Fun)
+    [Anonymous Symbol]                       0x080026b0   Section        0  rx8900.o(.text.RX8900_Process_ISR)
+    [Anonymous Symbol]                       0x0800274c   Section        0  rx8900.o(.text.RX8900_Set_Alarm)
+    [Anonymous Symbol]                       0x0800284c   Section        0  rx8900.o(.text.RX8900_Set_Time)
+    [Anonymous Symbol]                       0x080029d8   Section        0  rx8900.o(.text.RX8900_Updata_Time)
+    [Anonymous Symbol]                       0x08002ab0   Section        0  system_stm32l4xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08002ac4   Section        0  stm32l4xx_it.o(.text.UsageFault_Handler)
+    [Anonymous Symbol]                       0x08002ac8   Section        0  tx_byte_pool_create.o(.text._tx_byte_pool_create)
+    [Anonymous Symbol]                       0x08002b54   Section        0  tx_initialize_high_level.o(.text._tx_initialize_high_level)
+    [Anonymous Symbol]                       0x08002b84   Section        0  tx_initialize_kernel_enter.o(.text._tx_initialize_kernel_enter)
+    [Anonymous Symbol]                       0x08002bd4   Section        0  tx_thread_create.o(.text._tx_thread_create)
+    [Anonymous Symbol]                       0x08002d14   Section        0  tx_thread_initialize.o(.text._tx_thread_initialize)
+    [Anonymous Symbol]                       0x08002d4c   Section        0  tx_thread_shell_entry.o(.text._tx_thread_shell_entry)
+    [Anonymous Symbol]                       0x08002da8   Section        0  tx_thread_sleep.o(.text._tx_thread_sleep)
+    [Anonymous Symbol]                       0x08002e3c   Section        0  tx_thread_system_preempt_check.o(.text._tx_thread_system_preempt_check)
+    [Anonymous Symbol]                       0x08002e88   Section        0  tx_thread_system_resume.o(.text._tx_thread_system_resume)
+    [Anonymous Symbol]                       0x08002fbc   Section        0  tx_thread_system_suspend.o(.text._tx_thread_system_suspend)
+    [Anonymous Symbol]                       0x08003138   Section        0  tx_thread_time_slice.o(.text._tx_thread_time_slice)
+    [Anonymous Symbol]                       0x080031a8   Section        0  tx_thread_timeout.o(.text._tx_thread_timeout)
+    [Anonymous Symbol]                       0x080031e0   Section        0  tx_timer_expiration_process.o(.text._tx_timer_expiration_process)
+    [Anonymous Symbol]                       0x08003204   Section        0  tx_timer_initialize.o(.text._tx_timer_initialize)
+    [Anonymous Symbol]                       0x080032a4   Section        0  tx_timer_system_activate.o(.text._tx_timer_system_activate)
+    [Anonymous Symbol]                       0x08003300   Section        0  tx_timer_system_deactivate.o(.text._tx_timer_system_deactivate)
+    [Anonymous Symbol]                       0x0800333c   Section        0  tx_timer_thread_entry.o(.text._tx_timer_thread_entry)
+    [Anonymous Symbol]                       0x08003484   Section        0  txe_byte_pool_create.o(.text._txe_byte_pool_create)
+    [Anonymous Symbol]                       0x080035e8   Section        0  txe_thread_create.o(.text._txe_thread_create)
+    [Anonymous Symbol]                       0x08003778   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x08003804   Section        0  app_azure_rtos.o(.text.tx_application_define)
+    [Anonymous Symbol]                       0x08003858   Section        0  tx_low_power.o(.text.tx_low_power_enter)
+    [Anonymous Symbol]                       0x080039b0   Section        0  tx_low_power.o(.text.tx_low_power_exit)
+    [Anonymous Symbol]                       0x080039dc   Section        0  tx_low_power.o(.text.tx_time_increment)
+    $v0                                      0x08003ba4   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x08003ba4   Section       26  fpinit.o(x$fpl$fpinit)
     .L_MergedGlobals                         0x20000000   Data           8  stm32l4xx_hal.o(.data..L_MergedGlobals)
     [Anonymous Symbol]                       0x20000000   Section        0  stm32l4xx_hal.o(.data..L_MergedGlobals)
-    .bss                                     0x20000010   Section       96  libspace.o(.bss)
-    .L_MergedGlobals                         0x20000070   Data           8  rx8900.o(.bss..L_MergedGlobals)
-    [Anonymous Symbol]                       0x20000070   Section        0  rx8900.o(.bss..L_MergedGlobals)
-    .L_MergedGlobals                         0x20000078   Data          48  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    [Anonymous Symbol]                       0x20000078   Section        0  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    .L_MergedGlobals                         0x200000a8   Data          36  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    [Anonymous Symbol]                       0x200000a8   Section        0  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    .L_MergedGlobals                         0x200000cc   Data          52  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    [Anonymous Symbol]                       0x200000cc   Section        0  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    AppTaskStartStk                          0x20000100   Data        1024  appmain.o(.bss.AppTaskStartStk)
-    [Anonymous Symbol]                       0x20000100   Section        0  appmain.o(.bss.AppTaskStartStk)
-    tx_app_byte_pool                         0x200009bc   Data          52  app_azure_rtos.o(.bss.tx_app_byte_pool)
-    [Anonymous Symbol]                       0x200009bc   Section        0  app_azure_rtos.o(.bss.tx_app_byte_pool)
-    tx_byte_pool_buffer                      0x200009f0   Data         512  app_azure_rtos.o(.bss.tx_byte_pool_buffer)
-    [Anonymous Symbol]                       0x200009f0   Section        0  app_azure_rtos.o(.bss.tx_byte_pool_buffer)
-    Heap_Mem                                 0x20000bf8   Data         512  startup_stm32l432xx.o(HEAP)
-    HEAP                                     0x20000bf8   Section      512  startup_stm32l432xx.o(HEAP)
-    Stack_Mem                                0x20000df8   Data        1024  startup_stm32l432xx.o(STACK)
-    STACK                                    0x20000df8   Section     1024  startup_stm32l432xx.o(STACK)
-    __initial_sp                             0x200011f8   Data           0  startup_stm32l432xx.o(STACK)
+    .bss                                     0x20000018   Section       96  libspace.o(.bss)
+    .L_MergedGlobals                         0x20000078   Data           3  appmain.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20000078   Section        0  appmain.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x2000007b   Data          28  rx8900.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x2000007b   Section        0  rx8900.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x20000098   Data          48  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20000098   Section        0  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x200000c8   Data          36  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x200000c8   Section        0  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x200000ec   Data          52  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x200000ec   Section        0  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    AppTask10msStk                           0x20000120   Data        1024  appmain.o(.bss.AppTask10msStk)
+    [Anonymous Symbol]                       0x20000120   Section        0  appmain.o(.bss.AppTask10msStk)
+    tx_app_byte_pool                         0x200009dc   Data          52  app_azure_rtos.o(.bss.tx_app_byte_pool)
+    [Anonymous Symbol]                       0x200009dc   Section        0  app_azure_rtos.o(.bss.tx_app_byte_pool)
+    tx_byte_pool_buffer                      0x20000a10   Data         512  app_azure_rtos.o(.bss.tx_byte_pool_buffer)
+    [Anonymous Symbol]                       0x20000a10   Section        0  app_azure_rtos.o(.bss.tx_byte_pool_buffer)
+    Heap_Mem                                 0x20000c18   Data         512  startup_stm32l432xx.o(HEAP)
+    HEAP                                     0x20000c18   Section      512  startup_stm32l432xx.o(HEAP)
+    Stack_Mem                                0x20000e18   Data        1024  startup_stm32l432xx.o(STACK)
+    STACK                                    0x20000e18   Section     1024  startup_stm32l432xx.o(STACK)
+    __initial_sp                             0x20001218   Data           0  startup_stm32l432xx.o(STACK)
 
     Global Symbols
 
@@ -2974,143 +2987,148 @@ Image Symbol Table
     __I$use$semihosting                      0x08000631   Thumb Code     0  use_no_semi.o(.text)
     __use_no_semihosting_swi                 0x08000631   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x08000633   Thumb Code     0  indicate_semi.o(.text)
-    AppMain                                  0x08000635   Thumb Code    76  appmain.o(.text.AppMain)
-    App_ThreadX_Init                         0x080006c1   Thumb Code     8  app_threadx.o(.text.App_ThreadX_Init)
-    App_ThreadX_LowPower_Enter               0x080006c9   Thumb Code     8  app_threadx.o(.text.App_ThreadX_LowPower_Enter)
-    App_ThreadX_LowPower_Exit                0x080006d1   Thumb Code     2  app_threadx.o(.text.App_ThreadX_LowPower_Exit)
-    App_ThreadX_LowPower_Timer_Adjust        0x080006d5   Thumb Code     4  app_threadx.o(.text.App_ThreadX_LowPower_Timer_Adjust)
-    App_ThreadX_LowPower_Timer_Setup         0x080006d9   Thumb Code     2  app_threadx.o(.text.App_ThreadX_LowPower_Timer_Setup)
-    BusFault_Handler                         0x080006dd   Thumb Code     2  stm32l4xx_it.o(.text.BusFault_Handler)
-    DebugMon_Handler                         0x080006e1   Thumb Code     2  stm32l4xx_it.o(.text.DebugMon_Handler)
-    EXTI1_IRQHandler                         0x080006e5   Thumb Code     6  stm32l4xx_it.o(.text.EXTI1_IRQHandler)
-    Error_Handler                            0x080006ed   Thumb Code    10  main.o(.text.Error_Handler)
-    HAL_DBGMCU_EnableDBGSleepMode            0x080006f9   Thumb Code    18  stm32l4xx_hal.o(.text.HAL_DBGMCU_EnableDBGSleepMode)
-    HAL_DBGMCU_EnableDBGStopMode             0x0800070d   Thumb Code    18  stm32l4xx_hal.o(.text.HAL_DBGMCU_EnableDBGStopMode)
-    HAL_GPIO_EXTI_Callback                   0x08000721   Thumb Code    10  appirqcallout.o(.text.HAL_GPIO_EXTI_Callback)
-    HAL_GPIO_EXTI_IRQHandler                 0x0800072d   Thumb Code    22  stm32l4xx_hal_gpio.o(.text.HAL_GPIO_EXTI_IRQHandler)
-    HAL_GPIO_Init                            0x08000745   Thumb Code   434  stm32l4xx_hal_gpio.o(.text.HAL_GPIO_Init)
-    HAL_GetTick                              0x080008fd   Thumb Code    12  stm32l4xx_hal.o(.text.HAL_GetTick)
-    HAL_I2CEx_ConfigAnalogFilter             0x08000909   Thumb Code    74  stm32l4xx_hal_i2c_ex.o(.text.HAL_I2CEx_ConfigAnalogFilter)
-    HAL_I2CEx_ConfigDigitalFilter            0x08000955   Thumb Code    72  stm32l4xx_hal_i2c_ex.o(.text.HAL_I2CEx_ConfigDigitalFilter)
-    HAL_I2C_Init                             0x0800099d   Thumb Code   174  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Init)
-    HAL_I2C_Mem_Read                         0x08000a4d   Thumb Code   552  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Mem_Read)
-    HAL_I2C_Mem_Write                        0x08000c7d   Thumb Code   552  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Mem_Write)
-    HAL_I2C_MspInit                          0x08000ead   Thumb Code   134  i2c.o(.text.HAL_I2C_MspInit)
-    HAL_Init                                 0x08000f35   Thumb Code    30  stm32l4xx_hal.o(.text.HAL_Init)
-    HAL_InitTick                             0x08000f55   Thumb Code    76  stm32l4xx_hal.o(.text.HAL_InitTick)
-    HAL_MspInit                              0x08000fa1   Thumb Code    50  stm32l4xx_hal_msp.o(.text.HAL_MspInit)
-    HAL_NVIC_EnableIRQ                       0x08000fd5   Thumb Code    34  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_EnableIRQ)
-    HAL_NVIC_SetPriority                     0x08000ff9   Thumb Code    86  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_SetPriority)
-    HAL_NVIC_SetPriorityGrouping             0x08001051   Thumb Code    32  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping)
-    HAL_PWREx_ControlVoltageScaling          0x08001071   Thumb Code   140  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_ControlVoltageScaling)
-    HAL_PWREx_DisableLowPowerRunMode         0x080010fd   Thumb Code   102  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_DisableLowPowerRunMode)
-    HAL_PWREx_EnableLowPowerRunMode          0x08001165   Thumb Code    18  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnableLowPowerRunMode)
-    HAL_PWREx_EnterSTOP0Mode                 0x08001179   Thumb Code    54  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnterSTOP0Mode)
-    HAL_PWREx_EnterSTOP1Mode                 0x080011b1   Thumb Code    60  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnterSTOP1Mode)
-    HAL_PWREx_GetVoltageRange                0x080011ed   Thumb Code    16  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_GetVoltageRange)
-    HAL_PWR_EnterSLEEPMode                   0x080011fd   Thumb Code    74  stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSLEEPMode)
-    HAL_PWR_EnterSTOPMode                    0x08001249   Thumb Code    16  stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSTOPMode)
-    HAL_RCCEx_PeriphCLKConfig                0x08001259   Thumb Code   644  stm32l4xx_hal_rcc_ex.o(.text.HAL_RCCEx_PeriphCLKConfig)
-    HAL_RCC_ClockConfig                      0x080014dd   Thumb Code   634  stm32l4xx_hal_rcc.o(.text.HAL_RCC_ClockConfig)
-    HAL_RCC_OscConfig                        0x08001759   Thumb Code  2028  stm32l4xx_hal_rcc.o(.text.HAL_RCC_OscConfig)
-    HAL_SYSTICK_Config                       0x08001f45   Thumb Code    44  stm32l4xx_hal_cortex.o(.text.HAL_SYSTICK_Config)
-    HardFault_Handler                        0x08001f71   Thumb Code     2  stm32l4xx_it.o(.text.HardFault_Handler)
-    MX_GPIO_Init                             0x080022cd   Thumb Code   102  gpio.o(.text.MX_GPIO_Init)
-    MX_I2C1_Init                             0x08002335   Thumb Code   108  i2c.o(.text.MX_I2C1_Init)
-    MX_ThreadX_Init                          0x080023a1   Thumb Code     4  app_threadx.o(.text.MX_ThreadX_Init)
-    MemManage_Handler                        0x080023a5   Thumb Code     2  stm32l4xx_it.o(.text.MemManage_Handler)
-    NMI_Handler                              0x080023a9   Thumb Code     2  stm32l4xx_it.o(.text.NMI_Handler)
-    RX8900_IIC_Transmit                      0x080024f9   Thumb Code    90  rx8900_callout.o(.text.RX8900_IIC_Transmit)
-    RX8900_Init                              0x08002555   Thumb Code   126  rx8900.o(.text.RX8900_Init)
-    RX8900_Main_Fun                          0x080025d5   Thumb Code   132  rx8900.o(.text.RX8900_Main_Fun)
-    RX8900_Process_ISR                       0x08002659   Thumb Code   154  rx8900.o(.text.RX8900_Process_ISR)
-    RX8900_Set_Time                          0x080026f5   Thumb Code   390  rx8900.o(.text.RX8900_Set_Time)
-    RX8900_Updata_Time                       0x08002881   Thumb Code   216  rx8900.o(.text.RX8900_Updata_Time)
-    SystemInit                               0x08002959   Thumb Code    18  system_stm32l4xx.o(.text.SystemInit)
-    UsageFault_Handler                       0x0800296d   Thumb Code     2  stm32l4xx_it.o(.text.UsageFault_Handler)
-    _tx_byte_pool_create                     0x08002971   Thumb Code   140  tx_byte_pool_create.o(.text._tx_byte_pool_create)
-    _tx_initialize_high_level                0x080029fd   Thumb Code    46  tx_initialize_high_level.o(.text._tx_initialize_high_level)
-    _tx_initialize_kernel_enter              0x08002a2d   Thumb Code    78  tx_initialize_kernel_enter.o(.text._tx_initialize_kernel_enter)
-    _tx_thread_create                        0x08002a7d   Thumb Code   312  tx_thread_create.o(.text._tx_thread_create)
-    _tx_thread_initialize                    0x08002bbd   Thumb Code    54  tx_thread_initialize.o(.text._tx_thread_initialize)
-    _tx_thread_shell_entry                   0x08002bf5   Thumb Code    90  tx_thread_shell_entry.o(.text._tx_thread_shell_entry)
-    _tx_thread_system_preempt_check          0x08002c51   Thumb Code    76  tx_thread_system_preempt_check.o(.text._tx_thread_system_preempt_check)
-    _tx_thread_system_resume                 0x08002c9d   Thumb Code   308  tx_thread_system_resume.o(.text._tx_thread_system_resume)
-    _tx_thread_system_suspend                0x08002dd1   Thumb Code   380  tx_thread_system_suspend.o(.text._tx_thread_system_suspend)
-    _tx_thread_time_slice                    0x08002f4d   Thumb Code   112  tx_thread_time_slice.o(.text._tx_thread_time_slice)
-    _tx_thread_timeout                       0x08002fbd   Thumb Code    54  tx_thread_timeout.o(.text._tx_thread_timeout)
-    _tx_timer_expiration_process             0x08002ff5   Thumb Code    36  tx_timer_expiration_process.o(.text._tx_timer_expiration_process)
-    _tx_timer_initialize                     0x08003019   Thumb Code   140  tx_timer_initialize.o(.text._tx_timer_initialize)
-    _tx_timer_system_activate                0x080030b9   Thumb Code    90  tx_timer_system_activate.o(.text._tx_timer_system_activate)
-    _tx_timer_system_deactivate              0x08003115   Thumb Code    58  tx_timer_system_deactivate.o(.text._tx_timer_system_deactivate)
-    _tx_timer_thread_entry                   0x08003151   Thumb Code   320  tx_timer_thread_entry.o(.text._tx_timer_thread_entry)
-    _txe_byte_pool_create                    0x08003299   Thumb Code   356  txe_byte_pool_create.o(.text._txe_byte_pool_create)
-    _txe_thread_create                       0x080033fd   Thumb Code   392  txe_thread_create.o(.text._txe_thread_create)
-    main                                     0x0800358d   Thumb Code   138  main.o(.text.main)
-    tx_application_define                    0x08003619   Thumb Code    64  app_azure_rtos.o(.text.tx_application_define)
-    tx_low_power_enter                       0x0800366d   Thumb Code   344  tx_low_power.o(.text.tx_low_power_enter)
-    tx_low_power_exit                        0x080037c5   Thumb Code    44  tx_low_power.o(.text.tx_low_power_exit)
-    tx_time_increment                        0x080037f1   Thumb Code   450  tx_low_power.o(.text.tx_time_increment)
-    _fp_init                                 0x080039b9   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x080039d1   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x080039d1   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    AHBPrescTable                            0x080039d2   Data          16  system_stm32l4xx.o(.rodata.AHBPrescTable)
-    MSIRangeTable                            0x080039e4   Data          48  system_stm32l4xx.o(.rodata.MSIRangeTable)
-    gRX8900Cfg                               0x08003a14   Data           4  rx8900_lcfg.o(.rodata.gRX8900Cfg)
-    Region$$Table$$Base                      0x08003a18   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08003a38   Number         0  anon$$obj.o(Region$$Table)
+    AppMain                                  0x08000635   Thumb Code    84  appmain.o(.text.AppMain)
+    App_ThreadX_Init                         0x080006d5   Thumb Code     8  app_threadx.o(.text.App_ThreadX_Init)
+    App_ThreadX_LowPower_Enter               0x080006dd   Thumb Code     8  app_threadx.o(.text.App_ThreadX_LowPower_Enter)
+    App_ThreadX_LowPower_Exit                0x080006e5   Thumb Code     2  app_threadx.o(.text.App_ThreadX_LowPower_Exit)
+    App_ThreadX_LowPower_Timer_Adjust        0x080006e9   Thumb Code     4  app_threadx.o(.text.App_ThreadX_LowPower_Timer_Adjust)
+    App_ThreadX_LowPower_Timer_Setup         0x080006ed   Thumb Code     2  app_threadx.o(.text.App_ThreadX_LowPower_Timer_Setup)
+    BusFault_Handler                         0x080006f1   Thumb Code     2  stm32l4xx_it.o(.text.BusFault_Handler)
+    DebugMon_Handler                         0x080006f5   Thumb Code     2  stm32l4xx_it.o(.text.DebugMon_Handler)
+    EXTI1_IRQHandler                         0x080006f9   Thumb Code     6  stm32l4xx_it.o(.text.EXTI1_IRQHandler)
+    Error_Handler                            0x08000701   Thumb Code    10  main.o(.text.Error_Handler)
+    HAL_GPIO_EXTI_Callback                   0x0800070d   Thumb Code    10  appirqcallout.o(.text.HAL_GPIO_EXTI_Callback)
+    HAL_GPIO_EXTI_IRQHandler                 0x08000719   Thumb Code    22  stm32l4xx_hal_gpio.o(.text.HAL_GPIO_EXTI_IRQHandler)
+    HAL_GPIO_Init                            0x08000731   Thumb Code   434  stm32l4xx_hal_gpio.o(.text.HAL_GPIO_Init)
+    HAL_GetTick                              0x080008e9   Thumb Code    12  stm32l4xx_hal.o(.text.HAL_GetTick)
+    HAL_I2CEx_ConfigAnalogFilter             0x080008f5   Thumb Code    74  stm32l4xx_hal_i2c_ex.o(.text.HAL_I2CEx_ConfigAnalogFilter)
+    HAL_I2CEx_ConfigDigitalFilter            0x08000941   Thumb Code    72  stm32l4xx_hal_i2c_ex.o(.text.HAL_I2CEx_ConfigDigitalFilter)
+    HAL_I2C_Init                             0x08000989   Thumb Code   174  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Init)
+    HAL_I2C_Mem_Read                         0x08000a39   Thumb Code   552  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Mem_Read)
+    HAL_I2C_Mem_Write                        0x08000c69   Thumb Code   552  stm32l4xx_hal_i2c.o(.text.HAL_I2C_Mem_Write)
+    HAL_I2C_MspInit                          0x08000e99   Thumb Code   134  i2c.o(.text.HAL_I2C_MspInit)
+    HAL_Init                                 0x08000f21   Thumb Code    30  stm32l4xx_hal.o(.text.HAL_Init)
+    HAL_InitTick                             0x08000f41   Thumb Code    76  stm32l4xx_hal.o(.text.HAL_InitTick)
+    HAL_MspInit                              0x08000f8d   Thumb Code    50  stm32l4xx_hal_msp.o(.text.HAL_MspInit)
+    HAL_NVIC_EnableIRQ                       0x08000fc1   Thumb Code    34  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_EnableIRQ)
+    HAL_NVIC_SetPriority                     0x08000fe5   Thumb Code    86  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_SetPriority)
+    HAL_NVIC_SetPriorityGrouping             0x0800103d   Thumb Code    32  stm32l4xx_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping)
+    HAL_PWREx_ControlVoltageScaling          0x0800105d   Thumb Code   140  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_ControlVoltageScaling)
+    HAL_PWREx_DisableLowPowerRunMode         0x080010e9   Thumb Code   102  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_DisableLowPowerRunMode)
+    HAL_PWREx_EnableLowPowerRunMode          0x08001151   Thumb Code    18  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_EnableLowPowerRunMode)
+    HAL_PWREx_GetVoltageRange                0x08001165   Thumb Code    16  stm32l4xx_hal_pwr_ex.o(.text.HAL_PWREx_GetVoltageRange)
+    HAL_PWR_EnterSLEEPMode                   0x08001175   Thumb Code    74  stm32l4xx_hal_pwr.o(.text.HAL_PWR_EnterSLEEPMode)
+    HAL_RCCEx_PeriphCLKConfig                0x080011c1   Thumb Code   644  stm32l4xx_hal_rcc_ex.o(.text.HAL_RCCEx_PeriphCLKConfig)
+    HAL_RCC_ClockConfig                      0x08001445   Thumb Code   634  stm32l4xx_hal_rcc.o(.text.HAL_RCC_ClockConfig)
+    HAL_RCC_OscConfig                        0x080016c1   Thumb Code  2028  stm32l4xx_hal_rcc.o(.text.HAL_RCC_OscConfig)
+    HAL_SYSTICK_Config                       0x08001ead   Thumb Code    44  stm32l4xx_hal_cortex.o(.text.HAL_SYSTICK_Config)
+    HardFault_Handler                        0x08001ed9   Thumb Code     2  stm32l4xx_it.o(.text.HardFault_Handler)
+    MX_GPIO_Init                             0x08002235   Thumb Code   102  gpio.o(.text.MX_GPIO_Init)
+    MX_I2C1_Init                             0x0800229d   Thumb Code   108  i2c.o(.text.MX_I2C1_Init)
+    MX_ThreadX_Init                          0x08002309   Thumb Code     4  app_threadx.o(.text.MX_ThreadX_Init)
+    MemManage_Handler                        0x0800230d   Thumb Code     2  stm32l4xx_it.o(.text.MemManage_Handler)
+    NMI_Handler                              0x08002311   Thumb Code     2  stm32l4xx_it.o(.text.NMI_Handler)
+    RX8900_Get_Alarm                         0x08002461   Thumb Code   146  rx8900.o(.text.RX8900_Get_Alarm)
+    RX8900_IIC_Transmit                      0x080024f5   Thumb Code    90  rx8900_callout.o(.text.RX8900_IIC_Transmit)
+    RX8900_Init                              0x08002551   Thumb Code   126  rx8900.o(.text.RX8900_Init)
+    RX8900_Main_Fun                          0x080025d1   Thumb Code   222  rx8900.o(.text.RX8900_Main_Fun)
+    RX8900_Process_ISR                       0x080026b1   Thumb Code   154  rx8900.o(.text.RX8900_Process_ISR)
+    RX8900_Set_Alarm                         0x0800274d   Thumb Code   254  rx8900.o(.text.RX8900_Set_Alarm)
+    RX8900_Set_Time                          0x0800284d   Thumb Code   390  rx8900.o(.text.RX8900_Set_Time)
+    RX8900_Updata_Time                       0x080029d9   Thumb Code   216  rx8900.o(.text.RX8900_Updata_Time)
+    SystemInit                               0x08002ab1   Thumb Code    18  system_stm32l4xx.o(.text.SystemInit)
+    UsageFault_Handler                       0x08002ac5   Thumb Code     2  stm32l4xx_it.o(.text.UsageFault_Handler)
+    _tx_byte_pool_create                     0x08002ac9   Thumb Code   140  tx_byte_pool_create.o(.text._tx_byte_pool_create)
+    _tx_initialize_high_level                0x08002b55   Thumb Code    46  tx_initialize_high_level.o(.text._tx_initialize_high_level)
+    _tx_initialize_kernel_enter              0x08002b85   Thumb Code    78  tx_initialize_kernel_enter.o(.text._tx_initialize_kernel_enter)
+    _tx_thread_create                        0x08002bd5   Thumb Code   312  tx_thread_create.o(.text._tx_thread_create)
+    _tx_thread_initialize                    0x08002d15   Thumb Code    54  tx_thread_initialize.o(.text._tx_thread_initialize)
+    _tx_thread_shell_entry                   0x08002d4d   Thumb Code    90  tx_thread_shell_entry.o(.text._tx_thread_shell_entry)
+    _tx_thread_sleep                         0x08002da9   Thumb Code   146  tx_thread_sleep.o(.text._tx_thread_sleep)
+    _tx_thread_system_preempt_check          0x08002e3d   Thumb Code    76  tx_thread_system_preempt_check.o(.text._tx_thread_system_preempt_check)
+    _tx_thread_system_resume                 0x08002e89   Thumb Code   308  tx_thread_system_resume.o(.text._tx_thread_system_resume)
+    _tx_thread_system_suspend                0x08002fbd   Thumb Code   380  tx_thread_system_suspend.o(.text._tx_thread_system_suspend)
+    _tx_thread_time_slice                    0x08003139   Thumb Code   112  tx_thread_time_slice.o(.text._tx_thread_time_slice)
+    _tx_thread_timeout                       0x080031a9   Thumb Code    54  tx_thread_timeout.o(.text._tx_thread_timeout)
+    _tx_timer_expiration_process             0x080031e1   Thumb Code    36  tx_timer_expiration_process.o(.text._tx_timer_expiration_process)
+    _tx_timer_initialize                     0x08003205   Thumb Code   140  tx_timer_initialize.o(.text._tx_timer_initialize)
+    _tx_timer_system_activate                0x080032a5   Thumb Code    90  tx_timer_system_activate.o(.text._tx_timer_system_activate)
+    _tx_timer_system_deactivate              0x08003301   Thumb Code    58  tx_timer_system_deactivate.o(.text._tx_timer_system_deactivate)
+    _tx_timer_thread_entry                   0x0800333d   Thumb Code   320  tx_timer_thread_entry.o(.text._tx_timer_thread_entry)
+    _txe_byte_pool_create                    0x08003485   Thumb Code   356  txe_byte_pool_create.o(.text._txe_byte_pool_create)
+    _txe_thread_create                       0x080035e9   Thumb Code   392  txe_thread_create.o(.text._txe_thread_create)
+    main                                     0x08003779   Thumb Code   138  main.o(.text.main)
+    tx_application_define                    0x08003805   Thumb Code    64  app_azure_rtos.o(.text.tx_application_define)
+    tx_low_power_enter                       0x08003859   Thumb Code   344  tx_low_power.o(.text.tx_low_power_enter)
+    tx_low_power_exit                        0x080039b1   Thumb Code    44  tx_low_power.o(.text.tx_low_power_exit)
+    tx_time_increment                        0x080039dd   Thumb Code   450  tx_low_power.o(.text.tx_time_increment)
+    _fp_init                                 0x08003ba5   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08003bbd   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08003bbd   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    AHBPrescTable                            0x08003bbe   Data          16  system_stm32l4xx.o(.rodata.AHBPrescTable)
+    MSIRangeTable                            0x08003bd0   Data          48  system_stm32l4xx.o(.rodata.MSIRangeTable)
+    gRX8900Cfg                               0x08003c00   Data           4  rx8900_lcfg.o(.rodata.gRX8900Cfg)
+    Region$$Table$$Base                      0x08003c04   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08003c24   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x20000000   Data           1  stm32l4xx_hal.o(.data..L_MergedGlobals)
     uwTickPrio                               0x20000004   Data           4  stm32l4xx_hal.o(.data..L_MergedGlobals)
     SystemCoreClock                          0x20000008   Data           4  system_stm32l4xx.o(.data.SystemCoreClock)
     _tx_thread_system_state                  0x2000000c   Data           4  tx_thread_initialize.o(.data._tx_thread_system_state)
-    __libspace_start                         0x20000010   Data          96  libspace.o(.bss)
-    __temporary_stack_top$libspace           0x20000070   Data           0  libspace.o(.bss)
-    gRX8900RuntimeNotify                     0x20000070   Data           1  rx8900.o(.bss..L_MergedGlobals)
-    gRX8900TimeInfo                          0x20000071   Data           7  rx8900.o(.bss..L_MergedGlobals)
-    _tx_semaphore_created_ptr                0x20000078   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_semaphore_created_count              0x2000007c   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_queue_created_ptr                    0x20000080   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_queue_created_count                  0x20000084   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_event_flags_created_ptr              0x20000088   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_event_flags_created_count            0x2000008c   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_block_pool_created_ptr               0x20000090   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_block_pool_created_count             0x20000094   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_byte_pool_created_ptr                0x20000098   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_byte_pool_created_count              0x2000009c   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_mutex_created_ptr                    0x200000a0   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_mutex_created_count                  0x200000a4   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
-    _tx_thread_current_ptr                   0x200000a8   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_thread_execute_ptr                   0x200000ac   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_thread_priority_maps                 0x200000b0   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_thread_highest_priority              0x200000b4   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_thread_created_ptr                   0x200000b8   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_thread_created_count                 0x200000bc   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_thread_preempt_disable               0x200000c0   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_thread_mutex_release                 0x200000c4   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_build_options                        0x200000c8   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_system_clock                   0x200000cc   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_time_slice                     0x200000d0   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_expired_time_slice             0x200000d4   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_expired                        0x200000d8   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_expired_timer_ptr              0x200000dc   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_list_start                     0x200000e0   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_current_ptr                    0x200000e4   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_list_end                       0x200000e8   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_stack_start                    0x200000ec   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_stack_size                     0x200000f0   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_priority                       0x200000f4   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_created_ptr                    0x200000f8   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    _tx_timer_created_count                  0x200000fc   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
-    AppTaskStartTCB                          0x20000500   Data         176  appmain.o(.bss.AppTaskStartTCB)
-    _tx_initialize_unused_memory             0x200005b0   Data           4  tx_initialize_high_level.o(.bss._tx_initialize_unused_memory)
-    _tx_thread_priority_list                 0x200005b4   Data         128  tx_thread_initialize.o(.bss._tx_thread_priority_list)
-    _tx_thread_system_stack_ptr              0x20000634   Data           4  tx_thread_initialize.o(.bss._tx_thread_system_stack_ptr)
-    _tx_timer_list                           0x20000638   Data         128  tx_timer_initialize.o(.bss._tx_timer_list)
-    _tx_timer_thread                         0x200006b8   Data         176  tx_timer_initialize.o(.bss._tx_timer_thread)
-    _tx_timer_thread_stack_area              0x20000768   Data         512  tx_timer_initialize.o(.bss._tx_timer_thread_stack_area)
-    hi2c1                                    0x20000968   Data          84  i2c.o(.bss.hi2c1)
-    tx_low_power_entered                     0x20000bf0   Data           4  tx_low_power.o(.bss.tx_low_power_entered)
-    uwTick                                   0x20000bf4   Data           4  stm32l4xx_hal.o(.bss.uwTick)
+    gRX8900DebugRegAddr                      0x20000010   Data           1  rx8900.o(.data.gRX8900DebugRegAddr)
+    __libspace_start                         0x20000018   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000078   Data           0  libspace.o(.bss)
+    a                                        0x20000078   Data           1  appmain.o(.bss..L_MergedGlobals)
+    b                                        0x20000079   Data           1  appmain.o(.bss..L_MergedGlobals)
+    c                                        0x2000007a   Data           1  appmain.o(.bss..L_MergedGlobals)
+    gRX8900RuntimeNotify                     0x2000007b   Data           1  rx8900.o(.bss..L_MergedGlobals)
+    gRX8900DebugCtrCmd                       0x2000007c   Data           1  rx8900.o(.bss..L_MergedGlobals)
+    gRX8900DebugData                         0x2000007d   Data           1  rx8900.o(.bss..L_MergedGlobals)
+    gRX8900TimeInfo                          0x2000007e   Data           7  rx8900.o(.bss..L_MergedGlobals)
+    gRX8900AllReg                            0x20000085   Data          18  rx8900.o(.bss..L_MergedGlobals)
+    _tx_semaphore_created_ptr                0x20000098   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_semaphore_created_count              0x2000009c   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_queue_created_ptr                    0x200000a0   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_queue_created_count                  0x200000a4   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_event_flags_created_ptr              0x200000a8   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_event_flags_created_count            0x200000ac   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_block_pool_created_ptr               0x200000b0   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_block_pool_created_count             0x200000b4   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_byte_pool_created_ptr                0x200000b8   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_byte_pool_created_count              0x200000bc   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_mutex_created_ptr                    0x200000c0   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_mutex_created_count                  0x200000c4   Data           4  tx_initialize_high_level.o(.bss..L_MergedGlobals)
+    _tx_thread_current_ptr                   0x200000c8   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_thread_execute_ptr                   0x200000cc   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_thread_priority_maps                 0x200000d0   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_thread_highest_priority              0x200000d4   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_thread_created_ptr                   0x200000d8   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_thread_created_count                 0x200000dc   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_thread_preempt_disable               0x200000e0   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_thread_mutex_release                 0x200000e4   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_build_options                        0x200000e8   Data           4  tx_thread_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_system_clock                   0x200000ec   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_time_slice                     0x200000f0   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_expired_time_slice             0x200000f4   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_expired                        0x200000f8   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_expired_timer_ptr              0x200000fc   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_list_start                     0x20000100   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_current_ptr                    0x20000104   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_list_end                       0x20000108   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_stack_start                    0x2000010c   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_stack_size                     0x20000110   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_priority                       0x20000114   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_created_ptr                    0x20000118   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    _tx_timer_created_count                  0x2000011c   Data           4  tx_timer_initialize.o(.bss..L_MergedGlobals)
+    AppTask10msTCB                           0x20000520   Data         176  appmain.o(.bss.AppTask10msTCB)
+    _tx_initialize_unused_memory             0x200005d0   Data           4  tx_initialize_high_level.o(.bss._tx_initialize_unused_memory)
+    _tx_thread_priority_list                 0x200005d4   Data         128  tx_thread_initialize.o(.bss._tx_thread_priority_list)
+    _tx_thread_system_stack_ptr              0x20000654   Data           4  tx_thread_initialize.o(.bss._tx_thread_system_stack_ptr)
+    _tx_timer_list                           0x20000658   Data         128  tx_timer_initialize.o(.bss._tx_timer_list)
+    _tx_timer_thread                         0x200006d8   Data         176  tx_timer_initialize.o(.bss._tx_timer_thread)
+    _tx_timer_thread_stack_area              0x20000788   Data         512  tx_timer_initialize.o(.bss._tx_timer_thread_stack_area)
+    hi2c1                                    0x20000988   Data          84  i2c.o(.bss.hi2c1)
+    tx_low_power_entered                     0x20000c10   Data           4  tx_low_power.o(.bss.tx_low_power_entered)
+    uwTick                                   0x20000c14   Data           4  stm32l4xx_hal.o(.bss.uwTick)
 
 
 
@@ -3120,251 +3138,253 @@ Memory Map of the image
 
   Image Entry point : 0x0800018d
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003a48, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003c40, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003a38, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003c24, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x0000018c   Data   RO            3    RESET               startup_stm32l432xx.o
-    0x0800018c   0x0800018c   0x00000008   Code   RO         2287  * !!!main             c_w.l(__main.o)
-    0x08000194   0x08000194   0x0000005c   Code   RO         2454    !!!scatter          c_w.l(__scatter.o)
-    0x080001f0   0x080001f0   0x0000001a   Code   RO         2458    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x0800018c   0x0800018c   0x00000008   Code   RO         2293  * !!!main             c_w.l(__main.o)
+    0x08000194   0x08000194   0x0000005c   Code   RO         2460    !!!scatter          c_w.l(__scatter.o)
+    0x080001f0   0x080001f0   0x0000001a   Code   RO         2464    !!handler_copy      c_w.l(__scatter_copy.o)
     0x0800020a   0x0800020a   0x00000002   PAD
-    0x0800020c   0x0800020c   0x00000002   Code   RO         2455    !!handler_null      c_w.l(__scatter.o)
+    0x0800020c   0x0800020c   0x00000002   Code   RO         2461    !!handler_null      c_w.l(__scatter.o)
     0x0800020e   0x0800020e   0x00000002   PAD
-    0x08000210   0x08000210   0x0000001c   Code   RO         2460    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x0800022c   0x0800022c   0x00000002   Code   RO         2316    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x0800022e   0x0800022e   0x00000004   Code   RO         2322    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2325    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2327    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2330    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2332    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2334    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2337    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2339    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2341    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2343    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2345    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2347    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2349    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2351    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2353    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2355    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2357    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2361    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2363    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2365    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000000   Code   RO         2367    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x08000232   0x08000232   0x00000002   Code   RO         2368    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x08000234   0x08000234   0x00000002   Code   RO         2390    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x08000236   0x08000236   0x00000000   Code   RO         2405    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x08000236   0x08000236   0x00000000   Code   RO         2407    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x08000236   0x08000236   0x00000000   Code   RO         2410    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x08000236   0x08000236   0x00000000   Code   RO         2413    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x08000236   0x08000236   0x00000000   Code   RO         2415    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x08000236   0x08000236   0x00000000   Code   RO         2418    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x08000236   0x08000236   0x00000002   Code   RO         2419    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x08000238   0x08000238   0x00000000   Code   RO         2289    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x08000238   0x08000238   0x00000000   Code   RO         2293    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x08000238   0x08000238   0x00000006   Code   RO         2305    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x0800023e   0x0800023e   0x00000000   Code   RO         2295    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x0800023e   0x0800023e   0x00000004   Code   RO         2296    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x08000242   0x08000242   0x00000000   Code   RO         2298    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x08000242   0x08000242   0x00000008   Code   RO         2299    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x0800024a   0x0800024a   0x00000002   Code   RO         2320    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x0800024c   0x0800024c   0x00000000   Code   RO         2370    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x0800024c   0x0800024c   0x00000004   Code   RO         2371    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x08000250   0x08000250   0x00000006   Code   RO         2372    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000210   0x08000210   0x0000001c   Code   RO         2466    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x0800022c   0x0800022c   0x00000002   Code   RO         2322    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0800022e   0x0800022e   0x00000004   Code   RO         2328    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2331    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2333    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2336    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2338    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2340    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2343    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2345    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2347    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2349    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2351    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2353    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2355    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2357    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2359    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2361    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2363    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2367    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2369    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2371    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000000   Code   RO         2373    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x08000232   0x08000232   0x00000002   Code   RO         2374    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x08000234   0x08000234   0x00000002   Code   RO         2396    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x08000236   0x08000236   0x00000000   Code   RO         2411    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x08000236   0x08000236   0x00000000   Code   RO         2413    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x08000236   0x08000236   0x00000000   Code   RO         2416    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x08000236   0x08000236   0x00000000   Code   RO         2419    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x08000236   0x08000236   0x00000000   Code   RO         2421    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x08000236   0x08000236   0x00000000   Code   RO         2424    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x08000236   0x08000236   0x00000002   Code   RO         2425    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x08000238   0x08000238   0x00000000   Code   RO         2295    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x08000238   0x08000238   0x00000000   Code   RO         2299    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x08000238   0x08000238   0x00000006   Code   RO         2311    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x0800023e   0x0800023e   0x00000000   Code   RO         2301    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x0800023e   0x0800023e   0x00000004   Code   RO         2302    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000242   0x08000242   0x00000000   Code   RO         2304    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000242   0x08000242   0x00000008   Code   RO         2305    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800024a   0x0800024a   0x00000002   Code   RO         2326    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x0800024c   0x0800024c   0x00000000   Code   RO         2376    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x0800024c   0x0800024c   0x00000004   Code   RO         2377    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000250   0x08000250   0x00000006   Code   RO         2378    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x08000256   0x08000256   0x00000002   PAD
     0x08000258   0x08000258   0x00000040   Code   RO            4    .text               startup_stm32l432xx.o
     0x08000298   0x08000298   0x00000008   PAD
     0x080002a0   0x080002a0   0x00000098   Code   RO           25    .text               tx_initialize_low_level.o
     0x08000338   0x08000338   0x00000008   PAD
-    0x08000340   0x08000340   0x000000dc   Code   RO          860    .text               tx_thread_schedule.o
+    0x08000340   0x08000340   0x000000dc   Code   RO          866    .text               tx_thread_schedule.o
     0x0800041c   0x0800041c   0x00000004   PAD
-    0x08000420   0x08000420   0x00000040   Code   RO          865    .text               tx_thread_stack_build.o
-    0x08000460   0x08000460   0x000000b8   Code   RO          875    .text               tx_timer_interrupt.o
-    0x08000518   0x08000518   0x00000010   Code   RO         2281    .text               c_w.l(aeabi_memset.o)
-    0x08000528   0x08000528   0x0000004e   Code   RO         2283    .text               c_w.l(rt_memclr_w.o)
-    0x08000576   0x08000576   0x00000006   Code   RO         2285    .text               c_w.l(heapauxi.o)
-    0x0800057c   0x0800057c   0x00000044   Code   RO         2290    .text               c_w.l(rt_memclr.o)
-    0x080005c0   0x080005c0   0x0000004a   Code   RO         2307    .text               c_w.l(sys_stackheap_outer.o)
-    0x0800060a   0x0800060a   0x00000012   Code   RO         2309    .text               c_w.l(exit.o)
-    0x0800061c   0x0800061c   0x00000008   Code   RO         2317    .text               c_w.l(libspace.o)
-    0x08000624   0x08000624   0x0000000c   Code   RO         2380    .text               c_w.l(sys_exit.o)
-    0x08000630   0x08000630   0x00000002   Code   RO         2395    .text               c_w.l(use_no_semi.o)
-    0x08000632   0x08000632   0x00000000   Code   RO         2397    .text               c_w.l(indicate_semi.o)
+    0x08000420   0x08000420   0x00000040   Code   RO          871    .text               tx_thread_stack_build.o
+    0x08000460   0x08000460   0x000000b8   Code   RO          881    .text               tx_timer_interrupt.o
+    0x08000518   0x08000518   0x00000010   Code   RO         2287    .text               c_w.l(aeabi_memset.o)
+    0x08000528   0x08000528   0x0000004e   Code   RO         2289    .text               c_w.l(rt_memclr_w.o)
+    0x08000576   0x08000576   0x00000006   Code   RO         2291    .text               c_w.l(heapauxi.o)
+    0x0800057c   0x0800057c   0x00000044   Code   RO         2296    .text               c_w.l(rt_memclr.o)
+    0x080005c0   0x080005c0   0x0000004a   Code   RO         2313    .text               c_w.l(sys_stackheap_outer.o)
+    0x0800060a   0x0800060a   0x00000012   Code   RO         2315    .text               c_w.l(exit.o)
+    0x0800061c   0x0800061c   0x00000008   Code   RO         2323    .text               c_w.l(libspace.o)
+    0x08000624   0x08000624   0x0000000c   Code   RO         2386    .text               c_w.l(sys_exit.o)
+    0x08000630   0x08000630   0x00000002   Code   RO         2401    .text               c_w.l(use_no_semi.o)
+    0x08000632   0x08000632   0x00000000   Code   RO         2403    .text               c_w.l(indicate_semi.o)
     0x08000632   0x08000632   0x00000002   PAD
-    0x08000634   0x08000634   0x0000005c   Code   RO          780    .text.AppMain       appmain.o
-    0x08000690   0x08000690   0x0000002e   Code   RO          782    .text.AppTaskStart  appmain.o
-    0x080006be   0x080006be   0x00000002   PAD
-    0x080006c0   0x080006c0   0x00000008   Code   RO           40    .text.App_ThreadX_Init  app_threadx.o
-    0x080006c8   0x080006c8   0x00000008   Code   RO           46    .text.App_ThreadX_LowPower_Enter  app_threadx.o
-    0x080006d0   0x080006d0   0x00000002   Code   RO           48    .text.App_ThreadX_LowPower_Exit  app_threadx.o
-    0x080006d2   0x080006d2   0x00000002   PAD
-    0x080006d4   0x080006d4   0x00000004   Code   RO           50    .text.App_ThreadX_LowPower_Timer_Adjust  app_threadx.o
-    0x080006d8   0x080006d8   0x00000002   Code   RO           44    .text.App_ThreadX_LowPower_Timer_Setup  app_threadx.o
-    0x080006da   0x080006da   0x00000002   PAD
-    0x080006dc   0x080006dc   0x00000002   Code   RO           81    .text.BusFault_Handler  stm32l4xx_it.o
-    0x080006de   0x080006de   0x00000002   PAD
-    0x080006e0   0x080006e0   0x00000002   Code   RO           85    .text.DebugMon_Handler  stm32l4xx_it.o
-    0x080006e2   0x080006e2   0x00000002   PAD
-    0x080006e4   0x080006e4   0x00000006   Code   RO           87    .text.EXTI1_IRQHandler  stm32l4xx_it.o
-    0x080006ea   0x080006ea   0x00000002   PAD
-    0x080006ec   0x080006ec   0x0000000a   Code   RO           15    .text.Error_Handler  main.o
+    0x08000634   0x08000634   0x00000064   Code   RO          780    .text.AppMain       appmain.o
+    0x08000698   0x08000698   0x0000003c   Code   RO          782    .text.AppTask10ms   appmain.o
+    0x080006d4   0x080006d4   0x00000008   Code   RO           40    .text.App_ThreadX_Init  app_threadx.o
+    0x080006dc   0x080006dc   0x00000008   Code   RO           46    .text.App_ThreadX_LowPower_Enter  app_threadx.o
+    0x080006e4   0x080006e4   0x00000002   Code   RO           48    .text.App_ThreadX_LowPower_Exit  app_threadx.o
+    0x080006e6   0x080006e6   0x00000002   PAD
+    0x080006e8   0x080006e8   0x00000004   Code   RO           50    .text.App_ThreadX_LowPower_Timer_Adjust  app_threadx.o
+    0x080006ec   0x080006ec   0x00000002   Code   RO           44    .text.App_ThreadX_LowPower_Timer_Setup  app_threadx.o
+    0x080006ee   0x080006ee   0x00000002   PAD
+    0x080006f0   0x080006f0   0x00000002   Code   RO           81    .text.BusFault_Handler  stm32l4xx_it.o
+    0x080006f2   0x080006f2   0x00000002   PAD
+    0x080006f4   0x080006f4   0x00000002   Code   RO           85    .text.DebugMon_Handler  stm32l4xx_it.o
     0x080006f6   0x080006f6   0x00000002   PAD
-    0x080006f8   0x080006f8   0x00000012   Code   RO          314    .text.HAL_DBGMCU_EnableDBGSleepMode  stm32l4xx_hal.o
+    0x080006f8   0x080006f8   0x00000006   Code   RO           87    .text.EXTI1_IRQHandler  stm32l4xx_it.o
+    0x080006fe   0x080006fe   0x00000002   PAD
+    0x08000700   0x08000700   0x0000000a   Code   RO           15    .text.Error_Handler  main.o
     0x0800070a   0x0800070a   0x00000002   PAD
-    0x0800070c   0x0800070c   0x00000012   Code   RO          318    .text.HAL_DBGMCU_EnableDBGStopMode  stm32l4xx_hal.o
-    0x0800071e   0x0800071e   0x00000002   PAD
-    0x08000720   0x08000720   0x0000000a   Code   RO          794    .text.HAL_GPIO_EXTI_Callback  appirqcallout.o
-    0x0800072a   0x0800072a   0x00000002   PAD
-    0x0800072c   0x0800072c   0x00000016   Code   RO          518    .text.HAL_GPIO_EXTI_IRQHandler  stm32l4xx_hal_gpio.o
-    0x08000742   0x08000742   0x00000002   PAD
-    0x08000744   0x08000744   0x000001b8   Code   RO          506    .text.HAL_GPIO_Init  stm32l4xx_hal_gpio.o
-    0x080008fc   0x080008fc   0x0000000c   Code   RO          288    .text.HAL_GetTick   stm32l4xx_hal.o
-    0x08000908   0x08000908   0x0000004a   Code   RO          256    .text.HAL_I2CEx_ConfigAnalogFilter  stm32l4xx_hal_i2c_ex.o
-    0x08000952   0x08000952   0x00000002   PAD
-    0x08000954   0x08000954   0x00000048   Code   RO          258    .text.HAL_I2CEx_ConfigDigitalFilter  stm32l4xx_hal_i2c_ex.o
-    0x0800099c   0x0800099c   0x000000ae   Code   RO          104    .text.HAL_I2C_Init  stm32l4xx_hal_i2c.o
-    0x08000a4a   0x08000a4a   0x00000002   PAD
-    0x08000a4c   0x08000a4c   0x0000022e   Code   RO          164    .text.HAL_I2C_Mem_Read  stm32l4xx_hal_i2c.o
-    0x08000c7a   0x08000c7a   0x00000002   PAD
-    0x08000c7c   0x08000c7c   0x0000022e   Code   RO          162    .text.HAL_I2C_Mem_Write  stm32l4xx_hal_i2c.o
-    0x08000eaa   0x08000eaa   0x00000002   PAD
-    0x08000eac   0x08000eac   0x00000086   Code   RO           62    .text.HAL_I2C_MspInit  i2c.o
-    0x08000f32   0x08000f32   0x00000002   PAD
-    0x08000f34   0x08000f34   0x0000001e   Code   RO          276    .text.HAL_Init      stm32l4xx_hal.o
-    0x08000f52   0x08000f52   0x00000002   PAD
-    0x08000f54   0x08000f54   0x0000004c   Code   RO          278    .text.HAL_InitTick  stm32l4xx_hal.o
-    0x08000fa0   0x08000fa0   0x00000032   Code   RO           96    .text.HAL_MspInit   stm32l4xx_hal_msp.o
-    0x08000fd2   0x08000fd2   0x00000002   PAD
-    0x08000fd4   0x08000fd4   0x00000022   Code   RO          683    .text.HAL_NVIC_EnableIRQ  stm32l4xx_hal_cortex.o
-    0x08000ff6   0x08000ff6   0x00000002   PAD
-    0x08000ff8   0x08000ff8   0x00000056   Code   RO          681    .text.HAL_NVIC_SetPriority  stm32l4xx_hal_cortex.o
-    0x0800104e   0x0800104e   0x00000002   PAD
-    0x08001050   0x08001050   0x00000020   Code   RO          679    .text.HAL_NVIC_SetPriorityGrouping  stm32l4xx_hal_cortex.o
-    0x08001070   0x08001070   0x0000008c   Code   RO          605    .text.HAL_PWREx_ControlVoltageScaling  stm32l4xx_hal_pwr_ex.o
-    0x080010fc   0x080010fc   0x00000066   Code   RO          653    .text.HAL_PWREx_DisableLowPowerRunMode  stm32l4xx_hal_pwr_ex.o
+    0x0800070c   0x0800070c   0x0000000a   Code   RO          795    .text.HAL_GPIO_EXTI_Callback  appirqcallout.o
+    0x08000716   0x08000716   0x00000002   PAD
+    0x08000718   0x08000718   0x00000016   Code   RO          518    .text.HAL_GPIO_EXTI_IRQHandler  stm32l4xx_hal_gpio.o
+    0x0800072e   0x0800072e   0x00000002   PAD
+    0x08000730   0x08000730   0x000001b8   Code   RO          506    .text.HAL_GPIO_Init  stm32l4xx_hal_gpio.o
+    0x080008e8   0x080008e8   0x0000000c   Code   RO          288    .text.HAL_GetTick   stm32l4xx_hal.o
+    0x080008f4   0x080008f4   0x0000004a   Code   RO          256    .text.HAL_I2CEx_ConfigAnalogFilter  stm32l4xx_hal_i2c_ex.o
+    0x0800093e   0x0800093e   0x00000002   PAD
+    0x08000940   0x08000940   0x00000048   Code   RO          258    .text.HAL_I2CEx_ConfigDigitalFilter  stm32l4xx_hal_i2c_ex.o
+    0x08000988   0x08000988   0x000000ae   Code   RO          104    .text.HAL_I2C_Init  stm32l4xx_hal_i2c.o
+    0x08000a36   0x08000a36   0x00000002   PAD
+    0x08000a38   0x08000a38   0x0000022e   Code   RO          164    .text.HAL_I2C_Mem_Read  stm32l4xx_hal_i2c.o
+    0x08000c66   0x08000c66   0x00000002   PAD
+    0x08000c68   0x08000c68   0x0000022e   Code   RO          162    .text.HAL_I2C_Mem_Write  stm32l4xx_hal_i2c.o
+    0x08000e96   0x08000e96   0x00000002   PAD
+    0x08000e98   0x08000e98   0x00000086   Code   RO           62    .text.HAL_I2C_MspInit  i2c.o
+    0x08000f1e   0x08000f1e   0x00000002   PAD
+    0x08000f20   0x08000f20   0x0000001e   Code   RO          276    .text.HAL_Init      stm32l4xx_hal.o
+    0x08000f3e   0x08000f3e   0x00000002   PAD
+    0x08000f40   0x08000f40   0x0000004c   Code   RO          278    .text.HAL_InitTick  stm32l4xx_hal.o
+    0x08000f8c   0x08000f8c   0x00000032   Code   RO           96    .text.HAL_MspInit   stm32l4xx_hal_msp.o
+    0x08000fbe   0x08000fbe   0x00000002   PAD
+    0x08000fc0   0x08000fc0   0x00000022   Code   RO          683    .text.HAL_NVIC_EnableIRQ  stm32l4xx_hal_cortex.o
+    0x08000fe2   0x08000fe2   0x00000002   PAD
+    0x08000fe4   0x08000fe4   0x00000056   Code   RO          681    .text.HAL_NVIC_SetPriority  stm32l4xx_hal_cortex.o
+    0x0800103a   0x0800103a   0x00000002   PAD
+    0x0800103c   0x0800103c   0x00000020   Code   RO          679    .text.HAL_NVIC_SetPriorityGrouping  stm32l4xx_hal_cortex.o
+    0x0800105c   0x0800105c   0x0000008c   Code   RO          605    .text.HAL_PWREx_ControlVoltageScaling  stm32l4xx_hal_pwr_ex.o
+    0x080010e8   0x080010e8   0x00000066   Code   RO          653    .text.HAL_PWREx_DisableLowPowerRunMode  stm32l4xx_hal_pwr_ex.o
+    0x0800114e   0x0800114e   0x00000002   PAD
+    0x08001150   0x08001150   0x00000012   Code   RO          651    .text.HAL_PWREx_EnableLowPowerRunMode  stm32l4xx_hal_pwr_ex.o
     0x08001162   0x08001162   0x00000002   PAD
-    0x08001164   0x08001164   0x00000012   Code   RO          651    .text.HAL_PWREx_EnableLowPowerRunMode  stm32l4xx_hal_pwr_ex.o
-    0x08001176   0x08001176   0x00000002   PAD
-    0x08001178   0x08001178   0x00000036   Code   RO          655    .text.HAL_PWREx_EnterSTOP0Mode  stm32l4xx_hal_pwr_ex.o
-    0x080011ae   0x080011ae   0x00000002   PAD
-    0x080011b0   0x080011b0   0x0000003c   Code   RO          657    .text.HAL_PWREx_EnterSTOP1Mode  stm32l4xx_hal_pwr_ex.o
-    0x080011ec   0x080011ec   0x00000010   Code   RO          603    .text.HAL_PWREx_GetVoltageRange  stm32l4xx_hal_pwr_ex.o
-    0x080011fc   0x080011fc   0x0000004a   Code   RO          579    .text.HAL_PWR_EnterSLEEPMode  stm32l4xx_hal_pwr.o
-    0x08001246   0x08001246   0x00000002   PAD
-    0x08001248   0x08001248   0x00000010   Code   RO          581    .text.HAL_PWR_EnterSTOPMode  stm32l4xx_hal_pwr.o
-    0x08001258   0x08001258   0x00000284   Code   RO          382    .text.HAL_RCCEx_PeriphCLKConfig  stm32l4xx_hal_rcc_ex.o
-    0x080014dc   0x080014dc   0x0000027a   Code   RO          352    .text.HAL_RCC_ClockConfig  stm32l4xx_hal_rcc.o
-    0x08001756   0x08001756   0x00000002   PAD
-    0x08001758   0x08001758   0x000007ec   Code   RO          348    .text.HAL_RCC_OscConfig  stm32l4xx_hal_rcc.o
-    0x08001f44   0x08001f44   0x0000002c   Code   RO          691    .text.HAL_SYSTICK_Config  stm32l4xx_hal_cortex.o
-    0x08001f70   0x08001f70   0x00000002   Code   RO           77    .text.HardFault_Handler  stm32l4xx_it.o
-    0x08001f72   0x08001f72   0x00000002   PAD
-    0x08001f74   0x08001f74   0x0000015c   Code   RO          246    .text.I2C_IsErrorOccurred  stm32l4xx_hal_i2c.o
-    0x080020d0   0x080020d0   0x000000e8   Code   RO          114    .text.I2C_WaitOnFlagUntilTimeout  stm32l4xx_hal_i2c.o
-    0x080021b8   0x080021b8   0x0000007c   Code   RO          118    .text.I2C_WaitOnSTOPFlagUntilTimeout  stm32l4xx_hal_i2c.o
-    0x08002234   0x08002234   0x00000098   Code   RO          116    .text.I2C_WaitOnTXISFlagUntilTimeout  stm32l4xx_hal_i2c.o
-    0x080022cc   0x080022cc   0x00000066   Code   RO           31    .text.MX_GPIO_Init  gpio.o
-    0x08002332   0x08002332   0x00000002   PAD
-    0x08002334   0x08002334   0x0000006c   Code   RO           60    .text.MX_I2C1_Init  i2c.o
-    0x080023a0   0x080023a0   0x00000004   Code   RO           42    .text.MX_ThreadX_Init  app_threadx.o
-    0x080023a4   0x080023a4   0x00000002   Code   RO           79    .text.MemManage_Handler  stm32l4xx_it.o
-    0x080023a6   0x080023a6   0x00000002   PAD
-    0x080023a8   0x080023a8   0x00000002   Code   RO           75    .text.NMI_Handler   stm32l4xx_it.o
-    0x080023aa   0x080023aa   0x00000002   PAD
-    0x080023ac   0x080023ac   0x0000014a   Code   RO          384    .text.RCCEx_PLLSAI1_Config  stm32l4xx_hal_rcc_ex.o
-    0x080024f6   0x080024f6   0x00000002   PAD
-    0x080024f8   0x080024f8   0x0000005a   Code   RO          821    .text.RX8900_IIC_Transmit  rx8900_callout.o
-    0x08002552   0x08002552   0x00000002   PAD
-    0x08002554   0x08002554   0x0000007e   Code   RO          806    .text.RX8900_Init   rx8900.o
-    0x080025d2   0x080025d2   0x00000002   PAD
-    0x080025d4   0x080025d4   0x00000084   Code   RO          808    .text.RX8900_Main_Fun  rx8900.o
-    0x08002658   0x08002658   0x0000009a   Code   RO          810    .text.RX8900_Process_ISR  rx8900.o
-    0x080026f2   0x080026f2   0x00000002   PAD
-    0x080026f4   0x080026f4   0x0000018c   Code   RO          802    .text.RX8900_Set_Time  rx8900.o
-    0x08002880   0x08002880   0x000000d8   Code   RO          804    .text.RX8900_Updata_Time  rx8900.o
-    0x08002958   0x08002958   0x00000012   Code   RO          753    .text.SystemInit    system_stm32l4xx.o
-    0x0800296a   0x0800296a   0x00000002   PAD
-    0x0800296c   0x0800296c   0x00000002   Code   RO           83    .text.UsageFault_Handler  stm32l4xx_it.o
-    0x0800296e   0x0800296e   0x00000002   PAD
-    0x08002970   0x08002970   0x0000008c   Code   RO          991    .text._tx_byte_pool_create  tx_byte_pool_create.o
-    0x080029fc   0x080029fc   0x0000002e   Code   RO          881    .text._tx_initialize_high_level  tx_initialize_high_level.o
-    0x08002a2a   0x08002a2a   0x00000002   PAD
-    0x08002a2c   0x08002a2c   0x0000004e   Code   RO          891    .text._tx_initialize_kernel_enter  tx_initialize_kernel_enter.o
-    0x08002a7a   0x08002a7a   0x00000002   PAD
-    0x08002a7c   0x08002a7c   0x0000013e   Code   RO         1366    .text._tx_thread_create  tx_thread_create.o
-    0x08002bba   0x08002bba   0x00000002   PAD
-    0x08002bbc   0x08002bbc   0x00000036   Code   RO         1412    .text._tx_thread_initialize  tx_thread_initialize.o
-    0x08002bf2   0x08002bf2   0x00000002   PAD
-    0x08002bf4   0x08002bf4   0x0000005a   Code   RO         1475    .text._tx_thread_shell_entry  tx_thread_shell_entry.o
-    0x08002c4e   0x08002c4e   0x00000002   PAD
-    0x08002c50   0x08002c50   0x0000004c   Code   RO         1522    .text._tx_thread_system_preempt_check  tx_thread_system_preempt_check.o
-    0x08002c9c   0x08002c9c   0x00000134   Code   RO         1532    .text._tx_thread_system_resume  tx_thread_system_resume.o
-    0x08002dd0   0x08002dd0   0x0000017c   Code   RO         1541    .text._tx_thread_system_suspend  tx_thread_system_suspend.o
-    0x08002f4c   0x08002f4c   0x00000070   Code   RO         1561    .text._tx_thread_time_slice  tx_thread_time_slice.o
-    0x08002fbc   0x08002fbc   0x00000036   Code   RO         1581    .text._tx_thread_timeout  tx_thread_timeout.o
-    0x08002ff2   0x08002ff2   0x00000002   PAD
-    0x08002ff4   0x08002ff4   0x00000024   Code   RO         2150    .text._tx_timer_expiration_process  tx_timer_expiration_process.o
-    0x08003018   0x08003018   0x000000a0   Code   RO         2168    .text._tx_timer_initialize  tx_timer_initialize.o
-    0x080030b8   0x080030b8   0x0000005a   Code   RO         2181    .text._tx_timer_system_activate  tx_timer_system_activate.o
-    0x08003112   0x08003112   0x00000002   PAD
-    0x08003114   0x08003114   0x0000003a   Code   RO         2190    .text._tx_timer_system_deactivate  tx_timer_system_deactivate.o
-    0x0800314e   0x0800314e   0x00000002   PAD
-    0x08003150   0x08003150   0x00000146   Code   RO         2199    .text._tx_timer_thread_entry  tx_timer_thread_entry.o
-    0x08003296   0x08003296   0x00000002   PAD
-    0x08003298   0x08003298   0x00000164   Code   RO         1680    .text._txe_byte_pool_create  txe_byte_pool_create.o
-    0x080033fc   0x080033fc   0x0000018e   Code   RO         1986    .text._txe_thread_create  txe_thread_create.o
-    0x0800358a   0x0800358a   0x00000002   PAD
-    0x0800358c   0x0800358c   0x0000008a   Code   RO           11    .text.main          main.o
-    0x08003616   0x08003616   0x00000002   PAD
-    0x08003618   0x08003618   0x00000054   Code   RO          769    .text.tx_application_define  app_azure_rtos.o
-    0x0800366c   0x0800366c   0x00000158   Code   RO         2263    .text.tx_low_power_enter  tx_low_power.o
-    0x080037c4   0x080037c4   0x0000002c   Code   RO         2267    .text.tx_low_power_exit  tx_low_power.o
-    0x080037f0   0x080037f0   0x000001c8   Code   RO         2269    .text.tx_time_increment  tx_low_power.o
-    0x080039b8   0x080039b8   0x0000001a   Code   RO         2378    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x080039d2   0x080039d2   0x00000010   Data   RO          758    .rodata.AHBPrescTable  system_stm32l4xx.o
-    0x080039e2   0x080039e2   0x00000002   PAD
-    0x080039e4   0x080039e4   0x00000030   Data   RO          760    .rodata.MSIRangeTable  system_stm32l4xx.o
-    0x08003a14   0x08003a14   0x00000004   Data   RO          830    .rodata.gRX8900Cfg  rx8900_lcfg.o
-    0x08003a18   0x08003a18   0x00000020   Data   RO         2453    Region$$Table       anon$$obj.o
+    0x08001164   0x08001164   0x00000010   Code   RO          603    .text.HAL_PWREx_GetVoltageRange  stm32l4xx_hal_pwr_ex.o
+    0x08001174   0x08001174   0x0000004a   Code   RO          579    .text.HAL_PWR_EnterSLEEPMode  stm32l4xx_hal_pwr.o
+    0x080011be   0x080011be   0x00000002   PAD
+    0x080011c0   0x080011c0   0x00000284   Code   RO          382    .text.HAL_RCCEx_PeriphCLKConfig  stm32l4xx_hal_rcc_ex.o
+    0x08001444   0x08001444   0x0000027a   Code   RO          352    .text.HAL_RCC_ClockConfig  stm32l4xx_hal_rcc.o
+    0x080016be   0x080016be   0x00000002   PAD
+    0x080016c0   0x080016c0   0x000007ec   Code   RO          348    .text.HAL_RCC_OscConfig  stm32l4xx_hal_rcc.o
+    0x08001eac   0x08001eac   0x0000002c   Code   RO          691    .text.HAL_SYSTICK_Config  stm32l4xx_hal_cortex.o
+    0x08001ed8   0x08001ed8   0x00000002   Code   RO           77    .text.HardFault_Handler  stm32l4xx_it.o
+    0x08001eda   0x08001eda   0x00000002   PAD
+    0x08001edc   0x08001edc   0x0000015c   Code   RO          246    .text.I2C_IsErrorOccurred  stm32l4xx_hal_i2c.o
+    0x08002038   0x08002038   0x000000e8   Code   RO          114    .text.I2C_WaitOnFlagUntilTimeout  stm32l4xx_hal_i2c.o
+    0x08002120   0x08002120   0x0000007c   Code   RO          118    .text.I2C_WaitOnSTOPFlagUntilTimeout  stm32l4xx_hal_i2c.o
+    0x0800219c   0x0800219c   0x00000098   Code   RO          116    .text.I2C_WaitOnTXISFlagUntilTimeout  stm32l4xx_hal_i2c.o
+    0x08002234   0x08002234   0x00000066   Code   RO           31    .text.MX_GPIO_Init  gpio.o
+    0x0800229a   0x0800229a   0x00000002   PAD
+    0x0800229c   0x0800229c   0x0000006c   Code   RO           60    .text.MX_I2C1_Init  i2c.o
+    0x08002308   0x08002308   0x00000004   Code   RO           42    .text.MX_ThreadX_Init  app_threadx.o
+    0x0800230c   0x0800230c   0x00000002   Code   RO           79    .text.MemManage_Handler  stm32l4xx_it.o
+    0x0800230e   0x0800230e   0x00000002   PAD
+    0x08002310   0x08002310   0x00000002   Code   RO           75    .text.NMI_Handler   stm32l4xx_it.o
+    0x08002312   0x08002312   0x00000002   PAD
+    0x08002314   0x08002314   0x0000014a   Code   RO          384    .text.RCCEx_PLLSAI1_Config  stm32l4xx_hal_rcc_ex.o
+    0x0800245e   0x0800245e   0x00000002   PAD
+    0x08002460   0x08002460   0x00000092   Code   RO          809    .text.RX8900_Get_Alarm  rx8900.o
+    0x080024f2   0x080024f2   0x00000002   PAD
+    0x080024f4   0x080024f4   0x0000005a   Code   RO          827    .text.RX8900_IIC_Transmit  rx8900_callout.o
+    0x0800254e   0x0800254e   0x00000002   PAD
+    0x08002550   0x08002550   0x0000007e   Code   RO          811    .text.RX8900_Init   rx8900.o
+    0x080025ce   0x080025ce   0x00000002   PAD
+    0x080025d0   0x080025d0   0x000000de   Code   RO          813    .text.RX8900_Main_Fun  rx8900.o
+    0x080026ae   0x080026ae   0x00000002   PAD
+    0x080026b0   0x080026b0   0x0000009a   Code   RO          815    .text.RX8900_Process_ISR  rx8900.o
+    0x0800274a   0x0800274a   0x00000002   PAD
+    0x0800274c   0x0800274c   0x000000fe   Code   RO          807    .text.RX8900_Set_Alarm  rx8900.o
+    0x0800284a   0x0800284a   0x00000002   PAD
+    0x0800284c   0x0800284c   0x0000018c   Code   RO          803    .text.RX8900_Set_Time  rx8900.o
+    0x080029d8   0x080029d8   0x000000d8   Code   RO          805    .text.RX8900_Updata_Time  rx8900.o
+    0x08002ab0   0x08002ab0   0x00000012   Code   RO          753    .text.SystemInit    system_stm32l4xx.o
+    0x08002ac2   0x08002ac2   0x00000002   PAD
+    0x08002ac4   0x08002ac4   0x00000002   Code   RO           83    .text.UsageFault_Handler  stm32l4xx_it.o
+    0x08002ac6   0x08002ac6   0x00000002   PAD
+    0x08002ac8   0x08002ac8   0x0000008c   Code   RO          997    .text._tx_byte_pool_create  tx_byte_pool_create.o
+    0x08002b54   0x08002b54   0x0000002e   Code   RO          887    .text._tx_initialize_high_level  tx_initialize_high_level.o
+    0x08002b82   0x08002b82   0x00000002   PAD
+    0x08002b84   0x08002b84   0x0000004e   Code   RO          897    .text._tx_initialize_kernel_enter  tx_initialize_kernel_enter.o
+    0x08002bd2   0x08002bd2   0x00000002   PAD
+    0x08002bd4   0x08002bd4   0x0000013e   Code   RO         1372    .text._tx_thread_create  tx_thread_create.o
+    0x08002d12   0x08002d12   0x00000002   PAD
+    0x08002d14   0x08002d14   0x00000036   Code   RO         1418    .text._tx_thread_initialize  tx_thread_initialize.o
+    0x08002d4a   0x08002d4a   0x00000002   PAD
+    0x08002d4c   0x08002d4c   0x0000005a   Code   RO         1481    .text._tx_thread_shell_entry  tx_thread_shell_entry.o
+    0x08002da6   0x08002da6   0x00000002   PAD
+    0x08002da8   0x08002da8   0x00000092   Code   RO         1490    .text._tx_thread_sleep  tx_thread_sleep.o
+    0x08002e3a   0x08002e3a   0x00000002   PAD
+    0x08002e3c   0x08002e3c   0x0000004c   Code   RO         1528    .text._tx_thread_system_preempt_check  tx_thread_system_preempt_check.o
+    0x08002e88   0x08002e88   0x00000134   Code   RO         1538    .text._tx_thread_system_resume  tx_thread_system_resume.o
+    0x08002fbc   0x08002fbc   0x0000017c   Code   RO         1547    .text._tx_thread_system_suspend  tx_thread_system_suspend.o
+    0x08003138   0x08003138   0x00000070   Code   RO         1567    .text._tx_thread_time_slice  tx_thread_time_slice.o
+    0x080031a8   0x080031a8   0x00000036   Code   RO         1587    .text._tx_thread_timeout  tx_thread_timeout.o
+    0x080031de   0x080031de   0x00000002   PAD
+    0x080031e0   0x080031e0   0x00000024   Code   RO         2156    .text._tx_timer_expiration_process  tx_timer_expiration_process.o
+    0x08003204   0x08003204   0x000000a0   Code   RO         2174    .text._tx_timer_initialize  tx_timer_initialize.o
+    0x080032a4   0x080032a4   0x0000005a   Code   RO         2187    .text._tx_timer_system_activate  tx_timer_system_activate.o
+    0x080032fe   0x080032fe   0x00000002   PAD
+    0x08003300   0x08003300   0x0000003a   Code   RO         2196    .text._tx_timer_system_deactivate  tx_timer_system_deactivate.o
+    0x0800333a   0x0800333a   0x00000002   PAD
+    0x0800333c   0x0800333c   0x00000146   Code   RO         2205    .text._tx_timer_thread_entry  tx_timer_thread_entry.o
+    0x08003482   0x08003482   0x00000002   PAD
+    0x08003484   0x08003484   0x00000164   Code   RO         1686    .text._txe_byte_pool_create  txe_byte_pool_create.o
+    0x080035e8   0x080035e8   0x0000018e   Code   RO         1992    .text._txe_thread_create  txe_thread_create.o
+    0x08003776   0x08003776   0x00000002   PAD
+    0x08003778   0x08003778   0x0000008a   Code   RO           11    .text.main          main.o
+    0x08003802   0x08003802   0x00000002   PAD
+    0x08003804   0x08003804   0x00000054   Code   RO          769    .text.tx_application_define  app_azure_rtos.o
+    0x08003858   0x08003858   0x00000158   Code   RO         2269    .text.tx_low_power_enter  tx_low_power.o
+    0x080039b0   0x080039b0   0x0000002c   Code   RO         2273    .text.tx_low_power_exit  tx_low_power.o
+    0x080039dc   0x080039dc   0x000001c8   Code   RO         2275    .text.tx_time_increment  tx_low_power.o
+    0x08003ba4   0x08003ba4   0x0000001a   Code   RO         2384    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08003bbe   0x08003bbe   0x00000010   Data   RO          758    .rodata.AHBPrescTable  system_stm32l4xx.o
+    0x08003bce   0x08003bce   0x00000002   PAD
+    0x08003bd0   0x08003bd0   0x00000030   Data   RO          760    .rodata.MSIRangeTable  system_stm32l4xx.o
+    0x08003c00   0x08003c00   0x00000004   Data   RO          836    .rodata.gRX8900Cfg  rx8900_lcfg.o
+    0x08003c04   0x08003c04   0x00000020   Data   RO         2459    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x08003a48, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x08003c40, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003a38, Size: 0x000011f8, Max: 0x0000c000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003c28, Size: 0x00001218, Max: 0x0000c000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08003a38   0x00000008   Data   RW          337    .data..L_MergedGlobals  stm32l4xx_hal.o
-    0x20000008   0x08003a40   0x00000004   Data   RW          757    .data.SystemCoreClock  system_stm32l4xx.o
-    0x2000000c   0x08003a44   0x00000004   Data   RW         1415    .data._tx_thread_system_state  tx_thread_initialize.o
-    0x20000010        -       0x00000060   Zero   RW         2318    .bss                c_w.l(libspace.o)
-    0x20000070        -       0x00000008   Zero   RW          812    .bss..L_MergedGlobals  rx8900.o
-    0x20000078        -       0x00000030   Zero   RW          884    .bss..L_MergedGlobals  tx_initialize_high_level.o
-    0x200000a8        -       0x00000024   Zero   RW         1419    .bss..L_MergedGlobals  tx_thread_initialize.o
-    0x200000cc        -       0x00000034   Zero   RW         2173    .bss..L_MergedGlobals  tx_timer_initialize.o
-    0x20000100        -       0x00000400   Zero   RW          785    .bss.AppTaskStartStk  appmain.o
-    0x20000500        -       0x000000b0   Zero   RW          784    .bss.AppTaskStartTCB  appmain.o
-    0x200005b0        -       0x00000004   Zero   RW          883    .bss._tx_initialize_unused_memory  tx_initialize_high_level.o
-    0x200005b4        -       0x00000080   Zero   RW         1417    .bss._tx_thread_priority_list  tx_thread_initialize.o
-    0x20000634        -       0x00000004   Zero   RW         1418    .bss._tx_thread_system_stack_ptr  tx_thread_initialize.o
-    0x20000638        -       0x00000080   Zero   RW         2170    .bss._tx_timer_list  tx_timer_initialize.o
-    0x200006b8        -       0x000000b0   Zero   RW         2172    .bss._tx_timer_thread  tx_timer_initialize.o
-    0x20000768        -       0x00000200   Zero   RW         2171    .bss._tx_timer_thread_stack_area  tx_timer_initialize.o
-    0x20000968        -       0x00000054   Zero   RW           66    .bss.hi2c1          i2c.o
-    0x200009bc        -       0x00000034   Zero   RW          771    .bss.tx_app_byte_pool  app_azure_rtos.o
-    0x200009f0        -       0x00000200   Zero   RW          772    .bss.tx_byte_pool_buffer  app_azure_rtos.o
-    0x20000bf0        -       0x00000004   Zero   RW         2271    .bss.tx_low_power_entered  tx_low_power.o
-    0x20000bf4        -       0x00000004   Zero   RW          336    .bss.uwTick         stm32l4xx_hal.o
-    0x20000bf8        -       0x00000200   Zero   RW            2    HEAP                startup_stm32l432xx.o
-    0x20000df8        -       0x00000400   Zero   RW            1    STACK               startup_stm32l432xx.o
+    0x20000000   0x08003c28   0x00000008   Data   RW          337    .data..L_MergedGlobals  stm32l4xx_hal.o
+    0x20000008   0x08003c30   0x00000004   Data   RW          757    .data.SystemCoreClock  system_stm32l4xx.o
+    0x2000000c   0x08003c34   0x00000004   Data   RW         1421    .data._tx_thread_system_state  tx_thread_initialize.o
+    0x20000010   0x08003c38   0x00000001   Data   RW          817    .data.gRX8900DebugRegAddr  rx8900.o
+    0x20000011   0x08003c39   0x00000007   PAD
+    0x20000018        -       0x00000060   Zero   RW         2324    .bss                c_w.l(libspace.o)
+    0x20000078        -       0x00000003   Zero   RW          786    .bss..L_MergedGlobals  appmain.o
+    0x2000007b        -       0x0000001c   Zero   RW          818    .bss..L_MergedGlobals  rx8900.o
+    0x20000097   0x08003c39   0x00000001   PAD
+    0x20000098        -       0x00000030   Zero   RW          890    .bss..L_MergedGlobals  tx_initialize_high_level.o
+    0x200000c8        -       0x00000024   Zero   RW         1425    .bss..L_MergedGlobals  tx_thread_initialize.o
+    0x200000ec        -       0x00000034   Zero   RW         2179    .bss..L_MergedGlobals  tx_timer_initialize.o
+    0x20000120        -       0x00000400   Zero   RW          785    .bss.AppTask10msStk  appmain.o
+    0x20000520        -       0x000000b0   Zero   RW          784    .bss.AppTask10msTCB  appmain.o
+    0x200005d0        -       0x00000004   Zero   RW          889    .bss._tx_initialize_unused_memory  tx_initialize_high_level.o
+    0x200005d4        -       0x00000080   Zero   RW         1423    .bss._tx_thread_priority_list  tx_thread_initialize.o
+    0x20000654        -       0x00000004   Zero   RW         1424    .bss._tx_thread_system_stack_ptr  tx_thread_initialize.o
+    0x20000658        -       0x00000080   Zero   RW         2176    .bss._tx_timer_list  tx_timer_initialize.o
+    0x200006d8        -       0x000000b0   Zero   RW         2178    .bss._tx_timer_thread  tx_timer_initialize.o
+    0x20000788        -       0x00000200   Zero   RW         2177    .bss._tx_timer_thread_stack_area  tx_timer_initialize.o
+    0x20000988        -       0x00000054   Zero   RW           66    .bss.hi2c1          i2c.o
+    0x200009dc        -       0x00000034   Zero   RW          771    .bss.tx_app_byte_pool  app_azure_rtos.o
+    0x20000a10        -       0x00000200   Zero   RW          772    .bss.tx_byte_pool_buffer  app_azure_rtos.o
+    0x20000c10        -       0x00000004   Zero   RW         2277    .bss.tx_low_power_entered  tx_low_power.o
+    0x20000c14        -       0x00000004   Zero   RW          336    .bss.uwTick         stm32l4xx_hal.o
+    0x20000c18        -       0x00000200   Zero   RW            2    HEAP                startup_stm32l432xx.o
+    0x20000e18        -       0x00000400   Zero   RW            1    STACK               startup_stm32l432xx.o
 
 
 ==============================================================================
@@ -3377,22 +3397,22 @@ Image component sizes
         84         20          0          0        564       4083   app_azure_rtos.o
         28          0          0          0          0       1692   app_threadx.o
         10          0          0          0          0        636   appirqcallout.o
-       138         16          0          0       1200       4017   appmain.o
+       160         16          0          0       1203       3993   appmain.o
        102          0          0          0          0       3749   gpio.o
        242          0          0          0         84       6469   i2c.o
        148          0          0          0          0       3216   main.o
-      1024          0          0          0          8       4519   rx8900.o
+      1514          0          0          1         28       8557   rx8900.o
         90          0          0          0          0       1917   rx8900_callout.o
          0          0          4          0          0       1291   rx8900_lcfg.o
         64         26        396          0       1536        836   startup_stm32l432xx.o
-       154          0          0          8          4       7576   stm32l4xx_hal.o
+       118          0          0          8          4       7576   stm32l4xx_hal.o
        196          0          0          0          0      10051   stm32l4xx_hal_cortex.o
        462          0          0          0          0       5313   stm32l4xx_hal_gpio.o
       2146          0          0          0          0      57089   stm32l4xx_hal_i2c.o
        146          0          0          0          0       6081   stm32l4xx_hal_i2c_ex.o
         50          0          0          0          0       1582   stm32l4xx_hal_msp.o
-        90          0          0          0          0       5457   stm32l4xx_hal_pwr.o
-       390          0          0          0          0       8714   stm32l4xx_hal_pwr_ex.o
+        74          0          0          0          0       5457   stm32l4xx_hal_pwr.o
+       276          0          0          0          0       8714   stm32l4xx_hal_pwr_ex.o
       2662          0          0          0          0      11935   stm32l4xx_hal_rcc.o
        974          0          0          0          0      13537   stm32l4xx_hal_rcc_ex.o
         18          0          0          0          0       1159   stm32l4xx_it.o
@@ -3406,6 +3426,7 @@ Image component sizes
         54          0          0          4        168       3952   tx_thread_initialize.o
        220         16          0          0          0        849   tx_thread_schedule.o
         90          0          0          0          0       4024   tx_thread_shell_entry.o
+       146          0          0          0          0       4290   tx_thread_sleep.o
         64          0          0          0          0        461   tx_thread_stack_build.o
         76          0          0          0          0       3970   tx_thread_system_preempt_check.o
        308          0          0          0          0       4842   tx_thread_system_resume.o
@@ -3422,9 +3443,9 @@ Image component sizes
        398          0          0          0          0       5302   txe_thread_create.o
 
     ----------------------------------------------------------------------
-     13892        182        498         16       4488     245997   Object Totals
+     14384        182        498         20       4516     254301   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-       112          8          2          0          0          0   (incl. Padding)
+       112          8          2          3          5          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -3476,15 +3497,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     14406        198        498         16       4584     245889   Grand Totals
-     14406        198        498         16       4584     245889   ELF Image Totals
-     14406        198        498         16          0          0   ROM Totals
+     14898        198        498         20       4612     254173   Grand Totals
+     14898        198        498         20       4612     254173   ELF Image Totals
+     14898        198        498         20          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                14904 (  14.55kB)
-    Total RW  Size (RW Data + ZI Data)              4600 (   4.49kB)
-    Total ROM Size (Code + RO Data + RW Data)      14920 (  14.57kB)
+    Total RO  Size (Code + RO Data)                15396 (  15.04kB)
+    Total RW  Size (RW Data + ZI Data)              4632 (   4.52kB)
+    Total ROM Size (Code + RO Data + RW Data)      15416 (  15.05kB)
 
 ==============================================================================
 

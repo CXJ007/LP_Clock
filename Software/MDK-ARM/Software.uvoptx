@@ -184,22 +184,6 @@
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>67</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134231436</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Core/Src/main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\Software\../Core/Src/main.c\67</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
           <LineNumber>1</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
@@ -214,7 +198,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>4</Number>
+          <Number>3</Number>
           <Type>0</Type>
           <LineNumber>31</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -230,7 +214,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>5</Number>
+          <Number>4</Number>
           <Type>0</Type>
           <LineNumber>232</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -256,6 +240,36 @@
           <count>1</count>
           <WinNumber>1</WinNumber>
           <ItemText>gRX8900TimeInfo,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>gRX8900AllReg</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>gRX8900DebugCtrCmd</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>gRX8900DebugCtrCmd</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>a,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>6</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>b,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>c</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -424,7 +438,7 @@
 
   <Group>
     <GroupName>Drivers/STM32L4xx_HAL_Driver</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

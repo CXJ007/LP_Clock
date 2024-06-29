@@ -26,21 +26,21 @@ const RX8900CfgType gRX8900Cfg =
 {
   /* Control register configer */
   {
-    .B.RESET = 0x1U,//Software reset
+    .B.RESET = STD_ENABLE,//Software reset
     .B.RW0_0 = 0x0U,
-    .B.AIE = STD_OFF,
-    .B.TIE = STD_OFF,
-    .B.UIE = STD_ON,
+    .B.AIE = STD_ENABLE,
+    .B.TIE = STD_DISABLE,
+    .B.UIE = STD_ENABLE,
     .B.CSEL = RX8900_CSEL_0X5S
   },
   /* Extension register configer */
   {
     .B.TSEL = RX8900_TSEL_4096HZ,
     .B.FSEL = RX8900_FSEL_32768HZ,
-    .B.TE = STD_OFF,
+    .B.TE = STD_DISABLE,
     .B.USEL = RX8900_USEL_SEC,
-    .B.WADA = RX8900_WADA_DAY,
-    .B.TEST = 0x0U
+    .B.WADA = RX8900_WADA_WEEK,
+    .B.TEST = STD_DISABLE
   },
   /* Timer Counter 0 */
   {

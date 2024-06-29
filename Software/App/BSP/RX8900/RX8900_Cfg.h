@@ -25,7 +25,7 @@
 
 #include "RX8900_Types.h"
 
-#define RX8900_DEBUG                  (STD_OFF)
+#define RX8900_DEBUG                  (STD_ON)
 
 
 #if (RX8900_DEBUG == STD_ON)

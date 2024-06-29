@@ -3,58 +3,62 @@
 
 
 
-TX_THREAD AppTaskStartTCB;
+TX_THREAD AppTask10msTCB;
 
-static uint32 AppTaskStartStk[APP_CFG_TASK_START_STK_SIZE / 4];
+static uint32 AppTask10msStk[APP_CFG_TASK_10MS_STK_SIZE / 4];
 
-static void AppTaskStart(ULONG thread_input);
+static void AppTask10ms(ULONG thread_input);
 
 
 
 Std_ReturnType AppMain(void)
 {
-	Std_ReturnType RetVal;
+	Std_ReturnType RetVal = E_OK;
 	
-	RetVal = (Std_ReturnType)tx_thread_create(&AppTaskStartTCB,           
-																						"App Task Start",             
-																						AppTaskStart,                 
+//	HAL_DBGMCU_EnableDBGSleepMode();
+//	HAL_DBGMCU_EnableDBGStopMode();
+	
+	RetVal |= RX8900_Init();
+	
+	RetVal |= (Std_ReturnType)tx_thread_create(&AppTask10msTCB,           
+																						"App Task 10ms",             
+																						AppTask10ms,                 
 																						0,                            
-																						&AppTaskStartStk[0],          
-																						APP_CFG_TASK_START_STK_SIZE,    
-																						APP_CFG_TASK_START_PRIO,        
-																						APP_CFG_TASK_START_PRIO,      
+																						&AppTask10msStk[0],          
+																						APP_CFG_TASK_10MS_STK_SIZE,    
+																						APP_CFG_TASK_10MS_PRIO,        
+																						APP_CFG_TASK_10MS_PRIO,      
 																						TX_NO_TIME_SLICE,              
 																						TX_AUTO_START);
-
-	//RetVal = RX8900_Init();
 	return RetVal;
 }
 
-static void AppTaskStart(ULONG thread_input)
+uint8 a, b, c;
+
+static void AppTask10ms(ULONG thread_input)
 {
 	(void)thread_input;
 	Std_ReturnType RetVal;
 	RX8900TimeType Time;
-	Time.sec = 0;
+	Time.sec = 50;
 	Time.min = 21;
-	Time.hour = 22;
+	Time.hour = 23;
 	Time.week = RX8900_WEEK_WED;
 	Time.day = 25;
 	Time.mon = 6;
 	Time.year = 24;
 	
-	HAL_DBGMCU_EnableDBGSleepMode();
-	HAL_DBGMCU_EnableDBGStopMode();
-	
-	RX8900_Init();
 	RX8900_Set_Time(Time);
+
+	RX8900_Set_Alarm(22,23,0x7F);
+	RX8900_Get_Alarm(&a,&b,&c);
 
 	while (1)
 	{ 
 		RX8900_Main_Fun();
 		//RX8900_Updata_Time(&Time); 
-		//tx_thread_sleep(MS_TO_TICKS(10));
-		HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI);
+		tx_thread_sleep(MS_TO_TICKS(10));
+		//HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI);
 	}
 }
 

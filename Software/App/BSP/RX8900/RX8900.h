@@ -53,6 +53,8 @@
 #define RX8900_UPTATA_EVENT                               (0x08U)
 #define RX8900_ALARM_EVENT                                (0x10U)
 
+#define RX8900_ALARM_DISABLE                              (0x80U)
+
 #define RX8900_READ_REGISTER_LIST(Register, pData, Len)   RX8900_IIC_Transmit               \
                                                           (                                 \
                                                             RX8900_ADDRESS,                 \
@@ -94,6 +96,18 @@ extern Std_ReturnType RX8900_Init(void);
 extern Std_ReturnType RX8900_Main_Fun(void);
 extern Std_ReturnType RX8900_Set_Time(RX8900TimeType Time);
 extern Std_ReturnType RX8900_Updata_Time(RX8900TimeType *pTime);
+extern Std_ReturnType RX8900_Set_Alarm
+(
+	uint8 MinAlarm,
+	uint8 HourAlarm,
+	uint8 WeekAlarm
+);
+Std_ReturnType RX8900_Get_Alarm
+(
+	uint8 *pMinAlarm,
+	uint8 *pHourAlarm,
+	uint8 *pWeekAlarm
+);
 extern void RX8900_Process_ISR(void);
 
 #endif

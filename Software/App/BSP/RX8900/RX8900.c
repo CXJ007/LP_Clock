@@ -105,12 +105,12 @@ Std_ReturnType RX8900_Set_Time(RX8900TimeType Time)
 {
 	Std_ReturnType RetVal;
 
-	if((Time.sec <= RX8900_SEC_MAX) && (Time.min <= RX8900_MIN_MAX)              \
-																	&& (Time.hour <= RX8900_HOUR_MAX)            \
-																	&& (Time.week <= RX8900_WEEK_MAX)            \
-																	&& (Time.day <= RX8900_DAY_MAX)	             \
-																	&& (Time.mon <= RX8900_MON_MAX)							 \
-																	&& (Time.year <= RX8900_YEAR_MAX))
+	if((Time.sec <= RX8900_SEC_MAX) && (Time.min <= RX8900_MIN_MAX)            \
+																&& (Time.hour <= RX8900_HOUR_MAX)            \
+																&& (Time.week <= RX8900_WEEK_MAX)            \
+																&& (Time.day <= RX8900_DAY_MAX)	             \
+																&& (Time.mon <= RX8900_MON_MAX)							 \
+																&& (Time.year <= RX8900_YEAR_MAX))
 	{
 		RetVal = RX8900_WRITE_REGISTER((uint8)RX8900_SEC_REG, RX8900_DEC_TO_BCD(Time.sec));
 		RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_MIN_REG, RX8900_DEC_TO_BCD(Time.min));
@@ -174,6 +174,74 @@ Std_ReturnType RX8900_Updata_Time(RX8900TimeType *pTime)
 	else
 	{
 		RetVal = E_NOT_OK;
+	}
+
+	return RetVal;
+}
+
+Std_ReturnType RX8900_Set_Alarm
+(
+	uint8 MinAlarm,
+	uint8 HourAlarm,
+	uint8 WeekAlarm
+)
+{
+	Std_ReturnType RetVal;
+	RX8900ExtRegType ExtReg;
+	RX8900ControlRegType ControlReg;
+
+	if((MinAlarm <= RX8900_MIN_MAX) && (HourAlarm <= RX8900_HOUR_MAX))
+	{
+		RetVal = RX8900_WRITE_REGISTER((uint8)RX8900_MIN_ALARM_REG,                                      \
+																				((~RX8900_ALARM_DISABLE) & RX8900_DEC_TO_BCD(MinAlarm)));
+		RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_HOUR_ALARM_REG,                                    \
+																				((~RX8900_ALARM_DISABLE) & RX8900_DEC_TO_BCD(HourAlarm)));
+		RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_WEEKDAY_ALARM_REG,                                 \
+																				((~RX8900_ALARM_DISABLE) & WeekAlarm));
+		RetVal |= RX8900_READ_REGISTER((uint8)RX8900_CONTROL_REG, &ControlReg.U);
+		RetVal |= RX8900_READ_REGISTER((uint8)RX8900_EXTENSION_REG, &ExtReg.U);
+		if(E_OK == RetVal)
+		{
+			/* Enable Alarm */
+			ControlReg.B.AIE = STD_ENABLE;
+			/* Set alarm mode */
+			ExtReg.B.WADA = RX8900_WADA_WEEK;
+			RetVal = RX8900_WRITE_REGISTER((uint8)RX8900_CONTROL_REG, gRX8900Cfg.ControlRegCfg.U);
+			RetVal |= RX8900_WRITE_REGISTER((uint8)RX8900_EXTENSION_REG, gRX8900Cfg.ExtRegCfg.U);
+		}
+	}	
+	else
+	{
+		RetVal = E_NOT_OK;
+	}
+
+	return RetVal;
+}
+
+Std_ReturnType RX8900_Get_Alarm
+(
+	uint8 *pMinAlarm,
+	uint8 *pHourAlarm,
+	uint8 *pWeekAlarm
+)
+{
+	Std_ReturnType RetVal;
+	RX8900MinAlarmRegType MinAlarmReg;
+	RX8900HourAlarmRegType HourAlarmReg;
+	RX8900WeekDayAlarmRegType WeekDayAlarmReg;
+
+	RetVal = RX8900_READ_REGISTER((uint8)RX8900_MIN_ALARM_REG, &MinAlarmReg.U);
+	RetVal |= RX8900_READ_REGISTER((uint8)RX8900_HOUR_ALARM_REG, &HourAlarmReg.U);
+	RetVal |= RX8900_READ_REGISTER((uint8)RX8900_WEEKDAY_ALARM_REG, &WeekDayAlarmReg.U);
+	if(E_OK == RetVal)
+	{
+		*pMinAlarm = RX8900_BCD_TO_DEC(MinAlarmReg.B.ALARMBCD);
+		*pHourAlarm = RX8900_BCD_TO_DEC(HourAlarmReg.B.ALARMBCD);
+		*pWeekAlarm = WeekDayAlarmReg.WEEKB.ALARMBCD;
+	}
+	else
+	{
+		/* nothing */
 	}
 
 	return RetVal;
