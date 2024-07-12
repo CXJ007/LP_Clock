@@ -28,6 +28,7 @@
 "software\app_azure_rtos.o"
 "software\appmain.o"
 "software\appirqcallout.o"
+"software\applowpowermgr.o"
 "software\rx8900.o"
 "software\rx8900_callout.o"
 "software\rx8900_lcfg.o"

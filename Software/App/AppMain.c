@@ -14,8 +14,8 @@ static void AppTask10ms(ULONG thread_input);
 Std_ReturnType AppMain(void)
 {
 	Std_ReturnType RetVal = E_OK;
-	
-//	HAL_DBGMCU_EnableDBGSleepMode();
+	//HAL_DBGMCU_DisableDBGSleepMode();
+ HAL_DBGMCU_EnableDBGSleepMode();
 //	HAL_DBGMCU_EnableDBGStopMode();
 	
 	RetVal |= RX8900_Init();
@@ -33,15 +33,15 @@ Std_ReturnType AppMain(void)
 	return RetVal;
 }
 
-uint8 a, b, c;
-
+uint32 Task10msCount = 0;
+RX8900TimeType Time;
 static void AppTask10ms(ULONG thread_input)
 {
 	(void)thread_input;
 	Std_ReturnType RetVal;
-	RX8900TimeType Time;
-	Time.sec = 50;
-	Time.min = 21;
+	
+	Time.sec = 0;
+	Time.min = 0;
 	Time.hour = 23;
 	Time.week = RX8900_WEEK_WED;
 	Time.day = 25;
@@ -50,60 +50,44 @@ static void AppTask10ms(ULONG thread_input)
 	
 	RX8900_Set_Time(Time);
 
-	RX8900_Set_Alarm(22,23,0x7F);
-	RX8900_Get_Alarm(&a,&b,&c);
+	//RX8900_Set_Alarm(22,23,0x7F);
 
 	while (1)
 	{ 
+		Task10msCount++;
+		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_3);
+
 		RX8900_Main_Fun();
-		//RX8900_Updata_Time(&Time); 
-		tx_thread_sleep(MS_TO_TICKS(10));
+		RX8900_Updata_Time(&gRX8900TimeInfo); 
+		tx_thread_sleep(MS_TO_TICKS(1000));
 		//HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI);
 	}
 }
 
 
+HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority)
+{
+				return HAL_OK;
+}
 
+uint32_t HAL_GetTick (void)
+{
+	static uint32_t ticks = 0U;
+	uint32_t LoopCount;
 
+	if (_tx_thread_system_state == TX_INITIALIZE_IS_FINISHED)
+	{
+		ticks = (uint32_t)tx_time_get();
+	}
+	else
+	{
+		for (LoopCount = (SystemCoreClock >> 14U); LoopCount > 0U; LoopCount--)
+		{
+						__NOP(); __NOP(); __NOP(); __NOP(); __NOP(); __NOP();
+						__NOP(); __NOP(); __NOP(); __NOP(); __NOP(); __NOP();
+		}
+		ticks++;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority)
-// {
-//         return HAL_OK;
-// }
-
-// uint32_t HAL_GetTick (void)
-// {
-// 	static uint32_t ticks = 0U;
-// 	uint32_t indx;
-
-// 	if (_tx_thread_system_state == TX_INITIALIZE_IS_FINISHED)
-// 	{
-// 		ticks = (uint32_t)tx_time_get();
-// 	}
-// 	else
-// 	{
-// 		for (indx = (SystemCoreClock >> 14U); indx > 0U; indx--)
-// 		{
-// 						__NOP(); __NOP(); __NOP(); __NOP(); __NOP(); __NOP();
-// 						__NOP(); __NOP(); __NOP(); __NOP(); __NOP(); __NOP();
-// 		}
-// 		ticks++;
-// 	}
-
-// 	return ticks;
-// }
-
-
+	return ticks;
+}

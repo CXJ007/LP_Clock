@@ -21,8 +21,8 @@
  * SOFTWARE.
  */
 #include "gpio.h"
+#include "i2c.h"
 #include "RX8900.h"
-
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
@@ -30,4 +30,5 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   {
     RX8900_Process_ISR();
   }
+  
 }

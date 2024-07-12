@@ -4,6 +4,8 @@
     "rx8900_cfg.h": "c",
     "rx8900_types.h": "c",
     "rx8900_cbk.h": "c",
-    "main.h": "c"
+    "main.h": "c",
+    "cstdint": "c",
+    "std_types.h": "c"
   }
 }

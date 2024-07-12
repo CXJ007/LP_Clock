@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
-            <RunUserProg2>1</RunUserProg2>
+            <RunUserProg2>0</RunUserProg2>
             <UserProg1Name>.\..\keil5_disp_size_bar.exe</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>1</UserProg1Dos16Mode>
@@ -138,7 +138,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2V8M.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -338,7 +338,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32L432xx,TX_INCLUDE_USER_DEFINE_FILE,TX_LOW_POWER</Define>
+              <Define>USE_HAL_DRIVER,STM32L432xx,TX_INCLUDE_USER_DEFINE_FILE,TX_PORT_USE_BASEPRI,TX_PORT_BASEPRI=80</Define>
               <Undefine></Undefine>
               <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../AZURE_RTOS/App;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/;../Middlewares/ST/threadx/utility/low_power/;../App;../App/BSP/RX8900</IncludePath>
             </VariousControls>
@@ -356,7 +356,7 @@
             <ClangAsOpt>1</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>TX_LOW_POWER=1</Define>
+              <Define>TX_LOW_POWER=1,TX_PORT_BASEPRI=80,TX_PORT_USE_BASEPRI</Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
             </VariousControls>
@@ -818,6 +818,16 @@
               <FileName>AppIRQCallout.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App\AppIRQCallout.c</FilePath>
+            </File>
+            <File>
+              <FileName>AppLowPowerMgr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\AppLowPowerMgr.c</FilePath>
+            </File>
+            <File>
+              <FileName>AppLowPowerMgr.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\AppLowPowerMgr.h</FilePath>
             </File>
           </Files>
         </Group>

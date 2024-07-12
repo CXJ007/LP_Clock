@@ -289,6 +289,15 @@ void App_ThreadX_LowPower_Exit(void);
 unsigned long App_ThreadX_LowPower_Timer_Adjust(void);
 #define TX_LOW_POWER_USER_TIMER_ADJUST App_ThreadX_LowPower_Timer_Adjust()
 
+/* Define ThreadX interrupt lockout and restore macros for protection on
+   access of critical kernel information.  The restore interrupt macro must
+   restore the interrupt posture of the running thread prior to the value
+   present prior to the disable macro.  In most cases, the save area macro
+   is used to define a local function save area for the disable and restore
+   macros.  */
+
+#define TX_DISABLE_INLINE
+
 /* USER CODE BEGIN 2 */
 
 /* USER CODE END 2 */

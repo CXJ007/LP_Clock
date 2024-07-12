@@ -37,4 +37,4 @@ software/app_threadx.o: ..\Core\Src\app_threadx.c \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h \
-  ..\App\Std_Types.h
+  ..\App\Std_Types.h ..\App\AppLowPowerMgr.h ..\Core\Inc\i2c.h

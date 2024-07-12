@@ -90,7 +90,7 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-		
+
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();

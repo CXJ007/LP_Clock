@@ -20,8 +20,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+/**********************************************************************************
+************************************include****************************************
+**********************************************************************************/
 #include "RX8900.h"
-
+/**********************************************************************************
+*********************************global variable***********************************
+**********************************************************************************/
 uint8 gRX8900RuntimeNotify = 0U;
 RX8900TimeType gRX8900TimeInfo = {0U};
 #if (RX8900_DEBUG == STD_ON)
@@ -30,14 +35,23 @@ uint8 gRX8900DebugCtrCmd = RX8900_DEBUG_UPDATA_CMD;
 RX8900_RegisterType gRX8900DebugRegAddr = RX8900_RAM_REG;
 uint8 gRX8900DebugData = 0U;
 #endif
-
+/**********************************************************************************
+*********************************local function************************************
+**********************************************************************************/
 #if(RX8900_DEBUG == STD_ON)
 static void RX8900_Debug(void);
 #endif
 static Std_ReturnType RX8900_UpErrFlag_Polling(void);
 
 #if(RX8900_DEBUG == STD_ON)
-
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 static void RX8900_Debug(void)
 {
   if(RX8900_DEBUG_UPDATA_CMD == gRX8900DebugCtrCmd)
@@ -63,6 +77,14 @@ static void RX8900_Debug(void)
 }
 #endif
 
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 static Std_ReturnType RX8900_UpErrFlag_Polling(void)
 {
 	Std_ReturnType RetVal;
@@ -101,6 +123,18 @@ static Std_ReturnType RX8900_UpErrFlag_Polling(void)
 	return RetVal;
 }
 
+/**********************************************************************************
+*********************************global function***********************************
+**********************************************************************************/
+
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 Std_ReturnType RX8900_Set_Time(RX8900TimeType Time)
 {
 	Std_ReturnType RetVal;
@@ -128,6 +162,14 @@ Std_ReturnType RX8900_Set_Time(RX8900TimeType Time)
 	return RetVal;
 }
 
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 Std_ReturnType RX8900_Updata_Time(RX8900TimeType *pTime)
 {
 	Std_ReturnType RetVal;
@@ -179,6 +221,14 @@ Std_ReturnType RX8900_Updata_Time(RX8900TimeType *pTime)
 	return RetVal;
 }
 
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 Std_ReturnType RX8900_Set_Alarm
 (
 	uint8 MinAlarm,
@@ -218,6 +268,14 @@ Std_ReturnType RX8900_Set_Alarm
 	return RetVal;
 }
 
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 Std_ReturnType RX8900_Get_Alarm
 (
 	uint8 *pMinAlarm,
@@ -247,6 +305,14 @@ Std_ReturnType RX8900_Get_Alarm
 	return RetVal;
 }
 
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 Std_ReturnType RX8900_Init(void)
 {
   Std_ReturnType RetVal = E_OK;
@@ -264,6 +330,14 @@ Std_ReturnType RX8900_Init(void)
   return RetVal;
 }
 
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 Std_ReturnType RX8900_Main_Fun(void)
 {
 	Std_ReturnType RetVal = E_OK;
@@ -287,6 +361,14 @@ Std_ReturnType RX8900_Main_Fun(void)
 	return RetVal;
 }
 
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
 void RX8900_Process_ISR(void)
 {
 	uint8 index;

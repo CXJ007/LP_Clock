@@ -20,17 +20,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+/**********************************************************************************
+************************************include****************************************
+**********************************************************************************/
 #include "RX8900_Cfg.h"
-
+/**********************************************************************************
+*********************************global variable***********************************
+**********************************************************************************/
 const RX8900CfgType gRX8900Cfg =
 {
   /* Control register configer */
   {
     .B.RESET = STD_ENABLE,//Software reset
     .B.RW0_0 = 0x0U,
-    .B.AIE = STD_ENABLE,
+    .B.AIE = STD_DISABLE,
     .B.TIE = STD_DISABLE,
-    .B.UIE = STD_ENABLE,
+    .B.UIE = STD_DISABLE,
     .B.CSEL = RX8900_CSEL_0X5S
   },
   /* Extension register configer */
