@@ -23,32 +23,108 @@
 /**********************************************************************************
 ************************************Includes***************************************
 **********************************************************************************/
-#include "AppLowPowerMgr.h"
 #include "main.h"
 #include "i2c.h"
+#include "lptim.h"
+#include "AppMain.h"
+#include "AppLowPowerMgr.h"
 /**********************************************************************************
 ****************************Global variable Definitions****************************
 **********************************************************************************/
-uint32 gLPtick;
+uint32 gLP_Tick = 0x0U;
+uint8 gLP_WakeupSource = LP_WAKEUP_NONE;
 /**********************************************************************************
 *****************************Local Function Definitions****************************
 **********************************************************************************/
+/**********************************************************************************
+* Function name :
+* Inputs        :
+* Return        :
+* description   :
+* Limitation    :
+**********************************************************************************/
+static Std_ReturnType LPower_Peripheral_Set(void)
+{
+  Std_ReturnType RetVal = E_OK;
+
+  RetVal |= HAL_I2C_DeInit(&hi2c1);
+  RetVal |= HAL_LPTIM_Init(&hlptim1);
+  
+  return RetVal;
+}
+/**********************************************************************************
+* Function name :
+* Inputs        :
+* Return        :
+* description   :
+* Limitation    :
+**********************************************************************************/
+static Std_ReturnType LPower_Peripheral_Restore(void)
+{
+  Std_ReturnType RetVal = E_OK;
+
+  RetVal |= HAL_LPTIM_DeInit(&hlptim1);
+  RetVal |= HAL_I2C_Init(&hi2c1);
+  
+  return RetVal;
+}
+/**********************************************************************************
+* Function name :
+* Inputs        :
+* Return        :
+* description   :
+* Limitation    :
+**********************************************************************************/
 static Std_ReturnType LPower_Sysclock_Set(void)
 {
-  Std_ReturnType RetVal;
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-	
-  /* Configure the main internal regulator output voltage */
-  if((HAL_OK == HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1))
-      && (HAL_OK == HAL_RCC_DeInit()))
+  uint32 Timeout;
+  Std_ReturnType RetVal = E_OK;
+
+  /* Enable MSI */
+  SET_BIT(RCC->CR, RCC_CR_MSION);
+  /* Wait till MSI is ready */
+  Timeout = LP_TIMTEOUT_VALUE;
+  while((READ_BIT(RCC->CR, RCC_CR_MSIRDY) == 0x0U) && (Timeout > 0x0U))
   {
-    /* Open MSI clock */
-    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
-    RCC_OscInitStruct.MSIState = RCC_MSI_ON;
-    RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_4;
-    RetVal = HAL_RCC_OscConfig(&RCC_OscInitStruct);
-    
-	}
+    Timeout--;
+  }
+  if(Timeout != 0x0U)
+  {
+    /* MSIRANGE can be modified when MSI is OFF (MSION=0) 
+		or when MSI is ready (MSIRDY=1) */
+    if((READ_BIT(RCC->CR, RCC_CR_MSION) != RCC_CR_MSION)                           \
+			|| (READ_BIT(RCC->CR, RCC_CR_MSIRDY) == RCC_CR_MSIRDY))
+    {
+        /* Set MSI clock 1Mhz*/
+        WRITE_REG((RCC->CR), (((READ_REG(RCC->CR))                                 \
+										& (~(RCC_CR_MSIRANGE | RCC_CR_MSIRGSEL)))                      \
+                    | (RCC_CR_MSIRANGE_4 | RCC_CR_MSIRGSEL_Msk)));
+        /* Selected MSI as system clock  */
+        WRITE_REG((RCC->CFGR), (((READ_REG(RCC->CFGR))                             \
+										& (~(RCC_CFGR_SW))) | (RCC_CFGR_SW_MSI)));
+        /* Wait till system clock source is ready */
+        Timeout = LP_TIMTEOUT_VALUE;
+        while((READ_BIT(RCC->CFGR, RCC_CFGR_SWS) != RCC_CFGR_SWS_MSI)              \
+                                                              && (Timeout > 0x0U))
+        {
+          Timeout--;
+        }
+        if(Timeout != 0x0U)
+        {
+          /* Disable other clock */
+          CLEAR_BIT(RCC->CR, RCC_CR_HSEON | RCC_CR_HSION | RCC_CR_HSIKERON         \
+                              | RCC_CR_HSIASFS | RCC_CR_PLLON | RCC_CR_PLLSAI1ON);
+        }
+        else
+        {
+          RetVal = E_NOT_OK;
+        }
+    }
+    else
+    {
+      RetVal = E_NOT_OK;
+    }
+  }
   else
   {
     RetVal = E_NOT_OK;
@@ -56,53 +132,187 @@ static Std_ReturnType LPower_Sysclock_Set(void)
 
   return RetVal;
 }
-
-static void LPower_SysTickTick_Set(uint32 TickMs)
+/**********************************************************************************
+* Function name :
+* Inputs        :
+* Return        :
+* description   :
+* Limitation    :
+**********************************************************************************/
+static Std_ReturnType LPower_Sysclock_Restore(void)
 {
-  if(TickMs!=0) 
-  {
-    SysTick->CTRL &= (~SysTick_CTRL_ENABLE_Msk);
-    /* set reload register */
-    SysTick->LOAD = (uint32_t)(SystemCoreClock / 1000U * TickMs - 1U);                         
-    SysTick->VAL = 0U;                                          
-    SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk; 
-  }
-}
-
-uint32 sysclock1;
-extern void SystemClock_Config(void);
-Std_ReturnType App_Sysclock_Restore(void)
-{
+  uint32 Timeout;
   Std_ReturnType RetVal = E_OK;
 
-  SystemClock_Config();
-	/* Set systick 1khz  */
-  SysTick->CTRL &= (~SysTick_CTRL_ENABLE_Msk);
-  SysTick->LOAD = (uint32_t)(SystemCoreClock / 1000U - 1U);                         /* set reload register */
-  SysTick->VAL = 0U;                                             /* Load the SysTick Counter Value */
-  SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk    \
-                  | SysTick_CTRL_TICKINT_Msk    \
-                  | SysTick_CTRL_ENABLE_Msk;
-  sysclock1 = HAL_RCC_GetSysClockFreq();
+  /* Enable HSI */
+  SET_BIT(RCC->CR, RCC_CR_HSION);
+  /* Wait till HSI is ready */
+  Timeout = LP_TIMTEOUT_VALUE;
+  while((READ_BIT(RCC->CR, RCC_CR_HSIRDY) == 0x0U) && (Timeout > 0x0U))
+  {
+    Timeout--;
+  }
+  if(Timeout != 0x0U)
+  {
+    /* PLLM = 1 PLLN = 10 PLLR = 2 */
+    WRITE_REG((RCC->PLLCFGR), (((READ_REG(RCC->PLLCFGR))                            \
+										& (~(RCC_PLLCFGR_PLLSRC | RCC_PLLCFGR_PLLM | RCC_PLLCFGR_PLLN 
+                    | RCC_PLLCFGR_PLLR)))                                           \
+                    | (RCC_PLLSOURCE_HSI | (0x0U << RCC_PLLCFGR_PLLM_Pos) 
+                    | (0xAU << RCC_PLLCFGR_PLLN_Pos) 
+                    | (0x0U << RCC_PLLCFGR_PLLR_Pos))));
+    /* Enable PLL */
+    SET_BIT(RCC->CR, RCC_CR_PLLON);
+    /* Wait till PLL is ready */
+    Timeout = LP_TIMTEOUT_VALUE;
+    while((READ_BIT(RCC->CR, RCC_CR_PLLRDY)== 0x0U) && (Timeout > 0x0U))
+    {
+      Timeout--;
+    }
+    if(Timeout != 0x0U)
+    {
+      /* Enable PLL output */
+      SET_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLREN);
+      /* Selected PLL as system clock  */
+      WRITE_REG((RCC->CFGR), (((READ_REG(RCC->CFGR))                                \
+                              & (~(RCC_CFGR_SW))) | (RCC_CFGR_SW_PLL)));
+      /* Wait till system clock source is ready */
+      Timeout = LP_TIMTEOUT_VALUE;
+      while((READ_BIT(RCC->CFGR, RCC_CFGR_SWS) != RCC_CFGR_SW_PLL)                  \
+                                                          && (Timeout > 0x0U))
+      {
+      Timeout--;
+      }
+      if(Timeout != 0x0U)
+      {
+        /* Disable MSI */
+        CLEAR_BIT(RCC->CR, RCC_CR_MSION);
+      }
+      else
+      {
+        RetVal = E_NOT_OK;
+      }
+    }
+    else
+    {
+      RetVal = E_NOT_OK;
+    }
+  }
+  else
+  {
+    RetVal = E_NOT_OK;
+  }
 
   return RetVal;
 }
+/**********************************************************************************
+* Function name :
+* Inputs        :
+* Return        :
+* description   :
+* Limitation    :
+**********************************************************************************/
+static void LPower_NextWakeTime_Set(uint32 NextTime)
+{
+	/* 1Mhz */
+  HAL_LPTIM_Counter_Start_IT(&hlptim1, 1000U * NextTime);
+  /* 中断两次暂时无影响 */
+	
+}
+/**********************************************************************************
+* Function name :
+* Inputs        :
+* Return        :
+* description   :
+* Limitation    :
+**********************************************************************************/
+static uint32 LPower_SleepTime_Get(void)
+{
+	uint32 Time;
+  uint32 CNT;
 
+  CNT = HAL_LPTIM_ReadCounter(&hlptim1);
+	Time = (uint32)((float32)CNT / 1000U);
+  
+	return Time;
+}
 /**********************************************************************************
 ****************************Global Function Definitions****************************
 **********************************************************************************/
-uint32 sysclock0;
+/**********************************************************************************
+* Function name :
+* Inputs        :
+* Return        :
+* description   :
+* Limitation    :
+**********************************************************************************/
+uint32 sysclock0,sysclock1;
 extern uint32_t HAL_RCC_GetSysClockFreq(void);
 void LPower_Enter(void)
 {
   Std_ReturnType RetVal = E_OK;
 
-  RetVal |= HAL_I2C_DeInit(&hi2c1);
-  RetVal |= LPower_Sysclock_Set();
-  LPower_SysTickTick_Set(gLPtick);
-  sysclock0 = HAL_RCC_GetSysClockFreq();
-
-  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-//	HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+  if(gLP_Tick != 0x0U)
+  {
+    /* Disable SysTick */
+    SysTick->CTRL &= (~SysTick_CTRL_ENABLE_Msk);
+    RetVal |= LPower_Peripheral_Set();
+    RetVal |= LPower_Sysclock_Set();
+    if(E_OK == RetVal)
+    {
+      LPower_NextWakeTime_Set(gLP_Tick);
+			gApp_Moudle = APP_MOUDLE_LP;
+      gLP_WakeupSource = LP_WAKEUP_NONE;
+      HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+      //HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+      sysclock0 = HAL_RCC_GetSysClockFreq();
+    }
+    else
+    {
+      Error_Handler();
+    } 
+  }
+  else
+  {
+    /* nothing */
+  }
+  
 }
+/**********************************************************************************
+* Function name :
+* Inputs        :
+* Return        :
+* description   :
+* Limitation    :
+**********************************************************************************/
+void LPower_Exit(void)
+{
+  uint32 Time;
+	Std_ReturnType RetVal;
 
+  if(gLP_Tick != 0x0U)
+  {
+    RetVal = (Std_ReturnType)HAL_PWREx_DisableLowPowerRunMode();
+    if(E_OK == RetVal)
+    {
+      RetVal |= LPower_Sysclock_Restore();
+      RetVal |= LPower_Peripheral_Restore();
+      if((LP_WAKEUP_LPTIM & gLP_WakeupSource) != LP_WAKEUP_LPTIM)
+      {
+        gLP_Tick = LPower_SleepTime_Get();
+      }
+      /* Enable SysTick */
+      SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+			gApp_Moudle = APP_MOUDLE_RUN;
+      sysclock1 = HAL_RCC_GetSysClockFreq();
+    }
+    else
+    {
+      Error_Handler();
+    }
+  }
+  else
+  {
+    /* nothing */
+  }
+}

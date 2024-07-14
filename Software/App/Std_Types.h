@@ -24,6 +24,6 @@ typedef uint8                          Std_ReturnType;
 
 #define MS_TO_TICKS( TimeInMs )        ( ( uint32 ) ( ( ( uint32 ) ( TimeInMs )      \
                                        * ( uint32 ) TX_TIMER_TICKS_PER_SECOND )      \
-                                       / ( uint32 ) 1000 ) )    
+                                       / ( uint32 ) 1000U ) )    
 
 #endif

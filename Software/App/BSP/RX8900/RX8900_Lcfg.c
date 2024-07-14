@@ -35,7 +35,7 @@ const RX8900CfgType gRX8900Cfg =
     .B.RW0_0 = 0x0U,
     .B.AIE = STD_DISABLE,
     .B.TIE = STD_DISABLE,
-    .B.UIE = STD_DISABLE,
+    .B.UIE = STD_ENABLE,
     .B.CSEL = RX8900_CSEL_0X5S
   },
   /* Extension register configer */

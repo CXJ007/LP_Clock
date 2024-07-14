@@ -24,7 +24,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "AppMain.h"
-
 #include "AppLowPowerMgr.h"
 /* USER CODE END Includes */
 
@@ -98,7 +97,7 @@ void MX_ThreadX_Init(void)
 void App_ThreadX_LowPower_Timer_Setup(ULONG count)
 {
   /* USER CODE BEGIN  App_ThreadX_LowPower_Timer_Setup */
-  gLPtick = count;
+  gLP_Tick = count;
   /* USER CODE END  App_ThreadX_LowPower_Timer_Setup */
 }
 
@@ -119,13 +118,10 @@ void App_ThreadX_LowPower_Enter(void)
   * @param  None
   * @retval None
   */
-#include "i2c.h"
 void App_ThreadX_LowPower_Exit(void)
 {
   /* USER CODE BEGIN  App_ThreadX_LowPower_Exit */
-  HAL_PWREx_DisableLowPowerRunMode();
-  App_Sysclock_Restore();
-	HAL_I2C_Init(&hi2c1);
+  LPower_Exit();
   /* USER CODE END  App_ThreadX_LowPower_Exit */
 }
 
@@ -137,7 +133,7 @@ void App_ThreadX_LowPower_Exit(void)
 ULONG App_ThreadX_LowPower_Timer_Adjust(void)
 {
   /* USER CODE BEGIN  App_ThreadX_LowPower_Timer_Adjust */
-  return gLPtick;
+  return gLP_Tick;
   /* USER CODE END  App_ThreadX_LowPower_Timer_Adjust */
 }
 

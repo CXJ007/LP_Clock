@@ -1,7 +1,7 @@
 #include "AppMain.h"
 #include "RX8900.h"
 
-
+uint8 gApp_Moudle = APP_MOUDLE_RUN;
 
 TX_THREAD AppTask10msTCB;
 
@@ -14,8 +14,8 @@ static void AppTask10ms(ULONG thread_input);
 Std_ReturnType AppMain(void)
 {
 	Std_ReturnType RetVal = E_OK;
-	//HAL_DBGMCU_DisableDBGSleepMode();
- HAL_DBGMCU_EnableDBGSleepMode();
+	HAL_DBGMCU_DisableDBGSleepMode();
+ //HAL_DBGMCU_EnableDBGSleepMode();
 //	HAL_DBGMCU_EnableDBGStopMode();
 	
 	RetVal |= RX8900_Init();
@@ -34,12 +34,13 @@ Std_ReturnType AppMain(void)
 }
 
 uint32 Task10msCount = 0;
-RX8900TimeType Time;
+uint32 TaskCount = 0;
 static void AppTask10ms(ULONG thread_input)
 {
 	(void)thread_input;
 	Std_ReturnType RetVal;
-	
+	RX8900TimeType Time;
+
 	Time.sec = 0;
 	Time.min = 0;
 	Time.hour = 23;
@@ -51,15 +52,15 @@ static void AppTask10ms(ULONG thread_input)
 	RX8900_Set_Time(Time);
 
 	//RX8900_Set_Alarm(22,23,0x7F);
-
+	tx_time_set(0);
 	while (1)
 	{ 
 		Task10msCount++;
-		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_3);
-
+//		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_3);
+	
 		RX8900_Main_Fun();
-		RX8900_Updata_Time(&gRX8900TimeInfo); 
-		tx_thread_sleep(MS_TO_TICKS(1000));
+		// RX8900_Updata_Time(&gRX8900TimeInfo); 
+		tx_thread_sleep(MS_TO_TICKS(10));
 		//HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI);
 	}
 }

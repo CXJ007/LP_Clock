@@ -27,8 +27,17 @@ software/appirqcallout.o: ..\App\AppIRQCallout.c ..\Core\Inc\gpio.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h \
+  ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h \
-  ..\Core\Inc\i2c.h ..\App\BSP\RX8900\RX8900.h \
+  ..\Core\Inc\lptim.h ..\App\BSP\RX8900\RX8900.h \
   ..\App\BSP\RX8900\RX8900_Cbk.h ..\App\BSP\RX8900\RX8900_Cfg.h \
-  ..\App\BSP\RX8900\RX8900_Types.h ..\App\Std_Types.h
+  ..\App\BSP\RX8900\RX8900_Types.h ..\App\Std_Types.h ..\App\AppMain.h \
+  ..\Middlewares\ST\threadx\common\inc\tx_api.h \
+  ..\Middlewares\ST\threadx\ports\cortex_m4\ac6\inc\tx_port.h \
+  ..\Core\Inc\tx_user.h \
+  D:\app\keil\Keil_v5\ARM\ARMCLANG\include\stdlib.h \
+  D:\app\keil\Keil_v5\ARM\ARMCLANG\include\string.h \
+  ..\Middlewares\ST\threadx\common\inc\tx_initialize.h \
+  ..\Middlewares\ST\threadx\common\inc\tx_thread.h \
+  ..\App\AppLowPowerMgr.h
