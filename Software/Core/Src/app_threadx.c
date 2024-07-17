@@ -97,7 +97,7 @@ void MX_ThreadX_Init(void)
 void App_ThreadX_LowPower_Timer_Setup(ULONG count)
 {
   /* USER CODE BEGIN  App_ThreadX_LowPower_Timer_Setup */
-  gLP_Tick = count;
+  gLP_Ticks = count;
   /* USER CODE END  App_ThreadX_LowPower_Timer_Setup */
 }
 
@@ -133,7 +133,7 @@ void App_ThreadX_LowPower_Exit(void)
 ULONG App_ThreadX_LowPower_Timer_Adjust(void)
 {
   /* USER CODE BEGIN  App_ThreadX_LowPower_Timer_Adjust */
-  return gLP_Tick;
+  return gLP_Ticks;
   /* USER CODE END  App_ThreadX_LowPower_Timer_Adjust */
 }
 

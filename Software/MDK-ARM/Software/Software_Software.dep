@@ -1,14 +1,14 @@
 Dependencies for Project 'Software', Target 'Software': (DO NOT MODIFY !)
 CompilerVersion: 6210000::V6.21::ARMCLANG
-F (startup_stm32l432xx.s)(0x669373C2)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 539" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32L432xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"TX_LOW_POWER SETA 1" -Wa,armasm,--pd,"TX_PORT_USE_BASEPRI SETA 1" -Wa,armasm,--pd,"TX_PORT_BASEPRI SETA 80"-o software/startup_stm32l432xx.o)
-F (../Core/Src/main.c)(0x669374A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/main.o -MD)
+F (startup_stm32l432xx.s)(0x66952626)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 539" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32L432xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"TX_LOW_POWER SETA 1" -Wa,armasm,--pd,"TX_PORT_USE_BASEPRI SETA 1" -Wa,armasm,--pd,"TX_PORT_BASEPRI SETA 80"-o software/startup_stm32l432xx.o)
+F (../Core/Src/main.c)(0x66952AB2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/main.o -MD)
 I (..\Middlewares\ST\threadx\common\inc\tx_api.h)(0x66742E6F)
 I (..\Middlewares\ST\threadx\ports\cortex_m4\ac6\inc\tx_port.h)(0x66742E70)
 I (..\Core\Inc\tx_user.h)(0x668E92A4)
 I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -35,14 +35,14 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 I (..\Core\Inc\i2c.h4.\Core\Inc\lptim.hs.\Core\Inc\gpio.h)(0x00000000)
 F (../Core/Src/tx_initialize_low_level.S)(0x668BFA27)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION=539 -D_RTE_ -DSTM32L432xx -D_RTE_ -DTX_LOW_POWER=1 -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI=80-o software/tx_initialize_low_level.o)
 F (../Core/Src/gpio.c)(0x668A9546)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/gpio.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -69,10 +69,10 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
-F (../Core/Src/app_threadx.c)(0x6693D7AC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/app_threadx.o -MD)
+F (../Core/Src/app_threadx.c)(0x66968897)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/app_threadx.o -MD)
 I (..\Core\Inc\app_threadx.h)(0x66763F59)
 I (..\Middlewares\ST\threadx\common\inc\tx_api.h)(0x66742E6F)
 I (..\Middlewares\ST\threadx\ports\cortex_m4\ac6\inc\tx_port.h)(0x66742E70)
@@ -82,7 +82,7 @@ I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\Middlewares\ST\threadx\common\inc\tx_initialize.h)(0x66742E6F)
 I (..\Middlewares\ST\threadx\common\inc\tx_thread.hz.\Core\Inc\main.h)(0x00000000)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -109,13 +109,13 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 I (..\App\Std_Types.hx.\App\AppLowPowerMgr.h)(0x00000000)
 F (../Core/Src/i2c.c)(0x668BFA27)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/i2c.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -142,12 +142,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
-F (../Core/Src/lptim.c)(0x669373B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/lptim.o -MD)
+F (../Core/Src/lptim.c)(0x66968EE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/lptim.o -MD)
 I (..\Core\Inc\main.hc.\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x00000000)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -174,12 +174,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
-F (../Core/Src/stm32l4xx_it.c)(0x66928981)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_it.o -MD)
+F (../Core/Src/stm32l4xx_it.c)(0x66952AB2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_it.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -206,13 +206,13 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_it.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_it.h)(0x66952AB2)
 F (../Core/Src/stm32l4xx_hal_msp.c)(0x66737632)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_msp.o -MD)
 I (..\Core\Inc\main.h4.\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x00000000)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -239,12 +239,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_i2c.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -271,12 +271,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_i2c_ex.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -303,12 +303,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -335,12 +335,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_rcc.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -367,12 +367,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_rcc_ex.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -399,12 +399,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_flash.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -431,12 +431,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_flash_ex.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -463,12 +463,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_flash_ramfunc.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -495,12 +495,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_gpio.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -527,12 +527,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_dma.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -559,12 +559,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_dma_ex.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -591,12 +591,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c)(0x6693D44D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_pwr.o -MD)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_pwr.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -623,12 +623,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_pwr_ex.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -655,12 +655,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_cortex.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -687,12 +687,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_exti.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -719,12 +719,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_lptim.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_lptim.o -MD)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_lptim.c)(0x66967E50)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_lptim.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -751,12 +751,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_tim.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -783,12 +783,12 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c)(0x6672EAB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/stm32l4xx_hal_tim_ex.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -815,7 +815,7 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../Core/Src/system_stm32l4xx.c)(0x668D4132)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/system_stm32l4xx.o -MD)
@@ -831,7 +831,7 @@ I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569B010)
 I (C:\Users\CXJ\Desktop\Clock\Software\Drivers\CMSIS\Include\mpu_armv7.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h)(0x6672EAB6)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x6672EAB9)
@@ -847,7 +847,7 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 F (../AZURE_RTOS/App/app_azure_rtos.c)(0x6676893C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/app_azure_rtos.o -MD)
@@ -870,7 +870,7 @@ I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569B010)
 I (C:\Users\CXJ\Desktop\Clock\Software\Drivers\CMSIS\Include\mpu_armv7.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\system_stm32l4xx.h)(0x6672EAB6)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x6672EAB9)
@@ -886,10 +886,10 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
-F (..\App\AppMain.c)(0x6693DBFD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/appmain.o -MD)
+F (..\App\AppMain.c)(0x66967B01)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/appmain.o -MD)
 I (..\Middlewares\ST\threadx\common\inc\tx_api.h)(0x66742E6F)
 I (..\Middlewares\ST\threadx\ports\cortex_m4\ac6\inc\tx_port.h)(0x66742E70)
 I (..\Core\Inc\tx_user.h)(0x668E92A4)
@@ -898,7 +898,7 @@ I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\Middlewares\ST\threadx\common\inc\tx_initialize.h)(0x66742E6F)
 I (..\Middlewares\ST\threadx\common\inc\tx_thread.hz.\Core\Inc\main.h)(0x00000000)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -925,16 +925,16 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 I (..\App\Std_Types.hx.\App\BSP\RX8900\RX8900.h)(0x00000000)
 I (..\App\BSP\RX8900\RX8900_Cbk.hX.\App\BSP\RX8900\RX8900_Cfg.h)(0x00000000)
 I (..\App\BSP\RX8900\RX8900_Types.h)(0x6680AF46)
-F (..\App\AppMain.h)(0x6693D1C7)()
-F (..\App\AppIRQCallout.c)(0x6693D1CD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/appirqcallout.o -MD)
+F (..\App\AppMain.h)(0x669534F0)()
+F (..\App\AppIRQCallout.c)(0x6696883D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/appirqcallout.o -MD)
 I (..\Core\Inc\main.hu.\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x00000000)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -961,7 +961,7 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 I (..\Core\Inc\lptim.hx.\App\BSP\RX8900\RX8900.h)(0x00000000)
@@ -974,10 +974,10 @@ I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\Middlewares\ST\threadx\common\inc\tx_initialize.h)(0x66742E6F)
 I (..\Middlewares\ST\threadx\common\inc\tx_thread.h)(0x66742E6F)
-I (..\App\AppLowPowerMgr.h)(0x6693B9E3)
-F (..\App\AppLowPowerMgr.c)(0x6693D9C9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/applowpowermgr.o -MD)
+I (..\App\AppLowPowerMgr.h)(0x66968897)
+F (..\App\AppLowPowerMgr.c)(0x66968FB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/applowpowermgr.o -MD)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -1004,7 +1004,7 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 I (..\Core\Inc\i2c.h4.\Core\Inc\lptim.hs.\App\AppMain.h)(0x00000000)
@@ -1015,8 +1015,8 @@ I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\app\keil\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\Middlewares\ST\threadx\common\inc\tx_initialize.h)(0x66742E6F)
 I (..\Middlewares\ST\threadx\common\inc\tx_thread.hz.\App\Std_Types.h)(0x00000000)
-I (..\App\AppLowPowerMgr.h)(0x6693B9E3)
-F (..\App\AppLowPowerMgr.h)(0x6693B9E3)()
+I (..\App\AppLowPowerMgr.h)(0x66968897)
+F (..\App\AppLowPowerMgr.h)(0x66968897)()
 F (..\App\BSP\RX8900\RX8900.c)(0x6680B1C5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/rx8900.o -MD)
 I (..\App\BSP\RX8900\RX8900_Cbk.hp.\App\BSP\RX8900\RX8900_Cfg.h)(0x00000000)
 I (..\App\BSP\RX8900\RX8900_Types.h\.\App\Std_Types.h)(0x00000000)
@@ -1025,7 +1025,7 @@ F (..\App\BSP\RX8900\RX8900_Callout.c)(0x6680B21E)(-xc -std=c99 --target=arm-arm
 I (..\App\BSP\RX8900\RX8900_Cbk.hu.\App\BSP\RX8900\RX8900_Cfg.h)(0x00000000)
 I (..\App\BSP\RX8900\RX8900_Types.h\.\App\Std_Types.h8.\Core\Inc\main.h)(0x00000000)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h)(0x6672EAB9)
-I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66928982)
+I (..\Core\Inc\stm32l4xx_hal_conf.h)(0x66952AB2)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h)(0x6672EAB9)
 I (..\Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h)(0x6672EAB6)
@@ -1052,14 +1052,14 @@ I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ex.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_i2c_ex.h)(0x6672EAB9)
-I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x6693D249)
+I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_lptim.h)(0x66952AB3)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h)(0x6672EAB9)
 I (..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h)(0x6672EAB9)
 I (..\Core\Inc\i2c.h)(0x669121A8)
 F (..\App\BSP\RX8900\RX8900_Cbk.h)(0x6680AFA0)()
 F (..\App\BSP\RX8900\RX8900_Cfg.h)(0x6680BF60)()
 F (..\App\BSP\RX8900\RX8900_Types.h)(0x6680AF46)()
-F (..\App\BSP\RX8900\RX8900_Lcfg.c)(0x6693D878)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/rx8900_lcfg.o -MD)
+F (..\App\BSP\RX8900\RX8900_Lcfg.c)(0x66952A37)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../AZURE_RTOS/App -I ../Middlewares/ST/threadx/common/inc/ -I ../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/ -I ../Middlewares/ST/threadx/utility/low_power/ -I ../App -I ../App/BSP/RX8900-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32L432xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32L432xx -DTX_INCLUDE_USER_DEFINE_FILE -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI="80"-o software/rx8900_lcfg.o -MD)
 I (..\App\BSP\RX8900\RX8900_Cfg.hc.\App\BSP\RX8900\RX8900_Types.h)(0x00000000)
 I (..\App\Std_Types.h)(0x66923B73)
 F (../Middlewares/ST/threadx/ports/cortex_m4/ac6/src/tx_thread_context_restore.S)(0x66742E70)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_Software-ID:/app/keil/pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/app/keil/pack/Keil/STM32L4xx_DFP/2.7.0_2/Drivers/CMSIS/Device/ST/STM32L4xx/Include-D__UVISION_VERSION=539 -D_RTE_ -DSTM32L432xx -D_RTE_ -DTX_LOW_POWER=1 -DTX_PORT_USE_BASEPRI -DTX_PORT_BASEPRI=80-o software/tx_thread_context_restore.o)

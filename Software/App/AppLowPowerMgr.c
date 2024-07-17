@@ -31,8 +31,9 @@
 /**********************************************************************************
 ****************************Global variable Definitions****************************
 **********************************************************************************/
-uint32 gLP_Tick = 0x0U;
-uint8 gLP_WakeupSource = LP_WAKEUP_NONE;
+uint32 gLP_Ticks = 0x0U;
+uint8 gLP_WakeupSource = LP_WAKEUP_SOURCE_NONE;
+uint8 gLP_WakeupMode= LP_WAKEUP_MODE_RTC;
 /**********************************************************************************
 *****************************Local Function Definitions****************************
 **********************************************************************************/
@@ -181,7 +182,7 @@ static Std_ReturnType LPower_Sysclock_Restore(void)
       while((READ_BIT(RCC->CFGR, RCC_CFGR_SWS) != RCC_CFGR_SW_PLL)                  \
                                                           && (Timeout > 0x0U))
       {
-      Timeout--;
+				Timeout--;
       }
       if(Timeout != 0x0U)
       {
@@ -214,9 +215,9 @@ static Std_ReturnType LPower_Sysclock_Restore(void)
 **********************************************************************************/
 static void LPower_NextWakeTime_Set(uint32 NextTime)
 {
-	/* 1Mhz */
-  HAL_LPTIM_Counter_Start_IT(&hlptim1, 1000U * NextTime);
+	/* 62.5Khz */
   /* 中断两次暂时无影响 */
+  HAL_LPTIM_Counter_Start_IT(&hlptim1, (uint32)(62.5F * (float32)NextTime));
 	
 }
 /**********************************************************************************
@@ -232,7 +233,7 @@ static uint32 LPower_SleepTime_Get(void)
   uint32 CNT;
 
   CNT = HAL_LPTIM_ReadCounter(&hlptim1);
-	Time = (uint32)((float32)CNT / 1000U);
+	Time = (uint32)((float32)CNT / 62.5F);
   
 	return Time;
 }
@@ -252,7 +253,7 @@ void LPower_Enter(void)
 {
   Std_ReturnType RetVal = E_OK;
 
-  if(gLP_Tick != 0x0U)
+  if(gLP_Ticks != 0x0U)
   {
     /* Disable SysTick */
     SysTick->CTRL &= (~SysTick_CTRL_ENABLE_Msk);
@@ -260,9 +261,14 @@ void LPower_Enter(void)
     RetVal |= LPower_Sysclock_Set();
     if(E_OK == RetVal)
     {
-      LPower_NextWakeTime_Set(gLP_Tick);
-			gApp_Moudle = APP_MOUDLE_LP;
-      gLP_WakeupSource = LP_WAKEUP_NONE;
+			if(LP_WAKEUP_MODE_RTC == gLP_WakeupMode)
+			{
+				/* 1s interrupt once, after 1040ms wakeup  */
+				gLP_Ticks = 1040U;
+			}
+      LPower_NextWakeTime_Set(gLP_Ticks);
+			gApp_Moudle = APP_MODE_LP;
+      gLP_WakeupSource = LP_WAKEUP_SOURCE_NONE;
       HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
       //HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
       sysclock0 = HAL_RCC_GetSysClockFreq();
@@ -285,25 +291,28 @@ void LPower_Enter(void)
 * description   :
 * Limitation    :
 **********************************************************************************/
+
 void LPower_Exit(void)
 {
   uint32 Time;
 	Std_ReturnType RetVal;
 
-  if(gLP_Tick != 0x0U)
+  if(gLP_Ticks != 0x0U)
   {
-    RetVal = (Std_ReturnType)HAL_PWREx_DisableLowPowerRunMode();
+
+		RetVal = (Std_ReturnType)HAL_PWREx_DisableLowPowerRunMode();
     if(E_OK == RetVal)
     {
       RetVal |= LPower_Sysclock_Restore();
       RetVal |= LPower_Peripheral_Restore();
-      if((LP_WAKEUP_LPTIM & gLP_WakeupSource) != LP_WAKEUP_LPTIM)
+      if((LP_WAKEUP_SOURCE_LPTIM & gLP_WakeupSource) != LP_WAKEUP_SOURCE_LPTIM)
       {
-        gLP_Tick = LPower_SleepTime_Get();
+        gLP_WakeupSource &= (~LP_WAKEUP_SOURCE_LPTIM);
+        gLP_Ticks = LPower_SleepTime_Get();
       }
       /* Enable SysTick */
       SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
-			gApp_Moudle = APP_MOUDLE_RUN;
+			gApp_Moudle = APP_MODE_RUN;
       sysclock1 = HAL_RCC_GetSysClockFreq();
     }
     else

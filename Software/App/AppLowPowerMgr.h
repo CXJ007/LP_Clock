@@ -31,14 +31,19 @@
 **********************************************************************************/
 #define LP_TIMTEOUT_VALUE                 (0xFFFFU)
 /* Wakeup source */
-#define LP_WAKEUP_NONE                    (0x00U)
-#define LP_WAKEUP_LPTIM                   (0x01U)
-#define LP_WAKEUP_RTC                     (0x02U)
+#define LP_WAKEUP_SOURCE_NONE             (0x00U)
+#define LP_WAKEUP_SOURCE_LPTIM            (0x01U)
+#define LP_WAKEUP_SOURCE_RTC              (0x02U)
+/* Wakeup mode */
+#define LP_WAKEUP_MODE_LPTIM              (0x01U)
+#define LP_WAKEUP_MODE_RTC                (0x02U)
+#define LP_WAKEUP_MODE_NORMAL             (LP_WAKEUP_MODE_LPTIM                   \
+                                          | LP_WAKEUP_MODE_RTC)
 
 /**********************************************************************************
 ****************************Global variable Definitions****************************
 **********************************************************************************/
-extern uint32 gLP_Tick;
+extern uint32 gLP_Ticks;
 extern uint8 gLP_WakeupSource;
 /**********************************************************************************
 ****************************Global Function Definitions****************************

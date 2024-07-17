@@ -42,9 +42,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   if(GPIO_PIN_1 == GPIO_Pin)
   {
-		if(APP_MOUDLE_LP == gApp_Moudle)
+		if(APP_MODE_LP == gApp_Moudle)
 		{
-			gLP_WakeupSource |= LP_WAKEUP_RTC;
+			gLP_WakeupSource |= LP_WAKEUP_SOURCE_RTC;
 		}
 		else
 		{
@@ -66,6 +66,6 @@ uint32 lpcount = 0;
 void HAL_LPTIM_AutoReloadMatchCallback(LPTIM_HandleTypeDef *hlptim)
 {
   lpcount++;
-	gLP_WakeupSource |= LP_WAKEUP_LPTIM;
-  HAL_LPTIM_Counter_Stop_IT(hlptim);
+	gLP_WakeupSource |= LP_WAKEUP_SOURCE_LPTIM;
+	HAL_LPTIM_Counter_Stop_IT(&hlptim1);
 }

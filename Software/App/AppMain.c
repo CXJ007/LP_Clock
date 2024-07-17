@@ -1,7 +1,7 @@
 #include "AppMain.h"
 #include "RX8900.h"
 
-uint8 gApp_Moudle = APP_MOUDLE_RUN;
+uint8 gApp_Moudle = APP_MODE_STARTUP;
 
 TX_THREAD AppTask10msTCB;
 
@@ -15,7 +15,7 @@ Std_ReturnType AppMain(void)
 {
 	Std_ReturnType RetVal = E_OK;
 	HAL_DBGMCU_DisableDBGSleepMode();
- //HAL_DBGMCU_EnableDBGSleepMode();
+ HAL_DBGMCU_EnableDBGSleepMode();
 //	HAL_DBGMCU_EnableDBGStopMode();
 	
 	RetVal |= RX8900_Init();
@@ -30,6 +30,9 @@ Std_ReturnType AppMain(void)
 																						APP_CFG_TASK_10MS_PRIO,      
 																						TX_NO_TIME_SLICE,              
 																						TX_AUTO_START);
+
+	gApp_Moudle = APP_MODE_RUN;
+
 	return RetVal;
 }
 

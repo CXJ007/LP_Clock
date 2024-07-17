@@ -7,9 +7,11 @@
 #include "main.h"
 #include "Std_Types.h"
                 
+#define APP_MODE_STARTUP                                 (0x00U)
+#define APP_MODE_RUN                                     (0x01U)
+#define APP_MODE_LP                                      (0x02U)
 
-#define APP_MOUDLE_RUN                                   (0x01U)
-#define APP_MOUDLE_LP                                    (0x02U)
+
 
 #define  APP_CFG_TASK_10MS_PRIO                          (2U)
 
