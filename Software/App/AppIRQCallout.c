@@ -38,6 +38,7 @@
 * description   :
 * Limitation    :
 **********************************************************************************/
+uint32 Rtccount = 0;
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   if(GPIO_PIN_1 == GPIO_Pin)
@@ -45,12 +46,12 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		if(APP_MODE_LP == gApp_Moudle)
 		{
 			gLP_WakeupSource |= LP_WAKEUP_SOURCE_RTC;
+			Rtccount++;
 		}
 		else
 		{
-			/* nothing */
+			RX8900_Process_ISR();
 		}
-    RX8900_Process_ISR();
   }
   
 }
@@ -62,7 +63,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 * Limitation    :
 **********************************************************************************/
 uint32 lpcount = 0;
-
 void HAL_LPTIM_AutoReloadMatchCallback(LPTIM_HandleTypeDef *hlptim)
 {
   lpcount++;

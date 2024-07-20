@@ -1,12 +1,22 @@
 #include "AppMain.h"
+#include "AppObj.h"
+#include "AppModeCtrl.h"
 #include "RX8900.h"
+#include "HTU21D.h"
+
 
 uint8 gApp_Moudle = APP_MODE_STARTUP;
 
+TX_THREAD AppTaskModeCtrlTCB;
 TX_THREAD AppTask10msTCB;
 
-static uint32 AppTask10msStk[APP_CFG_TASK_10MS_STK_SIZE / 4];
 
+static uint8 AppTaskModeCtrlStk[APP_CFG_TASK_MODE_CTRL_STK_SIZE];
+static uint8 AppTask10msStk[APP_CFG_TASK_10MS_STK_SIZE];
+
+
+
+static void AppTaskModeCtrl(ULONG thread_input);
 static void AppTask10ms(ULONG thread_input);
 
 
@@ -15,16 +25,31 @@ Std_ReturnType AppMain(void)
 {
 	Std_ReturnType RetVal = E_OK;
 	HAL_DBGMCU_DisableDBGSleepMode();
- HAL_DBGMCU_EnableDBGSleepMode();
+	HAL_DBGMCU_EnableDBGSleepMode();
 //	HAL_DBGMCU_EnableDBGStopMode();
 	
+	
+	
+	
 	RetVal |= RX8900_Init();
+	RetVal |= App_ObjInit();
+	
+	RetVal |= (Std_ReturnType)tx_thread_create(&AppTaskModeCtrlTCB,           
+																						"App Task Mode Ctrl",             
+																						AppTaskModeCtrl,                 
+																						0U,                            
+																						AppTaskModeCtrlStk,          
+																						APP_CFG_TASK_MODE_CTRL_STK_SIZE,    
+																						APP_CFG_TASK_MODE_CTRL_PRIO,        
+																						APP_CFG_TASK_MODE_CTRL_PRIO,      
+																						TX_NO_TIME_SLICE,              
+																						TX_AUTO_START);
 	
 	RetVal |= (Std_ReturnType)tx_thread_create(&AppTask10msTCB,           
 																						"App Task 10ms",             
 																						AppTask10ms,                 
-																						0,                            
-																						&AppTask10msStk[0],          
+																						0U,                            
+																						AppTask10msStk,          
 																						APP_CFG_TASK_10MS_STK_SIZE,    
 																						APP_CFG_TASK_10MS_PRIO,        
 																						APP_CFG_TASK_10MS_PRIO,      
@@ -36,8 +61,33 @@ Std_ReturnType AppMain(void)
 	return RetVal;
 }
 
+uint32 TaskModeCtrlCount = 0;
+static void AppTaskModeCtrl(ULONG thread_input)
+{
+	(void)thread_input;
+	Std_ReturnType RetVal;
+	uint32 AppCtrlCmd;
+	
+	while(1)
+	{
+		TaskModeCtrlCount++;
+		RetVal = (Std_ReturnType)tx_event_flags_get(&gApp_ModeCtrlEventGroup,   \
+																								0x00000001U,                \
+																								TX_OR_CLEAR,                \
+																								(ULONG*)&AppCtrlCmd,        \
+																								TX_WAIT_FOREVER);
+		if(E_OK == RetVal)
+		{
+			App_ModeCtrl_MainFunc(AppCtrlCmd);
+		}
+		else
+		{
+			/* nothing */
+		}
+	}
+}
+
 uint32 Task10msCount = 0;
-uint32 TaskCount = 0;
 static void AppTask10ms(ULONG thread_input)
 {
 	(void)thread_input;
@@ -69,9 +119,18 @@ static void AppTask10ms(ULONG thread_input)
 }
 
 
+
+
+
+
+
+
+
+
+
 HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority)
 {
-				return HAL_OK;
+	return HAL_OK;
 }
 
 uint32_t HAL_GetTick (void)

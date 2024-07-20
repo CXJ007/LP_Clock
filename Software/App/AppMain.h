@@ -12,9 +12,10 @@
 #define APP_MODE_LP                                      (0x02U)
 
 
-
+#define  APP_CFG_TASK_MODE_CTRL_PRIO                     (1U)
 #define  APP_CFG_TASK_10MS_PRIO                          (2U)
 
+#define  APP_CFG_TASK_MODE_CTRL_STK_SIZE                 (1024U)
 #define  APP_CFG_TASK_10MS_STK_SIZE                      (1024U)
 
 extern uint8 gApp_Moudle;

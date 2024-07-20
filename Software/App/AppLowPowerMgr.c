@@ -28,12 +28,14 @@
 #include "lptim.h"
 #include "AppMain.h"
 #include "AppLowPowerMgr.h"
+#include "AppModeCtrl.h"
+#include "RX8900.h"
 /**********************************************************************************
 ****************************Global variable Definitions****************************
 **********************************************************************************/
 uint32 gLP_Ticks = 0x0U;
 uint8 gLP_WakeupSource = LP_WAKEUP_SOURCE_NONE;
-uint8 gLP_WakeupMode= LP_WAKEUP_MODE_RTC;
+uint8 gLP_WakeupMode= LP_WAKEUP_MODE_NORMAL;
 /**********************************************************************************
 *****************************Local Function Definitions****************************
 **********************************************************************************/
@@ -179,7 +181,7 @@ static Std_ReturnType LPower_Sysclock_Restore(void)
                               & (~(RCC_CFGR_SW))) | (RCC_CFGR_SW_PLL)));
       /* Wait till system clock source is ready */
       Timeout = LP_TIMTEOUT_VALUE;
-      while((READ_BIT(RCC->CFGR, RCC_CFGR_SWS) != RCC_CFGR_SW_PLL)                  \
+      while((READ_BIT(RCC->CFGR, RCC_CFGR_SWS) != RCC_CFGR_SWS_PLL)                  \
                                                           && (Timeout > 0x0U))
       {
 				Timeout--;
@@ -266,6 +268,10 @@ void LPower_Enter(void)
 				/* 1s interrupt once, after 1040ms wakeup  */
 				gLP_Ticks = 1040U;
 			}
+			else
+			{
+				/* nothing */
+			}
       LPower_NextWakeTime_Set(gLP_Ticks);
 			gApp_Moudle = APP_MODE_LP;
       gLP_WakeupSource = LP_WAKEUP_SOURCE_NONE;
@@ -303,17 +309,40 @@ void LPower_Exit(void)
 		RetVal = (Std_ReturnType)HAL_PWREx_DisableLowPowerRunMode();
     if(E_OK == RetVal)
     {
-      RetVal |= LPower_Sysclock_Restore();
-      RetVal |= LPower_Peripheral_Restore();
-      if((LP_WAKEUP_SOURCE_LPTIM & gLP_WakeupSource) != LP_WAKEUP_SOURCE_LPTIM)
+			if((LP_WAKEUP_SOURCE_LPTIM & gLP_WakeupSource) != LP_WAKEUP_SOURCE_LPTIM)
       {
         gLP_WakeupSource &= (~LP_WAKEUP_SOURCE_LPTIM);
         gLP_Ticks = LPower_SleepTime_Get();
+				HAL_LPTIM_Counter_Stop_IT(&hlptim1);
+				
       }
-      /* Enable SysTick */
-      SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
-			gApp_Moudle = APP_MODE_RUN;
-      sysclock1 = HAL_RCC_GetSysClockFreq();
+			else
+			{
+				/* nothing */
+			}
+      RetVal |= LPower_Sysclock_Restore();
+      RetVal |= LPower_Peripheral_Restore();
+			RetVal |= App_ModeCtrl_SendCmd(0x00000001U);
+      if(E_OK == RetVal)
+			{
+				/* Enable SysTick */
+				SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+				if((LP_WAKEUP_SOURCE_RTC & gLP_WakeupSource) == LP_WAKEUP_SOURCE_RTC)
+				{
+					gLP_WakeupSource &= (~LP_WAKEUP_SOURCE_RTC);
+					RX8900_Process_ISR();
+				}
+				else
+				{
+					/* nothing */
+				}
+				gApp_Moudle = APP_MODE_RUN;
+				sysclock1 = HAL_RCC_GetSysClockFreq();
+			}
+			else
+			{
+				Error_Handler();
+			}
     }
     else
     {

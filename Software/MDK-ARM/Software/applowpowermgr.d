@@ -38,4 +38,6 @@ software/applowpowermgr.o: ..\App\AppLowPowerMgr.c ..\Core\Inc\main.h \
   D:\app\keil\Keil_v5\ARM\ARMCLANG\include\string.h \
   ..\Middlewares\ST\threadx\common\inc\tx_initialize.h \
   ..\Middlewares\ST\threadx\common\inc\tx_thread.h ..\App\Std_Types.h \
-  ..\App\AppLowPowerMgr.h
+  ..\App\AppLowPowerMgr.h ..\App\AppModeCtrl.h \
+  ..\App\BSP\RX8900\RX8900.h ..\App\BSP\RX8900\RX8900_Cbk.h \
+  ..\App\BSP\RX8900\RX8900_Cfg.h ..\App\BSP\RX8900\RX8900_Types.h

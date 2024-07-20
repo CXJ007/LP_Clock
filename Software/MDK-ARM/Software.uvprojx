@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
-            <RunUserProg2>0</RunUserProg2>
+            <RunUserProg2>1</RunUserProg2>
             <UserProg1Name>.\..\keil5_disp_size_bar.exe</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>1</UserProg1Dos16Mode>
@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L432xx,TX_INCLUDE_USER_DEFINE_FILE,TX_PORT_USE_BASEPRI,TX_PORT_BASEPRI=80</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../AZURE_RTOS/App;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/;../Middlewares/ST/threadx/utility/low_power/;../App;../App/BSP/RX8900</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../AZURE_RTOS/App;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/;../Middlewares/ST/threadx/utility/low_power/;../App;../App/BSP/RX8900;../App/BSP/HTU21D</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -941,6 +941,26 @@
               <FileType>5</FileType>
               <FilePath>..\App\AppLowPowerMgr.h</FilePath>
             </File>
+            <File>
+              <FileName>AppObj.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\AppObj.c</FilePath>
+            </File>
+            <File>
+              <FileName>AppObj.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\AppObj.h</FilePath>
+            </File>
+            <File>
+              <FileName>AppModeCtrl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\AppModeCtrl.c</FilePath>
+            </File>
+            <File>
+              <FileName>AppModeCtrl.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\AppModeCtrl.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -980,6 +1000,26 @@
               <FileName>RX8900_Lcfg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App\BSP\RX8900\RX8900_Lcfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>HTU21D.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\HTU21D\HTU21D.c</FilePath>
+            </File>
+            <File>
+              <FileName>HTU21D.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\HTU21D\HTU21D.h</FilePath>
+            </File>
+            <File>
+              <FileName>HTU21D_Callout.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\HTU21D\HTU21D_Callout.c</FilePath>
+            </File>
+            <File>
+              <FileName>HTU21D_Cbk.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\HTU21D\HTU21D_Cbk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -10329,5 +10369,14 @@
     </components>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>Software</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
