@@ -99,7 +99,7 @@ extern RX8900TimeType gRX8900TimeInfo;
 ****************************Global Function Definitions****************************
 **********************************************************************************/
 extern Std_ReturnType RX8900_Init(void);
-extern Std_ReturnType RX8900_Main_Fun(void);
+extern Std_ReturnType RX8900_MainFunc(void);
 extern Std_ReturnType RX8900_Set_Time(RX8900TimeType Time);
 extern Std_ReturnType RX8900_Updata_Time(RX8900TimeType *pTime);
 extern Std_ReturnType RX8900_Set_Alarm

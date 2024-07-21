@@ -37,10 +37,9 @@
 * description ：
 * limit       :
 **********************************************************************************/
-
 Std_ReturnType RX8900_IIC_Transmit
 (
-  const uint8 Address, 
+  const uint8 Address,                                                    
   const uint8 Register, 
   const uint8 WriteData, 
   uint8 * const pReadData, 

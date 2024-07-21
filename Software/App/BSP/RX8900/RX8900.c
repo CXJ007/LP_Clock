@@ -337,7 +337,7 @@ Std_ReturnType RX8900_Init(void)
 * description ：
 * limit       :
 **********************************************************************************/
-Std_ReturnType RX8900_Main_Fun(void)
+Std_ReturnType RX8900_MainFunc(void)
 {
 	Std_ReturnType RetVal = E_OK;
 

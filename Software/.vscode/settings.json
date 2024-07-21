@@ -6,6 +6,8 @@
     "rx8900_cbk.h": "c",
     "main.h": "c",
     "cstdint": "c",
-    "std_types.h": "c"
+    "std_types.h": "c",
+    "htu21d_cbk.h": "c",
+    "htu21d.h": "c"
   }
 }

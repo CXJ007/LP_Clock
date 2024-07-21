@@ -20,6 +20,6 @@
 
 extern uint8 gApp_Moudle;
 
-Std_ReturnType AppMain(void);
+void AppMain(void);
 
 #endif

@@ -21,16 +21,16 @@ static void AppTask10ms(ULONG thread_input);
 
 
 
-Std_ReturnType AppMain(void)
+void AppMain(void)
 {
 	Std_ReturnType RetVal = E_OK;
 	HAL_DBGMCU_DisableDBGSleepMode();
-	HAL_DBGMCU_EnableDBGSleepMode();
+	//HAL_DBGMCU_EnableDBGSleepMode();
 //	HAL_DBGMCU_EnableDBGStopMode();
 	
 	
 	
-	
+	RetVal |= HTU21D_Init();
 	RetVal |= RX8900_Init();
 	RetVal |= App_ObjInit();
 	
@@ -57,8 +57,16 @@ Std_ReturnType AppMain(void)
 																						TX_AUTO_START);
 
 	gApp_Moudle = APP_MODE_RUN;
-
-	return RetVal;
+	
+	
+	if(E_OK != RetVal)
+	{
+		Error_Handler();
+	}
+	else
+	{
+		/* nothing */
+	}
 }
 
 uint32 TaskModeCtrlCount = 0;
@@ -110,8 +118,8 @@ static void AppTask10ms(ULONG thread_input)
 	{ 
 		Task10msCount++;
 //		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_3);
-	
-		RX8900_Main_Fun();
+		RX8900_MainFunc();
+		HTU21D_MainFunc(1000);
 		// RX8900_Updata_Time(&gRX8900TimeInfo); 
 		tx_thread_sleep(MS_TO_TICKS(10));
 		//HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI);
