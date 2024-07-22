@@ -34,7 +34,8 @@ uint8 gHTU21D_HumMinor = 0x0U;
 /**********************************************************************************
 *****************************Local Function Definitions****************************
 **********************************************************************************/
-static Std_ReturnType HTU21D_Updata(uint8 UpdataStatu);
+static Std_ReturnType HTU21D_Updata(void);
+static uint8 HTU21D_Crc8(uint8* pData, uint8 Len);
 /**********************************************************************************
 * name        :
 * input       :
@@ -43,7 +44,37 @@ static Std_ReturnType HTU21D_Updata(uint8 UpdataStatu);
 * description ：
 * limit       :
 **********************************************************************************/
-static Std_ReturnType HTU21D_Updata(uint8 UpdataStatu)
+static uint8 HTU21D_Crc8(uint8* pData, uint8 Len)
+{
+	uint8 index;
+	uint8 indexBit;
+	uint8 Crc8 = HTU21D_CRC8_INIT;
+
+	for (index = 0; index < Len; index++) 
+	{
+			Crc8 ^= pData[index];
+			for (indexBit = 0; indexBit < 8U; indexBit++) {
+					if (Crc8 & 0x80U) 
+					{ 
+							Crc8 = (Crc8 << 1) ^ HTU21D_CRC8_POLY;
+					} else 
+					{
+							Crc8 <<= 1;
+					}
+			}
+	}
+
+	return Crc8;
+}
+/**********************************************************************************
+* name        :
+* input       :
+* input\output:
+* return      :
+* description ：
+* limit       :
+**********************************************************************************/
+static Std_ReturnType HTU21D_Updata(void)
 {
   Std_ReturnType RetVal;
 	uint8 RxBuffer[HTU21D_BUFFER_LEN] = {0x0U};
@@ -51,25 +82,33 @@ static Std_ReturnType HTU21D_Updata(uint8 UpdataStatu)
 	float Data = 0;
 
 	RetVal = HTU21D_READ_DATA(RxBuffer, HTU21D_BUFFER_LEN);
-	RxData = RxBuffer[0] << 8U;
-	RxData |= RxBuffer[1];
-
-	if((E_OK == RetVal) && (HTU21D_UPDATA_TEMP == UpdataStatu))
+	
+	if((E_OK == RetVal) && (RxBuffer[2] == HTU21D_Crc8(RxBuffer, 2U)))
 	{
-		Data = (float32)HTU21D_DATA_TO_TEMP(RxData);
-		gHTU21D_TempMajor = (uint8)Data;
-		gHTU21D_TempMinor = (uint8)((Data - gHTU21D_TempMajor) * 100U);
-	}
-	else if((E_OK == RetVal) && (HTU21D_UPDATA_HUM == UpdataStatu))
-	{
-		Data = HTU21D_DATA_TO_HUM(RxData);
-		gHTU21D_HumMajor = (uint8)Data;
-		gHTU21D_HumMinor = (uint8)((Data - gHTU21D_HumMajor) * 100U);
+		RxData = RxBuffer[0] << 8U;
+		RxData |= RxBuffer[1];
+		if((RxBuffer[1] & HTU21D_HUM_STATUS) == HTU21D_HUM_STATUS)
+		{
+			/* Clear Status bit */
+			RxData &= (~HTU21D_HUM_STATUS);
+			Data = HTU21D_DATA_TO_HUM(RxData);
+			gHTU21D_HumMajor = (uint8)Data;
+			gHTU21D_HumMinor = (uint8)((Data - gHTU21D_HumMajor) * 100U);
+		}
+		else
+		{
+			Data = (float32)HTU21D_DATA_TO_TEMP(RxData);
+			gHTU21D_TempMajor = (uint8)Data;
+			gHTU21D_TempMinor = (uint8)((Data - gHTU21D_TempMajor) * 100U);
+		}
 	}
 	else
 	{
-		/* nothing */
+		RetVal = E_NOT_OK;
 	}
+	
+	
+	
 	
   return RetVal;
 }
@@ -130,10 +169,10 @@ Std_ReturnType HTU21D_MainFunc(uint32 CycleMs)
 						/* nothing */
 					}
 				}
-				else if(Ticks >= 50U)
+				else if(HTU21D_TEMP_DELAY_MS <= Ticks)
 				{
 					/* Delay 50ms */
-					RetVal = HTU21D_Updata(HTU21D_UPDATA_TEMP);
+					RetVal = HTU21D_Updata();
 					UpdataStatu = HTU21D_UPDATA_HUM;
 					EnterFirst = STD_TRUE;
 				}
@@ -158,10 +197,10 @@ Std_ReturnType HTU21D_MainFunc(uint32 CycleMs)
 						/* nothing */
 					}
 				}
-				else if(Ticks >= 50U)
+				else if(HTU21D_HUM_DELAY_MS <= Ticks)
 				{
-					/* Delay 50ms */
-					RetVal = HTU21D_Updata(HTU21D_UPDATA_HUM);
+					/* Delay 16ms */
+					RetVal = HTU21D_Updata();
 					UpdataStatu = HTU21D_UPDATA_NONE;
 					EnterFirst = STD_TRUE;
 				}

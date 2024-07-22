@@ -43,11 +43,19 @@
 #define HTU21D_UPDATA_TEMP                                (0x01U)
 #define HTU21D_UPDATA_HUM                                 (0x02U)
 
+#define HTU21D_TEMP_STATUS                                (0x00U)
+#define HTU21D_HUM_STATUS                                 (0x02U)
+
+#define HTU21D_TEMP_DELAY_MS                              (50U)
+#define HTU21D_HUM_DELAY_MS                               (16U)
 
 #define HTU21D_BUFFER_LEN                                 (3U)
 
 
 
+/* X^8 + X^5 + X^4 + 1 */
+#define HTU21D_CRC8_POLY                                  (0x31U)
+#define HTU21D_CRC8_INIT                                  (0x00U)
 
 
 

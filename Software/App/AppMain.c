@@ -25,7 +25,7 @@ void AppMain(void)
 {
 	Std_ReturnType RetVal = E_OK;
 	HAL_DBGMCU_DisableDBGSleepMode();
-	//HAL_DBGMCU_EnableDBGSleepMode();
+	HAL_DBGMCU_EnableDBGSleepMode();
 //	HAL_DBGMCU_EnableDBGStopMode();
 	
 	
@@ -102,8 +102,8 @@ static void AppTask10ms(ULONG thread_input)
 	Std_ReturnType RetVal;
 	RX8900TimeType Time;
 
-	Time.sec = 0;
-	Time.min = 0;
+	Time.sec = 30;
+	Time.min = 59;
 	Time.hour = 23;
 	Time.week = RX8900_WEEK_WED;
 	Time.day = 25;
