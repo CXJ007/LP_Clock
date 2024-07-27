@@ -20,31 +20,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+#ifndef BUZZER_CBK_H
+#define BUZZER_CBK_H
 /**********************************************************************************
-************************************Includes***************************************
+***********************************Includes****************************************
 **********************************************************************************/
-#include "AppObj.h"
-#include "Buzzer.h"
-/**********************************************************************************
-****************************Global variable Definitions****************************
-**********************************************************************************/
-TX_EVENT_FLAGS_GROUP  gApp_ModeCtrlEventGroup;
+#include "Std_Types.h"
 /**********************************************************************************
 ****************************Global Function Definitions****************************
 **********************************************************************************/
-/**********************************************************************************
-* Function name :
-* Inputs        :
-* Return        :
-* description   :
-* Limitation    :
-**********************************************************************************/
-Std_ReturnType App_ObjInit(void)
-{
-	Std_ReturnType RetVal = E_OK;
-	
-	RetVal |= (Std_ReturnType)tx_event_flags_create(&gApp_ModeCtrlEventGroup, "ModeCtrlEvent");
-		
-	return RetVal;
-}
-
+extern void Buzzer_On(void);
+extern void Buzzer_Off(void);
+extern void Buzzer_Toggle(void);
+extern Std_ReturnType Buzzer_CreatTimer(void (*CalloutFunc)(void), uint32 Ms);
+extern Std_ReturnType Buzzer_ActivteTimer(void);
+extern Std_ReturnType Buzzer_DeactivateTimer(void);
+#endif
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

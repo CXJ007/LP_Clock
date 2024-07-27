@@ -14,6 +14,7 @@
 
 #define  APP_CFG_TASK_MODE_CTRL_PRIO                     (1U)
 #define  APP_CFG_TASK_10MS_PRIO                          (2U)
+#define  APP_TASK_10MS_TICKS                             MS_TO_TICKS(10U)
 
 #define  APP_CFG_TASK_MODE_CTRL_STK_SIZE                 (1024U)
 #define  APP_CFG_TASK_10MS_STK_SIZE                      (1024U)

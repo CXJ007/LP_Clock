@@ -20,31 +20,35 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+#ifndef BUZZER_H
+#define BUZZER_H
 /**********************************************************************************
-************************************Includes***************************************
+***********************************Includes****************************************
 **********************************************************************************/
-#include "AppObj.h"
-#include "Buzzer.h"
+#include "Buzzer_Cbk.h"
 /**********************************************************************************
-****************************Global variable Definitions****************************
+*******************************Macro Definitions***********************************
 **********************************************************************************/
-TX_EVENT_FLAGS_GROUP  gApp_ModeCtrlEventGroup;
+#define BUZZER_CYCLE_MS                       (500U)
+
+#define BUZZER_STATU_STOP                     (0x00U)
+#define BUZZER_STATU_RUN                      (0x01U)
+
+#define BUZZER_MODE_KEEP                      (0x00U)
+#define BUZZER_MODE_FLICKER                   (0x01U)
+/**********************************************************************************
+*******************************Struct Definitions**********************************
+**********************************************************************************/
+typedef struct
+{
+    uint8 Mode;
+    uint8 Statu;
+    uint32 Cycle;
+    uint32 Timeout;
+} BuzzerInfo_Type;
 /**********************************************************************************
 ****************************Global Function Definitions****************************
 **********************************************************************************/
-/**********************************************************************************
-* Function name :
-* Inputs        :
-* Return        :
-* description   :
-* Limitation    :
-**********************************************************************************/
-Std_ReturnType App_ObjInit(void)
-{
-	Std_ReturnType RetVal = E_OK;
-	
-	RetVal |= (Std_ReturnType)tx_event_flags_create(&gApp_ModeCtrlEventGroup, "ModeCtrlEvent");
-		
-	return RetVal;
-}
-
+extern Std_ReturnType Buzzer_Init(void);
+extern Std_ReturnType Buzzer_ActiveOnce(void);
+#endif

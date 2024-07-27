@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L432xx,TX_INCLUDE_USER_DEFINE_FILE,TX_PORT_USE_BASEPRI,TX_PORT_BASEPRI=80</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../AZURE_RTOS/App;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/;../Middlewares/ST/threadx/utility/low_power/;../App;../App/BSP/RX8900;../App/BSP/HTU21D;..\App\BSP\BH1750FVI</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../AZURE_RTOS/App;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m4/ac6/inc/;../Middlewares/ST/threadx/utility/low_power/;../App;../App/BSP/RX8900;../App/BSP/HTU21D;../App/BSP/BH1750FVI;..\App\BSP\Buzzer</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1040,6 +1040,26 @@
               <FileName>BH1750FVI_Cbk.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\App\BSP\BH1750FVI\BH1750FVI_Cbk.h</FilePath>
+            </File>
+            <File>
+              <FileName>Buzzer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\Buzzer\Buzzer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Buzzer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\Buzzer\Buzzer.h</FilePath>
+            </File>
+            <File>
+              <FileName>Buzzer_Callout.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\Buzzer\Buzzer_Callout.c</FilePath>
+            </File>
+            <File>
+              <FileName>Buzzer_Cbk.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\Buzzer\Buzzer_Cbk.h</FilePath>
             </File>
           </Files>
         </Group>

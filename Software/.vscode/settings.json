@@ -8,6 +8,7 @@
     "cstdint": "c",
     "std_types.h": "c",
     "htu21d_cbk.h": "c",
-    "htu21d.h": "c"
+    "htu21d.h": "c",
+    "appobj.h": "c"
   }
 }
