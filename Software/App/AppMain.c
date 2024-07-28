@@ -107,7 +107,7 @@ static void AppTask10ms(ULONG thread_input)
     Time.year = 24;
 
     RX8900_Set_Time(Time);
-    Buzzer_ActiveOnce();
+    Buzzer_ActiveForever();
     // RX8900_Set_Alarm(22,23,0x7F);
     tx_time_set(0);
     while (1)

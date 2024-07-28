@@ -44,11 +44,14 @@ typedef struct
     uint8 Mode;
     uint8 Statu;
     uint32 Cycle;
-    uint32 Timeout;
+    uint32 LoopCount;
 } BuzzerInfo_Type;
 /**********************************************************************************
 ****************************Global Function Definitions****************************
 **********************************************************************************/
 extern Std_ReturnType Buzzer_Init(void);
 extern Std_ReturnType Buzzer_ActiveOnce(void);
+extern Std_ReturnType Buzzer_ActiveForever(void);
+extern Std_ReturnType Buzzer_Active(uint32 LoopCount);
+extern void Buzzer_Abort(void);
 #endif

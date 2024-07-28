@@ -45,7 +45,7 @@ static void Buzzer_MainFunc(void);
  *********************************************************************************/
 static void Buzzer_MainFunc(void)
 {
-    if ((BUZZER_STATU_RUN == iBuzzerInfo.Statu) && (iBuzzerInfo.Timeout > 0x0U))
+    if ((BUZZER_STATU_RUN == iBuzzerInfo.Statu) && (iBuzzerInfo.LoopCount > 0x0U))
     {
         if (BUZZER_MODE_FLICKER == iBuzzerInfo.Mode)
         {
@@ -59,13 +59,13 @@ static void Buzzer_MainFunc(void)
         {
             /* nothing */
         }
-        iBuzzerInfo.Timeout--;
+        iBuzzerInfo.LoopCount--;
     }
     else
     {
         Buzzer_Off();
         iBuzzerInfo.Statu = BUZZER_STATU_STOP;
-        iBuzzerInfo.Timeout = 0x0U;
+        iBuzzerInfo.LoopCount = 0x0U;
         (void)Buzzer_DeactivateTimer();
     }
 }
@@ -100,7 +100,52 @@ Std_ReturnType Buzzer_Init(void)
 Std_ReturnType Buzzer_ActiveOnce(void)
 {
     iBuzzerInfo.Statu = BUZZER_STATU_RUN;
-    iBuzzerInfo.Timeout = 1;
+    iBuzzerInfo.LoopCount = 1;
 
     return Buzzer_ActivteTimer();
+}
+
+/**********************************************************************************
+ * name        :
+ * input       :
+ * input\output:
+ * return      :
+ * description ：
+ * limit       :
+ *********************************************************************************/
+Std_ReturnType Buzzer_ActiveForever(void)
+{
+    iBuzzerInfo.Statu = BUZZER_STATU_RUN;
+    iBuzzerInfo.LoopCount = 0xFFFFFFFFU;
+    
+    return Buzzer_ActivteTimer();
+}
+
+/**********************************************************************************
+ * name        :
+ * input       :
+ * input\output:
+ * return      :
+ * description ：
+ * limit       :
+ *********************************************************************************/
+Std_ReturnType Buzzer_Active(uint32 LoopCount)
+{
+    iBuzzerInfo.Statu = BUZZER_STATU_RUN;
+    iBuzzerInfo.LoopCount = LoopCount;
+
+    return Buzzer_ActivteTimer();
+}
+
+/**********************************************************************************
+ * name        :
+ * input       :
+ * input\output:
+ * return      :
+ * description ：
+ * limit       :
+ *********************************************************************************/
+void Buzzer_Abort(void)
+{
+    iBuzzerInfo.Statu = BUZZER_STATU_STOP;
 }
