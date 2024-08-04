@@ -238,7 +238,12 @@
         <Ww>
           <count>17</count>
           <WinNumber>1</WinNumber>
-          <ItemText>iBuzzerInfo</ItemText>
+          <ItemText>gBH1750FVI_LightMajor,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>18</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>gBH1750FVI_LightMinor,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -283,16 +288,6 @@
       <pszMrulep></pszMrulep>
       <pSingCmdsp></pSingCmdsp>
       <pMultCmdsp></pMultCmdsp>
-      <SystemViewers>
-        <Entry>
-          <Name>System Viewer\LPTIM1</Name>
-          <WinId>35905</WinId>
-        </Entry>
-        <Entry>
-          <Name>System Viewer\RCC</Name>
-          <WinId>35904</WinId>
-        </Entry>
-      </SystemViewers>
       <DebugDescription>
         <Enable>0</Enable>
         <EnableFlashSeq>0</EnableFlashSeq>
@@ -673,7 +668,7 @@
 
   <Group>
     <GroupName>Application/User/AZURE_RTOS/App</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

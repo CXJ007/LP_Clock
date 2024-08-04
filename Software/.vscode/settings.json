@@ -9,6 +9,7 @@
     "std_types.h": "c",
     "htu21d_cbk.h": "c",
     "htu21d.h": "c",
-    "appobj.h": "c"
-  }
+    "appobj.h": "c",
+    "bh1750fvi.h": "c"
+}
 }

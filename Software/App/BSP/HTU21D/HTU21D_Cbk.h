@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -22,21 +22,23 @@
  */
 #ifndef HTU21D_CBK_H
 #define HTU21D_CBK_H
-/**********************************************************************************
-***********************************Includes****************************************
-**********************************************************************************/
+/*******************************************************************************
+***********************************Includes*************************************
+*******************************************************************************/
 #include "Std_Types.h"
-#include "main.h"
-#include "i2c.h" 
-/**********************************************************************************
-****************************Global Function Definitions****************************
-**********************************************************************************/
-Std_ReturnType HTU21D_IIC_Write(const uint8 Address, const uint8 Register);
-Std_ReturnType HTU21D_IIC_Read
+/*******************************************************************************
+****************************Global Function Definitions*************************
+********************************************************************************/
+extern Std_ReturnType HTU21D_IIC_Write
 (
-  const uint8 Address,                                                            \
-  uint8* const pData,                                                             \
-  const uint8 Len                                                                 \
+    const uint8 Address,
+    const uint8 Register
 );
-uint32 HTU21D_Get_TicksMs(void);
+extern Std_ReturnType HTU21D_IIC_Read
+(
+    const uint8 Address, 
+    uint8* const pData,
+    const uint8 Len
+);
+extern uint32         HTU21D_Get_TicksMs(void);
 #endif

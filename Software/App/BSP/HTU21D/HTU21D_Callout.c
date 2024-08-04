@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -20,80 +20,61 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**********************************************************************************
-***********************************Includes****************************************
-**********************************************************************************/
+/*******************************************************************************
+***********************************Includes*************************************
+*******************************************************************************/
 #include "HTU21D_Cbk.h"
+#include "i2c.h"
+#include "main.h"
 #include "tx_api.h"
-/**********************************************************************************
-****************************Global Function Definitions****************************
-**********************************************************************************/
-/**********************************************************************************
-* name        :
-* input       :
-* input\output:
-* return      :
-* description ：
-* limit       :
-**********************************************************************************/
+/*******************************************************************************
+****************************Global Function Definitions*************************
+*******************************************************************************/
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
 Std_ReturnType HTU21D_IIC_Write(const uint8 Address, const uint8 Register)
 {
-  Std_ReturnType RetVal;
+    Std_ReturnType RetVal;
 
-  RetVal = (Std_ReturnType)HAL_I2C_Master_Transmit(&hi2c1,                        \
-                      (uint16_t)Address, (uint8_t*)&Register, 0x1U, 0xFFFFU);
+    RetVal = (Std_ReturnType)HAL_I2C_Master_Transmit(
+        &hi2c1, (uint16_t)Address, (uint8_t*)&Register, 0x1U, 0xFFFFU);
 
-  return RetVal;
+    return RetVal;
 }
-
-/**********************************************************************************
-* name        :
-* input       :
-* input\output:
-* return      :
-* description ：
-* limit       :
-**********************************************************************************/
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
 Std_ReturnType HTU21D_IIC_Read
 (
-  const uint8 Address,                                                            \
-  uint8* const pData,                                                             \
-  const uint8 Len                                                                 \
+    const uint8 Address, 
+    uint8* const pData,
+    const uint8 Len
 )
 {
-  Std_ReturnType RetVal;
+    Std_ReturnType RetVal;
 
-  RetVal = (Std_ReturnType)HAL_I2C_Master_Receive(&hi2c1,                         \
-                          (uint16_t)Address, (uint8_t*)pData, Len, 0xFFFFU);
+    RetVal = (Std_ReturnType)HAL_I2C_Master_Receive(
+        &hi2c1, (uint16_t)Address, (uint8_t*)pData, Len, 0xFFFFU);
 
-  return RetVal;
+    return RetVal;
 }
-
-/**********************************************************************************
-* name        :
-* input       :
-* input\output:
-* return      :
-* description ：
-* limit       :
-**********************************************************************************/
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
 uint32 HTU21D_Get_TicksMs(void)
 {
-	return TICKS_TO_MS((uint32)tx_time_get());
+    return TICKS_TO_MS((uint32)tx_time_get());
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

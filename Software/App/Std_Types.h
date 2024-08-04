@@ -30,6 +30,6 @@ typedef uint8                          Std_ReturnType;
                                        / (uint32)1000U))
 
 #define TICKS_TO_MS(Ticks)          	((uint32)(Ticks) * (uint32)1000U            \
-																			/ (uint32)TX_TIMER_TICKS_PER_SECOND)
+											/ (uint32)TX_TIMER_TICKS_PER_SECOND)
 
 #endif

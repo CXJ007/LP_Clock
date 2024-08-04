@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -20,55 +20,83 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**********************************************************************************
-***********************************Includes****************************************
-**********************************************************************************/
+/*******************************************************************************
+***********************************Includes*************************************
+*******************************************************************************/
 #include "BH1750FVI_Cbk.h"
+#include "i2c.h"
+#include "main.h"
+#include "tx_api.h"
+/*******************************************************************************
+****************************Global Function Definitions*************************
+*******************************************************************************/
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
+Std_ReturnType BH1750FVI_IIC_Write(const uint8 Address, const uint8 Register)
+{
+    Std_ReturnType RetVal;
 
-/**********************************************************************************
-****************************Global Function Definitions****************************
-**********************************************************************************/
-/**********************************************************************************
-* name        :
-* input       :
-* input\output:
-* return      :
-* description ：
-* limit       :
-**********************************************************************************/
+    RetVal = (Std_ReturnType)HAL_I2C_Master_Transmit(&hi2c1, (uint16_t)Address, 
+                                        (uint8_t*)&Register, 0x1U, 0xFFFFU);
 
+    return RetVal;
+}
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
+Std_ReturnType BH1750FVI_IIC_Read
+(
+    const uint8 Address, 
+    uint8* const pData,
+    const uint8 Len
+)
+{
+    Std_ReturnType RetVal;
 
-/**********************************************************************************
-* name        :
-* input       :
-* input\output:
-* return      :
-* description ：
-* limit       :
-**********************************************************************************/
+    RetVal = (Std_ReturnType)HAL_I2C_Master_Receive(&hi2c1, (uint16_t)Address, 
+                                                (uint8_t*)pData, Len, 0xFFFFU);
 
-/**********************************************************************************
-* name        :
-* input       :
-* input\output:
-* return      :
-* description ：
-* limit       :
-**********************************************************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return RetVal;
+}
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
+void BH1750FVI_WriteDVI(uint8 PinStatu)
+{
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, PinStatu);
+}
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
+void BH1750FVI_DelayMs(uint32 Ms)
+{
+    HAL_Delay(Ms);
+}
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
+uint32 BH1750FVI_Get_TicksMs(void)
+{
+    return TICKS_TO_MS((uint32)tx_time_get());
+}

@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -22,20 +22,20 @@
  */
 #ifndef APPOBJ_H
 #define APPOBJ_H
-/**********************************************************************************
-************************************Includes***************************************
-**********************************************************************************/
+/*******************************************************************************
+************************************Includes************************************
+*******************************************************************************/
 #include "Std_Types.h"
 #include "tx_api.h"
 #include "tx_initialize.h"
 #include "tx_thread.h"
-/**********************************************************************************
-****************************Global variable Definitions****************************
-**********************************************************************************/
-extern TX_EVENT_FLAGS_GROUP  gApp_ModeCtrlEventGroup;
-/**********************************************************************************
-****************************Global Function Definitions****************************
-**********************************************************************************/
+/*******************************************************************************
+****************************Global variable Definitions*************************
+*******************************************************************************/
+extern TX_EVENT_FLAGS_GROUP gApp_ModeCtrlEventGroup;
+/*******************************************************************************
+****************************Global Function Definitions*************************
+*******************************************************************************/
 extern Std_ReturnType App_ObjInit(void);
 
 #endif

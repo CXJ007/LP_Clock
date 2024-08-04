@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -22,22 +22,20 @@
  */
 #ifndef RX8900_CBK_H
 #define RX8900_CBK_H
-/**********************************************************************************
-************************************Includes***************************************
-**********************************************************************************/
+/*******************************************************************************
+************************************Includes************************************
+*******************************************************************************/
 #include "RX8900_Cfg.h"
-/**********************************************************************************
-****************************Global Function Definitions****************************
-**********************************************************************************/
+/*******************************************************************************
+****************************Global Function Definitions*************************
+*******************************************************************************/
 extern Std_ReturnType RX8900_IIC_Transmit
 (
-  const uint8 Address, 
-  const uint8 Register, 
-  const uint8 WriteData, 
-  uint8 * const pReadData, 
-  const uint8 Len, 
-  const uint8 Cmd
+    const uint8  Address,
+    const uint8  Register,
+    const uint8  WriteData,
+    uint8* const pReadData,
+    const uint8 Len, const uint8 Cmd
 );
-
 
 #endif

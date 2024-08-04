@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -20,56 +20,35 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**********************************************************************************
-************************************Includes***************************************
-**********************************************************************************/
+/*******************************************************************************
+************************************Includes************************************
+*******************************************************************************/
 #include "AppModeCtrl.h"
 #include "AppObj.h"
-/**********************************************************************************
-****************************Global variable Definitions****************************
-**********************************************************************************/
-/**********************************************************************************
-* Function name :
-* Inputs        :
-* Return        :
-* description   :
-* Limitation    :
-**********************************************************************************/
-void App_ModeCtrl_MainFunc(uint32 CtrlCmd)
-{
-
-
-}
-
-/**********************************************************************************
-* Function name :
-* Inputs        :
-* Return        :
-* description   :
-* Limitation    :
-**********************************************************************************/
+/*******************************************************************************
+****************************Global variable Definitions*************************
+*******************************************************************************/
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
+void App_ModeCtrl_MainFunc(uint32 CtrlCmd) {}
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
 Std_ReturnType App_ModeCtrl_SendCmd(uint32 CtrlCmd)
 {
-	Std_ReturnType RetVal;
-	
-	RetVal = (Std_ReturnType)tx_event_flags_set(&gApp_ModeCtrlEventGroup,           \
-																													(ULONG)CtrlCmd, TX_OR);
+    Std_ReturnType RetVal;
 
-	return RetVal;
+    RetVal = (Std_ReturnType)tx_event_flags_set(&gApp_ModeCtrlEventGroup,
+                                                (ULONG)CtrlCmd, TX_OR);
+
+    return RetVal;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -22,51 +22,51 @@
  */
 #ifndef RX8900_CFG_H
 #define RX8900_CFG_H
-/**********************************************************************************
-************************************Includes***************************************
-**********************************************************************************/
+/*******************************************************************************
+************************************Includes************************************
+*******************************************************************************/
 #include "RX8900_Types.h"
-/**********************************************************************************
-*******************************Macro Dfinitions***********************************
-**********************************************************************************/
-#define RX8900_DEBUG                  (STD_OFF)
+/*******************************************************************************
+*******************************Macro Dfinitions*********************************
+*******************************************************************************/
+#define RX8900_DEBUG            (STD_OFF)
 
-#if (RX8900_DEBUG == STD_ON)
+#if(RX8900_DEBUG == STD_ON)
 
-#define RX8900_REG_OFFSET              (16U)
-#define RX8900_DEBUG_UPDATA_CMD        (0x0U)
-#define RX8900_DEBUG_WRITE_CMD         (0x1U)
-#define RX8900_DEBUG_NONE_CMD          (0xFU)
-/**********************************************************************************
-*******************************Struct Definitions***********************************
-**********************************************************************************/
-typedef struct 
+#define RX8900_REG_OFFSET       (16U)
+#define RX8900_DEBUG_UPDATA_CMD (0x0U)
+#define RX8900_DEBUG_WRITE_CMD  (0x1U)
+#define RX8900_DEBUG_NONE_CMD   (0xFU)
+/*******************************************************************************
+*******************************Struct Definitions*******************************
+*******************************************************************************/
+typedef struct
 {
-  RX8900SecRegType            SecReg;
-  RX8900MinRegType            MinReg;
-  RX8900HourRegType           HourReg;
-  RX8900WeekRegType           WeekReg;
-  RX8900DayRegType            DayReg;
-  RX8900MonthRegType          MonthReg;
-  RX8900YearRegType           YearReg;
-  RX8900RamRegType            RamReg;
-  RX8900MinAlarmRegType       MinAlarmReg;
-  RX8900HourAlarmRegType      HourAlarmReg;
-  RX8900WeekDayAlarmRegType   WeekDayAlarmReg;
-  RX8900TimeCount0RegType     TimeCount0Reg;
-  RX8900TimeCount1RegType     TimeCount1Reg;
-  RX8900ExtRegType            ExtReg;
-  RX8900FlagRegType           FlagReg;
-  RX8900ControlRegType        ControlReg;
-  RX8900TEMPRegType           TempReg;
-  RX8900BackupRegType         BackupReg;
-}RX8900AllRegType;
+    RX8900SecRegType          SecReg;
+    RX8900MinRegType          MinReg;
+    RX8900HourRegType         HourReg;
+    RX8900WeekRegType         WeekReg;
+    RX8900DayRegType          DayReg;
+    RX8900MonthRegType        MonthReg;
+    RX8900YearRegType         YearReg;
+    RX8900RamRegType          RamReg;
+    RX8900MinAlarmRegType     MinAlarmReg;
+    RX8900HourAlarmRegType    HourAlarmReg;
+    RX8900WeekDayAlarmRegType WeekDayAlarmReg;
+    RX8900TimeCount0RegType   TimeCount0Reg;
+    RX8900TimeCount1RegType   TimeCount1Reg;
+    RX8900ExtRegType          ExtReg;
+    RX8900FlagRegType         FlagReg;
+    RX8900ControlRegType      ControlReg;
+    RX8900TEMPRegType         TempReg;
+    RX8900BackupRegType       BackupReg;
+} RX8900AllRegType;
 
 #endif
 
-/**********************************************************************************
-****************************Global variable Definitions****************************
-**********************************************************************************/
+/*******************************************************************************
+****************************Global variable Definitions*************************
+*******************************************************************************/
 extern const RX8900CfgType gRX8900Cfg;
 
 #endif

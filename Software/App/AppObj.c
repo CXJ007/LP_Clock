@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -20,31 +20,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/**********************************************************************************
-************************************Includes***************************************
-**********************************************************************************/
+/*******************************************************************************
+************************************Includes************************************
+*******************************************************************************/
 #include "AppObj.h"
 #include "Buzzer.h"
-/**********************************************************************************
-****************************Global variable Definitions****************************
-**********************************************************************************/
-TX_EVENT_FLAGS_GROUP  gApp_ModeCtrlEventGroup;
-/**********************************************************************************
-****************************Global Function Definitions****************************
-**********************************************************************************/
-/**********************************************************************************
-* Function name :
-* Inputs        :
-* Return        :
-* description   :
-* Limitation    :
-**********************************************************************************/
+/*******************************************************************************
+****************************Global variable Definitions*************************
+*******************************************************************************/
+TX_EVENT_FLAGS_GROUP gApp_ModeCtrlEventGroup;
+/*******************************************************************************
+****************************Global Function Definitions*************************
+*******************************************************************************/
+/*******************************************************************************
+ * Function name :
+ * Inputs        :
+ * Return        :
+ * description   :
+ * Limitation    :
+ ******************************************************************************/
 Std_ReturnType App_ObjInit(void)
 {
-	Std_ReturnType RetVal = E_OK;
-	
-	RetVal |= (Std_ReturnType)tx_event_flags_create(&gApp_ModeCtrlEventGroup, "ModeCtrlEvent");
-		
-	return RetVal;
-}
+    Std_ReturnType RetVal = E_OK;
 
+    RetVal |= ( Std_ReturnType )tx_event_flags_create(&gApp_ModeCtrlEventGroup,
+                                                      "ModeCtrlEvent");
+
+    return RetVal;
+}

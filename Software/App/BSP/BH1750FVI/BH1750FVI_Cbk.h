@@ -9,8 +9,8 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -22,14 +22,25 @@
  */
 #ifndef BH1750FVI_CBK_H
 #define BH1750FVI_CBK_H
-/**********************************************************************************
-***********************************Includes****************************************
-**********************************************************************************/
+/*******************************************************************************
+***********************************Includes*************************************
+*******************************************************************************/
 #include "Std_Types.h"
-#include "main.h"
-#include "i2c.h" 
-/**********************************************************************************
-****************************Global Function Definitions****************************
-**********************************************************************************/
-
+/*******************************************************************************
+****************************Global Function Definitions*************************
+*******************************************************************************/
+extern Std_ReturnType BH1750FVI_IIC_Write
+(
+    const uint8 Address,
+    const uint8 Register
+);
+extern Std_ReturnType BH1750FVI_IIC_Read
+(
+    const uint8 Address, 
+    uint8* const pData,
+    const uint8 Len
+);
+extern void           BH1750FVI_WriteDVI(uint8 PinStatu);
+extern void           BH1750FVI_DelayMs(uint32 Ms);
+extern uint32         BH1750FVI_Get_TicksMs(void);
 #endif
