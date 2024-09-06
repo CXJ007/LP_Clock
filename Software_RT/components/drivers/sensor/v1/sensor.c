@@ -283,6 +283,7 @@ static rt_ssize_t rt_sensor_read(rt_device_t dev, rt_off_t pos, void *buf, rt_si
 {
     rt_sensor_t sensor = (rt_sensor_t)dev;
     rt_size_t result = 0;
+
     RT_ASSERT(dev != RT_NULL);
 
     if (buf == NULL || len == 0)
@@ -298,6 +299,23 @@ static rt_ssize_t rt_sensor_read(rt_device_t dev, rt_off_t pos, void *buf, rt_si
     /* The buffer is not empty. Read the data in the buffer first */
     if (sensor->data_len > 0)
     {
+        /* CXJ007 add begin */
+        if(sensor->data_len > sensor->info.fifo_max)
+        {
+            sensor->data_len = sensor->info.fifo_max;
+        }
+        else
+        {
+            /* nothing */
+        }
+        if(len >= sensor->data_len)
+        {
+            len = sensor->data_len;
+        }
+        else
+        {
+            /* nothing */
+        }
         if (len > sensor->data_len / sizeof(struct rt_sensor_data))
         {
             len = sensor->data_len / sizeof(struct rt_sensor_data);

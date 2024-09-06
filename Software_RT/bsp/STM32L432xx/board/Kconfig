@@ -18,6 +18,21 @@ menu "On-chip Peripheral Drivers"
         select RT_USING_PIN
         default y
 
+    menuconfig BSP_USING_I2C1
+        bool "Enable I2C1 BUS (software simulation)"
+        default n
+        select RT_USING_I2C
+        select RT_USING_I2C_BITOPS
+        select RT_USING_PIN
+        if BSP_USING_I2C1
+            config BSP_I2C1_SCL_PIN
+                int "i2c1 scl pin number"
+                default 9
+            config BSP_I2C1_SDA_PIN
+                int "I2C1 sda pin number"
+                default 10
+        endif
+
     menuconfig BSP_USING_UART
         bool "Enable UART"
         default y
@@ -38,6 +53,7 @@ menu "On-chip Peripheral Drivers"
 endmenu
 
 menu "Board extended module Drivers"
+
 
 endmenu
 

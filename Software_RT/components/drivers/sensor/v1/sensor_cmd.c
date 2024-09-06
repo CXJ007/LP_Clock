@@ -302,7 +302,7 @@ static int sensor(int argc, char **argv)
         rt_kprintf("         sodr <var>            Set output date rate to var\n");
         rt_kprintf("         read [num]            Read [num] times sensor\n");
         rt_kprintf("                               num default 5\n");
-        return ;
+        return -RT_ERROR;
     }
     else if (!strcmp(argv[1], "info"))
     {

@@ -212,7 +212,7 @@ out:
     return -RT_EINVAL;
 }
 
-static void stm32_pin_write(rt_device_t dev, rt_base_t pin, rt_uint8_t value)
+void stm32_pin_write(rt_device_t dev, rt_base_t pin, rt_uint8_t value)//CXJ007
 {
     GPIO_TypeDef *gpio_port;
     uint16_t gpio_pin;
@@ -226,7 +226,7 @@ static void stm32_pin_write(rt_device_t dev, rt_base_t pin, rt_uint8_t value)
     }
 }
 
-static rt_ssize_t stm32_pin_read(rt_device_t dev, rt_base_t pin)
+rt_ssize_t stm32_pin_read(rt_device_t dev, rt_base_t pin)//CXJ007
 {
     GPIO_TypeDef *gpio_port;
     uint16_t gpio_pin;
@@ -258,7 +258,8 @@ static void stm32_pin_mode(rt_device_t dev, rt_base_t pin, rt_uint8_t mode)
     /* Configure GPIO_InitStructure */
     GPIO_InitStruct.Pin = PIN_STPIN(pin);
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    //GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;//CXJ007
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
 
     if (mode == PIN_MODE_OUTPUT)
     {

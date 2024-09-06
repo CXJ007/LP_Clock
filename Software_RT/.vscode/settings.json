@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "rtthread.h": "c",
+        "rtdevice.h": "c",
+        "board.h": "c",
+        "bh1750fvi.h": "c",
+        "drv_gpio.h": "c",
+        "bh1750fvi_cfg.h": "c",
+        "array": "c",
+        "deque": "c",
+        "vector": "c",
+        "string_view": "c",
+        "drv_common.h": "c"
+    }
+}

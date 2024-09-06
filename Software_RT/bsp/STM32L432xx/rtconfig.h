@@ -90,6 +90,9 @@
 #define RT_USING_SERIAL_V1
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
+#define RT_USING_SENSOR
 #define RT_USING_PIN
 /* end of Device Drivers */
 
@@ -134,10 +137,6 @@
 
 /* end of Using USB legacy version */
 /* end of RT-Thread Components */
-
-/* RT-Thread Utestcases */
-
-/* end of RT-Thread Utestcases */
 
 /* RT-Thread online packages */
 
@@ -229,10 +228,6 @@
 
 /* STM32 HAL & SDK Drivers */
 
-#define PKG_USING_STM32F4_HAL_DRIVER
-#define PKG_USING_STM32F4_HAL_DRIVER_LATEST_VERSION
-#define PKG_USING_STM32F4_CMSIS_DRIVER
-#define PKG_USING_STM32F4_CMSIS_DRIVER_LATEST_VERSION
 #define PKG_USING_STM32L4_HAL_DRIVER
 #define PKG_USING_STM32L4_HAL_DRIVER_LATEST_VERSION
 #define PKG_USING_STM32L4_CMSIS_DRIVER
@@ -337,6 +332,9 @@
 /* On-chip Peripheral Drivers */
 
 #define BSP_USING_GPIO
+#define BSP_USING_I2C1
+#define BSP_I2C1_SCL_PIN 9
+#define BSP_I2C1_SDA_PIN 10
 #define BSP_USING_UART
 #define BSP_USING_UART1
 /* end of On-chip Peripheral Drivers */

@@ -72,17 +72,30 @@ static void stm32_i2c_pin_init(void)
  * @param Stm32 config class.
  * @param The sda pin state.
  */
+
+// #include "drv_gpio.h"
+extern void stm32_pin_write(rt_device_t dev, rt_base_t pin, rt_uint8_t value);
+extern rt_ssize_t stm32_pin_read(rt_device_t dev, rt_base_t pin);
+// extern void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);//CXJ007
+// extern GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);//CXJ007
 static void stm32_set_sda(void *data, rt_int32_t state)
 {
     struct stm32_soft_i2c_config* cfg = (struct stm32_soft_i2c_config*)data;
-    if (state)
-    {
-        rt_pin_write(cfg->sda, PIN_HIGH);
-    }
-    else
-    {
-        rt_pin_write(cfg->sda, PIN_LOW);
-    }
+    stm32_pin_write(NULL, cfg->sda, state);
+    //HAL_GPIO_WritePin(GPIOA, 0x0400, (GPIO_PinState)state);//CXJ007
+
+
+
+
+
+//     if (state)
+//     {
+//         rt_pin_write(cfg->sda, PIN_HIGH);
+//     }
+//     else
+//     {
+//         rt_pin_write(cfg->sda, PIN_LOW);
+//     }
 }
 
 /**
@@ -94,14 +107,16 @@ static void stm32_set_sda(void *data, rt_int32_t state)
 static void stm32_set_scl(void *data, rt_int32_t state)
 {
     struct stm32_soft_i2c_config* cfg = (struct stm32_soft_i2c_config*)data;
-    if (state)
-    {
-        rt_pin_write(cfg->scl, PIN_HIGH);
-    }
-    else
-    {
-        rt_pin_write(cfg->scl, PIN_LOW);
-    }
+    stm32_pin_write(NULL, cfg->scl, state);
+    //HAL_GPIO_WritePin(GPIOA, 0x0200, (GPIO_PinState)state);//CXJ007
+    // if (state)
+    // {
+    //     rt_pin_write(cfg->scl, PIN_HIGH);
+    // }
+    // else
+    // {
+    //     rt_pin_write(cfg->scl, PIN_LOW);
+    // }
 }
 
 /**
@@ -112,7 +127,7 @@ static void stm32_set_scl(void *data, rt_int32_t state)
 static rt_int32_t stm32_get_sda(void *data)
 {
     struct stm32_soft_i2c_config* cfg = (struct stm32_soft_i2c_config*)data;
-    return rt_pin_read(cfg->sda);
+    return stm32_pin_read(NULL, cfg->sda);//CXJ007
 }
 
 /**
@@ -123,7 +138,11 @@ static rt_int32_t stm32_get_sda(void *data)
 static rt_int32_t stm32_get_scl(void *data)
 {
     struct stm32_soft_i2c_config* cfg = (struct stm32_soft_i2c_config*)data;
-    return rt_pin_read(cfg->scl);
+    return stm32_pin_read(NULL, cfg->scl);//CXJ007;
+}
+static void stm32_i2c_delay(rt_uint32_t cnt)
+{
+    __NOP();
 }
 
 static const struct rt_i2c_bit_ops stm32_bit_ops_default =
@@ -134,7 +153,7 @@ static const struct rt_i2c_bit_ops stm32_bit_ops_default =
     .set_scl  = stm32_set_scl,
     .get_sda  = stm32_get_sda,
     .get_scl  = stm32_get_scl,
-    .udelay   = rt_hw_us_delay,
+    .udelay   = stm32_i2c_delay,
     .delay_us = 1,
     .timeout  = 100,
     .i2c_pin_init_flag = RT_FALSE
