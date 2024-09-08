@@ -30,9 +30,13 @@ rt_align(RT_ALIGN_SIZE) static rt_uint8_t sys_200ms_thread_stack[SYS_200MS_THREA
 
 static void sys_200ms_thread_entry(void *parameter);
 
+extern void cdc_acm_init(uint8_t busid, uint32_t reg_base);
+    
 int main(void)
 {
     rt_err_t ret = RT_EOK;
+    
+    cdc_acm_init(0,USB_BASE);
 
     ret |= rt_thread_init(&sys_200ms_thread,
                           "200ms",
@@ -57,6 +61,8 @@ int main(void)
 
     while (1)
     {
+        extern void cdc_acm_data_send_with_dtr_test(uint8_t busid);
+        cdc_acm_data_send_with_dtr_test(0);
         rt_pin_write(LED0_PIN, PIN_HIGH);
         rt_thread_mdelay(500);
         rt_pin_write(LED0_PIN, PIN_LOW);
