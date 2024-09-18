@@ -47,7 +47,7 @@
 #define RT_USING_DEVICE
 #define RT_USING_CONSOLE
 #define RT_CONSOLEBUF_SIZE 256
-#define RT_CONSOLE_DEVICE_NAME "uart1"
+#define RT_CONSOLE_DEVICE_NAME "vcom"
 #define RT_VER_NUM 0x50200
 #define RT_BACKTRACE_LEVEL_MAX_NR 32
 /* end of RT-Thread Kernel */
@@ -99,7 +99,7 @@
 #define RT_CHERRYUSB_DEVICE_SPEED_FS
 #define RT_CHERRYUSB_DEVICE_FSDEV
 #define RT_CHERRYUSB_DEVICE_CDC_ACM
-#define RT_CHERRYUSB_DEVICE_TEMPLATE_CDC_ACM
+#define RT_CHERRYUSB_DEVICE_TEMPLATE_NONE
 /* end of Device Drivers */
 
 /* C/C++ and POSIX layer */

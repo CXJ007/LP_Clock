@@ -7,9 +7,7 @@
 *******************************************************************************/
 static struct rt_i2c_bus_device *ibh1750fvi_pi2c_bus = RT_NULL;
 static rt_thread_t               ibh1750fvi_thread   = RT_NULL;
-static rt_uint16_t              *ibh1750fvi_pbuffer  = RT_NULL;
-static rt_uint8_t                u8front;
-static rt_uint8_t                u8rear;
+struct rt_ringbuffer            *ibh1750fvi_pbuffer  = RT_NULL;
 /*******************************************************************************
 *****************************Local Function Definitions*************************
 *******************************************************************************/
@@ -43,7 +41,7 @@ int bh1750fvi_sensor_init(void)
     rt_sensor_t              psensor_light = RT_NULL;
     struct rt_sensor_ops    *psensor_ops   = RT_NULL;
 
-    pmodule = rt_calloc(0x1U, sizeof(struct rt_sensor_module));
+    pmodule = rt_calloc(1U, sizeof(struct rt_sensor_module));
     if (RT_NULL == pmodule)
     {
         nret = -RT_ENOMEM;
@@ -271,7 +269,7 @@ static void bh1750fvi_thread(void *parameter)
 
     while (1)
     {
-        if (((u8rear + 1) % BH1750FVI_SENSOR_FIFO_MAX) != u8front)
+        if ((BH1750FVI_SENSOR_FIFO_MAX * sizeof(rt_uint16_t)) >= rt_ringbuffer_space_len(ibh1750fvi_pbuffer))
         {
             if (RT_SENSOR_POWER_NORMAL == psensor->config.power)
             {
@@ -295,7 +293,7 @@ static void bh1750fvi_thread(void *parameter)
         }
         else
         {
-            if(RT_EOK == rt_thread_suspend(ibh1750fvi_thread))
+            if (RT_EOK == rt_thread_suspend(ibh1750fvi_thread))
             {
                 rt_schedule();
             }
@@ -321,14 +319,13 @@ static rt_err_t bh1750fvi_write_fifo(rt_uint16_t u16data)
 {
     rt_err_t nret = RT_EOK;
 
-    if (((u8rear + 1) % BH1750FVI_SENSOR_FIFO_MAX) != u8front)
+    if (sizeof(rt_uint16_t) == rt_ringbuffer_put(ibh1750fvi_pbuffer, (rt_uint8_t *)&u16data, sizeof(rt_uint16_t)))
     {
-        ibh1750fvi_pbuffer[u8rear] = u16data;
-        u8rear                     = (u8rear + 1) % BH1750FVI_SENSOR_FIFO_MAX;
+        /* nothing */
     }
     else
     {
-        nret = -RT_EFULL;
+        nret = -RT_EEMPTY;
     }
 
     return nret;
@@ -348,10 +345,10 @@ static rt_err_t bh1750fvi_read_fifo(rt_uint16_t *pdata)
 {
     rt_err_t nret = RT_EOK;
 
-    if (u8front != u8rear)
+
+    if (sizeof(rt_uint16_t) == rt_ringbuffer_get(ibh1750fvi_pbuffer, (rt_uint8_t *)pdata, sizeof(rt_uint16_t)))
     {
-        *pdata  = ibh1750fvi_pbuffer[u8front];
-        u8front = (u8front + 1) % BH1750FVI_SENSOR_FIFO_MAX;
+        /* nothing */
     }
     else
     {
@@ -383,7 +380,7 @@ static rt_err_t bh1750fvi_set_power_mode(struct rt_sensor_device *psensor, const
         if (RT_SENSOR_MODE_FIFO == psensor->config.mode)
         {
             nret = rt_thread_delete(ibh1750fvi_thread);
-            rt_free(ibh1750fvi_pbuffer);
+            rt_ringbuffer_destroy(ibh1750fvi_pbuffer);
             ibh1750fvi_pbuffer = RT_NULL;
         }
         else
@@ -426,13 +423,10 @@ static rt_err_t bh1750fvi_set_work_mode(struct rt_sensor_device * const psensor,
         break;
     }
     case RT_SENSOR_MODE_FIFO: {
-        ibh1750fvi_pbuffer = rt_calloc(BH1750FVI_SENSOR_FIFO_MAX, sizeof(rt_uint16_t));
+        ibh1750fvi_pbuffer = rt_ringbuffer_create(BH1750FVI_SENSOR_FIFO_MAX * sizeof(rt_uint16_t));
         if (RT_NULL != ibh1750fvi_pbuffer)
         {
-            u8front = 0x0U;
-            u8rear  = 0x0U;
-
-            ibh1750fvi_thread = rt_thread_create("bh1750fvi_thread",
+            ibh1750fvi_thread = rt_thread_create(BH1750FVI_SENSOR_NAME,
                                                  bh1750fvi_thread,
                                                  psensor,
                                                  BH1750FVI_THREAD_STACK,
@@ -444,7 +438,7 @@ static rt_err_t bh1750fvi_set_work_mode(struct rt_sensor_device * const psensor,
             }
             else
             {
-                rt_free(ibh1750fvi_pbuffer);
+                rt_ringbuffer_destroy(ibh1750fvi_pbuffer);
                 ibh1750fvi_pbuffer = RT_NULL;
                 nret               = -RT_ENOMEM;
             }
@@ -453,8 +447,6 @@ static rt_err_t bh1750fvi_set_work_mode(struct rt_sensor_device * const psensor,
         {
             /* nothing */
         }
-
-
         break;
     }
     break;
@@ -493,9 +485,9 @@ static rt_ssize_t bh1750fvi_fetch_data(struct rt_sensor_device *psensor, void *p
         else if (RT_SENSOR_MODE_FIFO == psensor->config.mode)
         {
             nret = bh1750fvi_read_fifo(&u16data);
-            if(RT_THREAD_SUSPEND_UNINTERRUPTIBLE == ibh1750fvi_thread->stat)
+            if (RT_THREAD_SUSPEND_UNINTERRUPTIBLE == ibh1750fvi_thread->stat)
             {
-                if(RT_EOK == rt_thread_resume (ibh1750fvi_thread))
+                if (RT_EOK == rt_thread_resume(ibh1750fvi_thread))
                 {
                     /* nothing */
                 }

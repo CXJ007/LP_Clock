@@ -10,6 +10,10 @@
         "deque": "c",
         "vector": "c",
         "string_view": "c",
-        "drv_common.h": "c"
+        "drv_common.h": "c",
+        "rthw.h": "c",
+        "sstream": "c",
+        "initializer_list": "c",
+        "utility": "c"
     }
 }
