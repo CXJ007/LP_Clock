@@ -80,6 +80,7 @@ static void           sys_200ms_thread_entry(void *parameter)
     while (1)
     {
         rt_device_read(li_dev, 0, &data, 1);
+        //rt_kprintf("%d\n", data.data.light);
         ret = rt_thread_delay_until(&sys_200ms_next_tick, sys_200ms_inc_tick);
         SYS_ASSERT(ret);
     }
@@ -113,12 +114,12 @@ void rt_hw_board_init(void)
     rt_hw_pin_init();
 #endif
 
-#ifdef RT_USING_SERIAL
+#ifdef RT_USING_UART
     extern int rt_hw_usart_init(void);
     rt_hw_usart_init();
 #endif
 
-#if defined(RT_USING_CONSOLE) && defined(RT_USING_DEVICE)
+#if defined(RT_USING_CONSOLE) && defined(RT_USING_DEVICE) && defined(RT_USING_UART)
     /* Set the shell console output device */
     rt_console_set_device(RT_CONSOLE_DEVICE_NAME);
 #endif

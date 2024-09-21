@@ -11,7 +11,7 @@ path = [cwd]
 if GetDepend(['RT_USING_PIN']):
     src += ['drv_gpio.c']
 
-if GetDepend(['RT_USING_SERIAL']):
+if GetDepend(['RT_USING_UART']):
     if GetDepend(['RT_USING_SERIAL_V2']):
         src += ['drv_usart_v2.c']
     else:

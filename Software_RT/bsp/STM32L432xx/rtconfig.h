@@ -92,6 +92,9 @@
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_I2C
 #define RT_USING_I2C_BITOPS
+#define RT_USING_RTC
+#define RT_USING_ALARM
+#define RT_USING_SOFT_RTC
 #define RT_USING_SENSOR
 #define RT_USING_PIN
 #define RT_USING_CHERRYUSB
@@ -205,6 +208,8 @@
 
 /* tools packages */
 
+#define PKG_USING_CPU_USAGE
+#define PKG_USING_CPU_USAGE_LATEST_VERSION
 /* end of tools packages */
 
 /* system packages */
@@ -341,8 +346,6 @@
 #define BSP_USING_I2C1
 #define BSP_I2C1_SCL_PIN 9
 #define BSP_I2C1_SDA_PIN 10
-#define BSP_USING_UART
-#define BSP_USING_UART1
 /* end of On-chip Peripheral Drivers */
 
 /* Board extended module Drivers */

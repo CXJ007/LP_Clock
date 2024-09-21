@@ -1,5 +1,10 @@
 [
  {
+  "name": "CPU_USAGE",
+  "path": "/packages/tools/cpu_usage",
+  "ver": "latest"
+ },
+ {
   "name": "CMSIS_CORE",
   "path": "/packages/system/CMSIS/CMSIS-Core",
   "ver": "latest"

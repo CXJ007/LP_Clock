@@ -5,6 +5,7 @@
 #include "Buzzer.h"
 #include "HTU21D.h"
 #include "RX8900.h"
+#include "Button.h"
 
 uint8 gApp_Moudle = APP_MODE_STARTUP;
 
@@ -21,15 +22,20 @@ void AppMain(void)
 {
     Std_ReturnType RetVal = E_OK;
     HAL_DBGMCU_DisableDBGSleepMode();
-   // HAL_DBGMCU_EnableDBGSleepMode();
+    HAL_DBGMCU_EnableDBGSleepMode();
     //	HAL_DBGMCU_EnableDBGStopMode();
+    while(1)
+    {
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3);
+    }
 
     RetVal |= HTU21D_Init();
     RetVal |= RX8900_Init();
     RetVal |= Buzzer_Init();
     RetVal |= BH1750FVI_Init();
     RetVal |= App_ObjInit();
-    
+    Button_Init();
+
     RetVal |= (Std_ReturnType)tx_thread_create(
         &AppTaskModeCtrlTCB, "App Task Mode Ctrl", AppTaskModeCtrl, 0U,
         AppTaskModeCtrlStk, APP_CFG_TASK_MODE_CTRL_STK_SIZE,
@@ -95,11 +101,12 @@ static void AppTask10ms(ULONG thread_input)
     Time.year = 24;
 
     RX8900_Set_Time(Time);
-    //Buzzer_ActiveForever();
+    Buzzer_ActiveForever();
     // RX8900_Set_Alarm(22,23,0x7F);
     tx_time_set(0);
     while(1)
     {
+        
         NextTime = tx_time_get() + APP_TASK_10MS_TICKS;
 
         Task10msCount++;
@@ -107,9 +114,7 @@ static void AppTask10ms(ULONG thread_input)
         RX8900_MainFunc();
         HTU21D_MainFunc(1000);
         BH1750FVI_MainFunc(1000);
-            
-        
-        // RX8900_Updata_Time(&gRX8900TimeInfo);
+        Button_Mainfunc();
 
         // HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI);
 
