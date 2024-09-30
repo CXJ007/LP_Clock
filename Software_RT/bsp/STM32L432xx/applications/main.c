@@ -4,6 +4,66 @@
 
 #define LED0_PIN GET_PIN(A, 3)
 
+#define RX8900_EXTERN_CTRL_RTC_GET_TEMP  (RT_DEVICE_CTRL_BASE(RTC) + 0x0AU) 
+
+void user_alarm_callback(rt_alarm_t alarm, time_t timestamp)
+{
+    float temp;
+    rt_device_t dev = rt_device_find("rtc");
+    rt_device_control(dev, RX8900_EXTERN_CTRL_RTC_GET_TEMP, &temp);
+    rt_kprintf("rx8900 temperature: [%d.%dC] \n", (int)temp, (int)(temp * 10) % 10);
+}
+
+void alarm_sample(void)
+{  
+    rt_device_t dev = rt_device_find("rtc");
+    struct rt_alarm_setup setup;
+    struct rt_alarm * alarm = RT_NULL;
+    struct rt_alarm * alarm1 = RT_NULL;
+    static time_t now;
+    struct tm p_tm;
+
+    if (alarm != RT_NULL)
+        return;
+
+    /* 获取当前时间戳，并把下一秒时间设置为闹钟时间 */
+    now = time(NULL) + 1;
+    gmtime_r(&now,&p_tm);
+
+    setup.flag = RT_ALARM_DAILY;            
+    setup.wktime.tm_year = 2024;
+    setup.wktime.tm_mon = 9;
+    setup.wktime.tm_mday = 27;
+    setup.wktime.tm_wday = 5;
+    setup.wktime.tm_hour = 20;
+    setup.wktime.tm_min = 10;
+    setup.wktime.tm_sec = 0;   
+
+    alarm = rt_alarm_create(user_alarm_callback, &setup);    
+    if(RT_NULL != alarm)
+    {
+        rt_alarm_start(alarm);
+    }
+
+
+    setup.flag = RT_ALARM_DAILY;            
+    setup.wktime.tm_year = 2024;
+    setup.wktime.tm_mon = 9;
+    setup.wktime.tm_mday = 27;
+    setup.wktime.tm_wday = 5;
+    setup.wktime.tm_hour = 20;
+    setup.wktime.tm_min = 11;
+    setup.wktime.tm_sec = 0;   
+
+    alarm1 = rt_alarm_create(user_alarm_callback, &setup); 
+    if(RT_NULL != alarm1)
+    {
+        rt_alarm_start(alarm1);
+    }
+}
+
+
+
 #define SYS_ASSERT(EX)       \
     do {                     \
         if (RT_EOK != (EX))  \
@@ -76,7 +136,7 @@ static void           sys_200ms_thread_entry(void *parameter)
     li_dev = rt_device_find("li_bh1750fvi");
     rt_device_open(li_dev, RT_DEVICE_FLAG_FIFO_RX);
     rt_device_control(li_dev, RT_SENSOR_CTRL_SET_POWER, (void *)RT_SENSOR_POWER_LOW);
-
+alarm_sample();
     while (1)
     {
         rt_device_read(li_dev, 0, &data, 1);
@@ -136,3 +196,4 @@ void rt_hw_board_init(void)
     rt_components_board_init();
 #endif
 }
+

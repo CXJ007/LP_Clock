@@ -14,6 +14,15 @@
         "rthw.h": "c",
         "sstream": "c",
         "initializer_list": "c",
-        "utility": "c"
+        "utility": "c",
+        "condition_variable": "c",
+        "optional": "c",
+        "istream": "c",
+        "ostream": "c",
+        "ratio": "c",
+        "system_error": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c"
     }
 }

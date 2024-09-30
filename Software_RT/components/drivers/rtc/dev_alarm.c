@@ -229,7 +229,8 @@ static void alarm_update(rt_uint32_t event)
     {
         /* get time of now */
         get_timestamp(&timestamp);
-        gmtime_r(&timestamp, &now);
+        localtime_r(&timestamp, &now);
+        //gmtime_r(&timestamp, &now);CXJ007
 
         for (next = _container.head.next; next != &_container.head; next = next->next)
         {
@@ -240,7 +241,8 @@ static void alarm_update(rt_uint32_t event)
 
         /* get time of now */
         get_timestamp(&timestamp);
-        gmtime_r(&timestamp, &now);
+        localtime_r(&timestamp, &now);
+        //gmtime_r(&timestamp, &now);CXJ007
         sec_now = alarm_mkdaysec(&now);
 
         for (next = _container.head.next; next != &_container.head; next = next->next)
@@ -564,7 +566,8 @@ rt_err_t rt_alarm_start(rt_alarm_t alarm)
 
         /* get time of now */
         get_timestamp(&timestamp);
-        gmtime_r(&timestamp, &now);
+        localtime_r(&timestamp, &now);
+        //gmtime_r(&timestamp, &now);CXJ007
 
         alarm->flag |= RT_ALARM_STATE_START;
 

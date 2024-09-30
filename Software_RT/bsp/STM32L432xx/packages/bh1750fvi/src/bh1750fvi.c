@@ -34,7 +34,7 @@ static rt_err_t   bh1750fvi_control(struct rt_sensor_device *psensor, int s32cmd
  * @return  None
  *
  */
-int bh1750fvi_sensor_init(void)
+int rt_hw_bh1750fvi_sensor_init(void)
 {
     rt_err_t                 nret          = RT_EOK;
     struct rt_sensor_module *pmodule       = RT_NULL;
@@ -109,7 +109,7 @@ int bh1750fvi_sensor_init(void)
 
     return nret;
 }
-INIT_DEVICE_EXPORT(bh1750fvi_sensor_init);
+INIT_DEVICE_EXPORT(rt_hw_bh1750fvi_sensor_init);
 
 /*******************************************************************************
 *****************************Local Function Definitions*************************

@@ -121,5 +121,8 @@ void usb_dc_low_level_deinit(void)
 void USB_IRQHandler(void)
 {
     extern void USBD_IRQHandler(uint8_t busid);
+    rt_interrupt_enter();
     USBD_IRQHandler(0);
+    rt_interrupt_leave();
+    
 }
